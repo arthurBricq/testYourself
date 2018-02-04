@@ -12,6 +12,7 @@
 		4E3538852024CBFB00901DD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E3538832024CBFB00901DD3 /* Main.storyboard */; };
 		4E3538872024CBFB00901DD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E3538862024CBFB00901DD3 /* Assets.xcassets */; };
 		4E35388A2024CBFB00901DD3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E3538882024CBFB00901DD3 /* LaunchScreen.storyboard */; };
+		4EE6B9F72027308E00E7B864 /* QuizzViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE6B9F62027308E00E7B864 /* QuizzViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		4E3538862024CBFB00901DD3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4E3538892024CBFB00901DD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4E35388B2024CBFB00901DD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4EE6B9F62027308E00E7B864 /* QuizzViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizzViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				4E35387F2024CBFB00901DD3 /* AppDelegate.swift */,
 				4E3538812024CBFB00901DD3 /* ViewController.swift */,
 				4E3538832024CBFB00901DD3 /* Main.storyboard */,
+				4EE6B9F62027308E00E7B864 /* QuizzViewController.swift */,
 				4E3538862024CBFB00901DD3 /* Assets.xcassets */,
 				4E3538882024CBFB00901DD3 /* LaunchScreen.storyboard */,
 				4E35388B2024CBFB00901DD3 /* Info.plist */,
@@ -138,6 +141,7 @@
 			files = (
 				4E3538822024CBFB00901DD3 /* ViewController.swift in Sources */,
 				4E3538802024CBFB00901DD3 /* AppDelegate.swift in Sources */,
+				4EE6B9F72027308E00E7B864 /* QuizzViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
