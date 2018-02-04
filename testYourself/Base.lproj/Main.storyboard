@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IFW-1h-0AJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -83,11 +83,15 @@
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.87990674361359655" green="0.36591944252226888" blue="0.25369849988224102" alpha="0.86606378424657537" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="Abh-KB-jQw" firstAttribute="centerY" secondItem="Vml-sT-htn" secondAttribute="centerY" id="6ej-74-iGH"/>
                                     <constraint firstItem="Abh-KB-jQw" firstAttribute="leading" secondItem="Vml-sT-htn" secondAttribute="leading" constant="22" id="Psr-me-QVY"/>
                                     <constraint firstAttribute="height" constant="100" id="SpZ-Ug-5ds"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="uVy-O3-3qh" appends="YES" id="jjr-Sq-mUq"/>
+                                </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u7p-PW-kEO" userLabel="ResultView">
                                 <rect key="frame" x="0.0" y="397" width="375" height="100"/>
@@ -112,11 +116,15 @@
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.46028815398966605" green="0.20216817375436888" blue="0.26888081024075638" alpha="0.70293771404109584" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="DnI-fk-2VF" firstAttribute="centerY" secondItem="u7p-PW-kEO" secondAttribute="centerY" id="CBw-af-lZf"/>
                                     <constraint firstItem="DnI-fk-2VF" firstAttribute="leading" secondItem="u7p-PW-kEO" secondAttribute="leading" constant="22" id="NMd-ou-vkE"/>
                                     <constraint firstAttribute="height" constant="100" id="hkg-bn-mHx"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="72B-Xd-qUL" appends="YES" id="TBH-Kb-cPB"/>
+                                </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ktO-lX-za8" userLabel="BottomView">
                                 <rect key="frame" x="0.0" y="497" width="375" height="100"/>
@@ -129,12 +137,16 @@
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.26733452382680961" green="0.20294748540137281" blue="0.35148104677345549" alpha="0.86665239726027399" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="fqv-ra-VBb" firstAttribute="centerX" secondItem="ktO-lX-za8" secondAttribute="centerX" id="GVq-8w-IEO"/>
                                     <constraint firstItem="fqv-ra-VBb" firstAttribute="centerY" secondItem="ktO-lX-za8" secondAttribute="centerY" id="IPn-Ac-KKJ"/>
                                     <constraint firstAttribute="height" constant="100" id="RIe-O6-aJ1"/>
                                     <constraint firstItem="fqv-ra-VBb" firstAttribute="leading" secondItem="ktO-lX-za8" secondAttribute="leading" constant="22" id="Ygk-nR-kDm"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="wzA-Gu-oKb" appends="YES" id="tbA-7c-b5j"/>
+                                </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tJf-Ab-PiZ" userLabel="FinalView">
                                 <rect key="frame" x="0.0" y="597" width="375" height="70"/>
@@ -180,6 +192,21 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="uVy-O3-3qh" userLabel="Pan Start View">
+                    <connections>
+                        <action selector="handlePan:" destination="BYZ-38-t0r" id="B8Y-A9-82f"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="72B-Xd-qUL" userLabel="Pan Result View">
+                    <connections>
+                        <action selector="handlePan:" destination="BYZ-38-t0r" id="rvH-J3-rQL"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="wzA-Gu-oKb" userLabel="Pan Bottom View">
+                    <connections>
+                        <action selector="handlePan:" destination="BYZ-38-t0r" id="b3a-dc-gFi"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
         </scene>
