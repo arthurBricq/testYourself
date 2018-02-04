@@ -14,11 +14,20 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        newTestView.center.x = self.view.center.x
+        previousResultView.center.x = self.view.center.x
+        moreAboutView.center.x = self.view.center.x
     }
+    
+    
+    // OUTLETS
+    @IBOutlet weak var newTestView: UIView!
+    @IBOutlet weak var previousResultView: UIView!
+    @IBOutlet weak var moreAboutView: UIView!
 
     @IBAction func handlePan(_ sender: UIPanGestureRecognizer) {
         let translation = sender.translation(in: self.view)
@@ -31,9 +40,11 @@ class ViewController: UIViewController {
         
         
             if sender.state == UIGestureRecognizerState.ended {
-                UIView.animate(withDuration: 0.5, delay: 0, options: UIViewAnimationOptions.curveEaseOut, animations: {
-                    senderView.center.x = screenCenter.x
-                }, completion: nil)
+                if senderView.center.x >= 0 {
+                    UIView.animate(withDuration: 0.5, delay: 0, options: UIViewAnimationOptions.curveEaseOut, animations: {
+                        senderView.center.x = screenCenter.x
+                    }, completion: nil)
+                }
             }
             
             if senderView.center.x < 0 {
@@ -41,14 +52,10 @@ class ViewController: UIViewController {
                     senderView.center.x = -screenCenter.x
                 }, completion: { (finished: Bool) in
                     self.performSegue(withIdentifier: "menuToNewTest", sender: nil)
-                    senderView.center.x = screenCenter.x
                 })
             }
         }
         sender.setTranslation(CGPoint.zero, in: self.view)
     }
-    
-    
-    @IBAction func unwindToMenu(unwindSegue: UIStoryboardSegue){}
 }
 
