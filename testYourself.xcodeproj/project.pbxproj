@@ -57,6 +57,8 @@
 		4E35387E2024CBFB00901DD3 /* testYourself */ = {
 			isa = PBXGroup;
 			children = (
+				4EE6B9F62027308E00E7B864 /* QuizzViewController.swift */,
+				4E3538812024CBFB00901DD3 /* ViewController.swift */,
 				4E35387F2024CBFB00901DD3 /* AppDelegate.swift */,
 				4E3538832024CBFB00901DD3 /* Main.storyboard */,
 				4E3538862024CBFB00901DD3 /* Assets.xcassets */,
@@ -69,8 +71,6 @@
 		4EE6B9F820279A1D00E7B864 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
-				4EE6B9F62027308E00E7B864 /* QuizzViewController.swift */,
-				4E3538812024CBFB00901DD3 /* ViewController.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
