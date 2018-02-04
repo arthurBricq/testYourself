@@ -11,12 +11,12 @@
     </dependencies>
     <customFonts key="customFonts">
         <array key="Avenir.ttc">
-            <string>Avenir-Book</string>
-            <string>Avenir-Heavy</string>
+            <string>Avenir-Light</string>
         </array>
         <array key="AvenirNextCondensed.ttc">
             <string>AvenirNextCondensed-DemiBold</string>
             <string>AvenirNextCondensed-Heavy</string>
+            <string>AvenirNextCondensed-Medium</string>
         </array>
     </customFonts>
     <scenes>
@@ -187,6 +187,21 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="Axy-8R-MSN">
+            <objects>
+                <viewController id="J67-Vz-Q4m" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="L59-r3-fwV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="D08-1P-XSx"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VJw-x6-O3C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1071" y="-637"/>
+        </scene>
         <!--Quizz View Controller-->
         <scene sceneID="fw9-x4-3mH">
             <objects>
@@ -195,73 +210,154 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose which test you want" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hxl-ju-mNa">
-                                <rect key="frame" x="9.5" y="55" width="356.5" height="41"/>
-                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Heavy" family="Avenir Next Condensed" pointSize="30"/>
-                                <color key="textColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="aoW-Ml-E2y">
-                                <rect key="frame" x="9" y="174" width="332.5" height="47"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Are you really smart ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z5U-ro-KBj">
-                                        <rect key="frame" x="0.0" y="0.0" width="276.5" height="47"/>
-                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="27"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZRZ-SX-mHq">
-                                        <rect key="frame" x="291.5" y="0.0" width="41" height="47"/>
-                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="25"/>
-                                        <state key="normal" title="GO"/>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="0ra-Q8-FSE">
-                                <rect key="frame" x="23" y="281" width="343" height="47"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Will you become rich ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="De6-zq-67s">
-                                        <rect key="frame" x="0.0" y="0.0" width="287" height="47"/>
-                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="27"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yuc-gf-jn5">
-                                        <rect key="frame" x="302" y="0.0" width="41" height="47"/>
-                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="25"/>
-                                        <state key="normal" title="GO"/>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="ix2-cY-d4K">
-                                <rect key="frame" x="48" y="375" width="279.5" height="47"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Are you deviant ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rJ8-P3-P6E">
-                                        <rect key="frame" x="0.0" y="0.0" width="223.5" height="47"/>
-                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="27"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dSw-ox-8vN">
-                                        <rect key="frame" x="238.5" y="0.0" width="41" height="47"/>
-                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="25"/>
-                                        <state key="normal" title="GO"/>
-                                    </button>
-                                </subviews>
-                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iS9-Nx-iSJ">
+                                <rect key="frame" x="15" y="80" width="345" height="537"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <stackView key="tableFooterView" opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" id="IE4-U9-J9Q">
+                                    <rect key="frame" x="0.0" y="0.0" width="345" height="472"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ply-ab-YgP" userLabel="NameStack">
+                                            <rect key="frame" x="10" y="0.0" width="325" height="81"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is your name ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mkQ-tR-GI1">
+                                                    <rect key="frame" x="0.0" y="0.0" width="219.5" height="41"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNextCondensed-Medium" family="Avenir Next Condensed" pointSize="30"/>
+                                                    <color key="textColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mfj-J2-Xto">
+                                                    <rect key="frame" x="0.0" y="51" width="325" height="30"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="IFW-1h-0AJ" id="zea-eZ-QUH"/>
+                                                    </connections>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Mfj-J2-Xto" firstAttribute="centerX" secondItem="ply-ab-YgP" secondAttribute="centerX" id="kP2-Z0-yMP"/>
+                                            </constraints>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dcw-xr-5BQ" userLabel="GenderStack">
+                                            <rect key="frame" x="10" y="131" width="325" height="81"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender ? " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GMB-93-mKq">
+                                                    <rect key="frame" x="0.0" y="0.0" width="103" height="41"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNextCondensed-Medium" family="Avenir Next Condensed" pointSize="30"/>
+                                                    <color key="textColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="jYW-nx-4Na">
+                                                    <rect key="frame" x="0.0" y="51" width="325" height="31"/>
+                                                    <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="myZ-EE-J1X"/>
+                                                    </constraints>
+                                                    <segments>
+                                                        <segment title="Female"/>
+                                                        <segment title="Male"/>
+                                                    </segments>
+                                                    <color key="tintColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </segmentedControl>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="jYW-nx-4Na" firstAttribute="centerX" secondItem="dcw-xr-5BQ" secondAttribute="centerX" id="Ify-qZ-UrQ"/>
+                                            </constraints>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="4jM-tb-hKG" userLabel="QuizzStack">
+                                            <rect key="frame" x="6" y="262" width="333.5" height="210"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose which test do you want?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hxl-ju-mNa">
+                                                    <rect key="frame" x="0.0" y="0.0" width="333.5" height="40"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNextCondensed-Medium" family="Avenir Next Condensed" pointSize="29"/>
+                                                    <color key="textColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="Uza-A0-xLd">
+                                                    <rect key="frame" x="0.0" y="50" width="333.5" height="160"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="aoW-Ml-E2y" userLabel="SmartStack">
+                                                            <rect key="frame" x="0.0" y="0.0" width="264.5" height="24"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Are you really smart ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z5U-ro-KBj">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="227.5" height="24"/>
+                                                                    <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="24"/>
+                                                                    <color key="textColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZRZ-SX-mHq">
+                                                                    <rect key="frame" x="242.5" y="0.0" width="22" height="24"/>
+                                                                    <color key="tintColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <state key="normal">
+                                                                        <color key="titleColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    </state>
+                                                                </button>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="0ra-Q8-FSE" userLabel="RichStack">
+                                                            <rect key="frame" x="0.0" y="59" width="279" height="33"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Will you become rich ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="De6-zq-67s">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="242" height="33"/>
+                                                                    <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="24"/>
+                                                                    <color key="textColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yuc-gf-jn5">
+                                                                    <rect key="frame" x="257" y="0.0" width="22" height="33"/>
+                                                                    <color key="tintColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <state key="normal">
+                                                                        <color key="titleColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    </state>
+                                                                </button>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="ix2-cY-d4K" userLabel="DeviantStack">
+                                                            <rect key="frame" x="0.0" y="127" width="222" height="33"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Are you deviant ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rJ8-P3-P6E">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="185" height="33"/>
+                                                                    <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="24"/>
+                                                                    <color key="textColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dSw-ox-8vN">
+                                                                    <rect key="frame" x="200" y="0.0" width="22" height="33"/>
+                                                                    <color key="tintColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <state key="normal">
+                                                                        <color key="titleColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    </state>
+                                                                </button>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="ply-ab-YgP" firstAttribute="leading" secondItem="IE4-U9-J9Q" secondAttribute="leading" constant="10" id="Apb-vK-bzO"/>
+                                        <constraint firstItem="dcw-xr-5BQ" firstAttribute="leading" secondItem="IE4-U9-J9Q" secondAttribute="leading" constant="10" id="dyz-pJ-l50"/>
+                                    </constraints>
+                                </stackView>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="hxl-ju-mNa" firstAttribute="centerX" secondItem="Fzc-ZW-o1b" secondAttribute="centerX" id="Zye-XU-2vb"/>
-                            <constraint firstItem="hxl-ju-mNa" firstAttribute="top" secondItem="Iye-NH-CMA" secondAttribute="top" constant="35" id="tBY-LV-io7"/>
+                            <constraint firstItem="Iye-NH-CMA" firstAttribute="trailing" secondItem="iS9-Nx-iSJ" secondAttribute="trailing" constant="15" id="40R-Li-XQU"/>
+                            <constraint firstItem="iS9-Nx-iSJ" firstAttribute="top" secondItem="Iye-NH-CMA" secondAttribute="top" constant="60" id="9BA-JM-Jia"/>
+                            <constraint firstItem="iS9-Nx-iSJ" firstAttribute="leading" secondItem="Iye-NH-CMA" secondAttribute="leading" constant="15" id="CFa-TM-VuW"/>
+                            <constraint firstItem="Iye-NH-CMA" firstAttribute="bottom" secondItem="iS9-Nx-iSJ" secondAttribute="bottom" constant="50" id="N5C-Hz-gCc"/>
+                            <constraint firstItem="iS9-Nx-iSJ" firstAttribute="centerX" secondItem="Fzc-ZW-o1b" secondAttribute="centerX" id="ZRx-75-WB6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Iye-NH-CMA"/>
                     </view>
                     <connections>
                         <outlet property="globalView" destination="Fzc-ZW-o1b" id="kwB-VN-f6k"/>
+                        <outlet property="segmentedControl" destination="jYW-nx-4Na" id="4e3-ND-j1n"/>
+                        <outlet property="textField" destination="Mfj-J2-Xto" id="4ck-Qa-jKN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nNu-LP-e6Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
