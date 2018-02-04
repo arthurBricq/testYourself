@@ -39,9 +39,9 @@ class QuizzViewController: UIViewController, UITextFieldDelegate {
     }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        // This function is called when the buton return is tapped.
+        // This function is called when the buton return is tapped. The view controller class must be part of UITextFieldDelegate. 
         self.view.endEditing(true)
-        return true 
+        return true
     }
     
 }
