@@ -190,6 +190,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <segue destination="IFW-1h-0AJ" kind="custom" identifier="menuToNewTest" customClass="CustomSegueRightToLeft" customModule="testYourself" customModuleProvider="target" id="Xkh-yp-zET"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <panGestureRecognizer minimumNumberOfTouches="1" id="uVy-O3-3qh" userLabel="Pan Start View">
@@ -217,7 +220,18 @@
                     <view key="view" contentMode="scaleToFill" id="Fzc-ZW-o1b">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dof-i8-2te">
+                                <rect key="frame" x="84" y="282.5" width="206" height="101"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="74"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dof-i8-2te" firstAttribute="centerY" secondItem="Fzc-ZW-o1b" secondAttribute="centerY" id="G6U-NF-1tf"/>
+                            <constraint firstItem="dof-i8-2te" firstAttribute="centerX" secondItem="Fzc-ZW-o1b" secondAttribute="centerX" id="K2M-sv-LxG"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Iye-NH-CMA"/>
                     </view>
                     <connections>
@@ -226,7 +240,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nNu-LP-e6Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1105" y="132"/>
+            <point key="canvasLocation" x="1104.8" y="131.78410794602701"/>
         </scene>
     </scenes>
     <resources>

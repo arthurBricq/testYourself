@@ -35,6 +35,15 @@ class ViewController: UIViewController {
                     senderView.center.x = screenCenter.x
                 }, completion: nil)
             }
+            
+            if senderView.center.x < 0 {
+                UIView.animate(withDuration: 0.3, delay: 0, options: UIViewAnimationOptions.curveEaseOut, animations: {
+                    senderView.center.x = -screenCenter.x
+                }, completion: { (finished: Bool) in
+                    self.performSegue(withIdentifier: "menuToNewTest", sender: nil)
+                    senderView.center.x = screenCenter.x
+                })
+            }
         }
         sender.setTranslation(CGPoint.zero, in: self.view)
     }
