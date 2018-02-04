@@ -21,6 +21,8 @@ class ViewController: UIViewController {
         newTestView.center.x = self.view.center.x
         previousResultView.center.x = self.view.center.x
         moreAboutView.center.x = self.view.center.x
+        
+        counterToPerformSegueOnlyOnce = true // Variable is true when we can perform the segue. We need it because without it, the actions perfom thousands of segues. 
     }
     
     
@@ -51,11 +53,16 @@ class ViewController: UIViewController {
                 UIView.animate(withDuration: 0.3, delay: 0, options: UIViewAnimationOptions.curveEaseOut, animations: {
                     senderView.center.x = -screenCenter.x
                 }, completion: { (finished: Bool) in
-                    self.performSegue(withIdentifier: "menuToNewTest", sender: nil)
+                    if counterToPerformSegueOnlyOnce {
+                        counterToPerformSegueOnlyOnce = false
+                        self.performSegue(withIdentifier: "menuToNewTest", sender: self)
+                    }
                 })
             }
         }
         sender.setTranslation(CGPoint.zero, in: self.view)
     }
+    
+    @IBAction func unwindToMenu(unwindSegue: UIStoryboardSegue){}
 }
 

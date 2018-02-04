@@ -223,7 +223,18 @@
                     <view key="view" contentMode="scaleToFill" id="Fzc-ZW-o1b">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2vs-j9-Rep">
+                                <rect key="frame" x="130" y="313.5" width="114" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="2vs-j9-Rep" firstAttribute="centerX" secondItem="Iye-NH-CMA" secondAttribute="centerX" id="yMo-qz-b9W"/>
+                            <constraint firstItem="2vs-j9-Rep" firstAttribute="centerY" secondItem="Iye-NH-CMA" secondAttribute="centerY" id="ydG-BK-ZxV"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Iye-NH-CMA"/>
                     </view>
                     <connections>
@@ -232,7 +243,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nNu-LP-e6Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1104.8" y="131.78410794602701"/>
+            <point key="canvasLocation" x="1318" y="6"/>
         </scene>
     </scenes>
     <resources>

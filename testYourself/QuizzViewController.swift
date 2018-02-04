@@ -14,9 +14,9 @@ class QuizzViewController: UIViewController {
         
         // Arranging the background (creating a gradient of color for the view)
         var expension = CGAffineTransform()
-        expension.a = 3
+        expension.a = 1
         expension.d = 2
-        expension.tx = -100
+        expension.tx = 0
         expension.ty = -300
         print(expension)
         gradient.frame = globalView.frame.applying(expension)
@@ -32,7 +32,5 @@ class QuizzViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
 
 }

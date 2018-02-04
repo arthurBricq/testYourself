@@ -11,12 +11,9 @@ import UIKit
 class CustomSegueRightToLeft: UIStoryboardSegue {
     override func perform() {
         
-        // recupere la fenetre de l'écran
-        let window = UIApplication.shared.keyWindow
-        
         // crée la vue source et celle de destination
-        let sourceView = self.source.view
-        let destinationView = self.destination.view
+        let sourceView = self.source.view as UIView!
+        let destinationView = self.destination.view as UIView!
         
         // recupere la hauteur et la largeur de l'écran
         let screenWidth = UIScreen.main.bounds.width
@@ -26,13 +23,17 @@ class CustomSegueRightToLeft: UIStoryboardSegue {
         destinationView?.frame = CGRect(x: screenWidth, y: 0, width: screenWidth, height: screenHeight)
         
         // ajoute la destination à l'écran de l'app au-dessus de la vue d'origine
+        let window = UIApplication.shared.keyWindow
         window?.insertSubview(destinationView!, aboveSubview: sourceView!)
         
-        UIView.animate(withDuration: 0.5, delay: 0, options: UIViewAnimationOptions.curveEaseInOut, animations: {
+        UIView.animate(withDuration: 1.5, delay: 0, options: [], animations: {
             sourceView?.frame = CGRect(x: -screenWidth, y: 0, width: screenWidth, height: screenHeight)
             destinationView?.frame = CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight)
-        }, completion: {(finished: Bool) in
-            self.source.present(self.destination, animated: false, completion: nil)
-        })
+            
+        }) {(Finished) in
+            self.source.present(self.destination as UIViewController, animated: false, completion: nil)
+            sourceView?.frame = CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight)
+            print("the view is changed.")
+        }
     }
 }
