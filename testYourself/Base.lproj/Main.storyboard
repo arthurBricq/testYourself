@@ -201,6 +201,33 @@
             </objects>
             <point key="canvasLocation" x="1105" y="132"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="jCv-Zg-7S3">
+            <objects>
+                <viewController id="rT9-zx-7jI" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FqC-M5-3D0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Previous Results" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zzj-eU-OAx">
+                                <rect key="frame" x="124.5" y="333" width="126" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Zzj-eU-OAx" firstAttribute="centerY" secondItem="gUR-I4-CZm" secondAttribute="centerY" id="Jbp-9G-P82"/>
+                            <constraint firstItem="Zzj-eU-OAx" firstAttribute="centerX" secondItem="gUR-I4-CZm" secondAttribute="centerX" id="Lzl-b9-7hF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gUR-I4-CZm"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Sj-p8-t8L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1098" y="857"/>
+        </scene>
     </scenes>
     <resources>
         <image name="alunosicon" width="1200" height="1200"/>
