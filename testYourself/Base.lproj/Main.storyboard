@@ -183,6 +183,34 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="VJM-aK-XKV">
+            <objects>
+                <viewController id="cTb-h8-wla" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Hil-ti-jOE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z5d-fU-qc7">
+                                <rect key="frame" x="166" y="323" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Z5d-fU-qc7" firstAttribute="leading" secondItem="Vbq-b0-QfJ" secondAttribute="leading" constant="166" id="DL9-oy-V8Z"/>
+                            <constraint firstItem="Vbq-b0-QfJ" firstAttribute="trailing" secondItem="Z5d-fU-qc7" secondAttribute="trailing" constant="167" id="Zs7-EM-9jz"/>
+                            <constraint firstItem="Z5d-fU-qc7" firstAttribute="top" secondItem="Vbq-b0-QfJ" secondAttribute="top" constant="303" id="vDF-ht-XFh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Vbq-b0-QfJ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eev-6F-ymd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="231" y="842"/>
+        </scene>
         <!--Quizz View Controller-->
         <scene sceneID="fw9-x4-3mH">
             <objects>
