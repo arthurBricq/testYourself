@@ -76,6 +76,7 @@ class ViewController: UIViewController {
                         } else if sender.view == self.resultView {
                             print("Segue to result")
                         } else if sender.view == self.bottomView {
+                            segueId = "VCToMoreAboutUs"
                             print("Segue to more about us")
                         }
                         

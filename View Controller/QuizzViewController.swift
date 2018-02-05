@@ -25,7 +25,6 @@ class QuizzViewController: UIViewController, UITextFieldDelegate {
         print(expension)
         gradient.frame = globalView.frame.applying(expension)
         print(gradient.frame)
-        //let myColor = UIColor(displayP3Red: 255, green: 168, blue: 52, alpha: 0.65)
         let myColor = UIColor(red: 255/255, green: 168/255, blue: 52/255, alpha: 0.7)
         gradient.colors = [ myColor.cgColor , UIColor.clear.cgColor]
         gradient.transform = CATransform3DMakeRotation(0*CGFloat.pi / 12, 0, 0, 1)
