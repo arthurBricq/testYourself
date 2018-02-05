@@ -201,6 +201,7 @@
                         <outlet property="viewsWidth" destination="cY6-R7-DsX" id="2r7-ib-Q7M"/>
                         <segue destination="IFW-1h-0AJ" kind="custom" identifier="VCToQuizzVC" customClass="CustomSegueRightToLeft" customModule="testYourself" customModuleProvider="target" id="VPd-nm-Rbh"/>
                         <segue destination="J67-Vz-Q4m" kind="custom" identifier="VCToMoreAboutUs" customClass="CustomSegueRightToLeft" customModule="testYourself" customModuleProvider="target" id="2uQ-wM-N3R"/>
+                        <segue destination="rT9-zx-7jI" kind="custom" identifier="VCToPreviousResultVC" customClass="CustomSegueRightToLeft" customModule="testYourself" customModuleProvider="target" id="Bhp-vv-dcy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -527,6 +528,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HLe-gx-RsJ">
                                 <rect key="frame" x="164" y="393" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="custom" customClass="CustomSegueLeftToRight" customModule="testYourself" customModuleProvider="target" id="hhd-rP-jPJ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -579,4 +583,7 @@
         <image name="done" width="512" height="512"/>
         <image name="test" width="512" height="512"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="hhd-rP-jPJ"/>
+    </inferredMetricsTieBreakers>
 </document>

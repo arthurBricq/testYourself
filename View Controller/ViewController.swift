@@ -74,6 +74,7 @@ class ViewController: UIViewController {
                             segueId = "VCToQuizzVC"
                             print("Segue to start a new test")
                         } else if sender.view == self.resultView {
+                            segueId = "VCToPreviousResultVC"
                             print("Segue to result")
                         } else if sender.view == self.bottomView {
                             segueId = "VCToMoreAboutUs"
