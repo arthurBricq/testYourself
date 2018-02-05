@@ -90,7 +90,7 @@
                                     <constraint firstAttribute="height" constant="100" id="SpZ-Ug-5ds"/>
                                 </constraints>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="uVy-O3-3qh" appends="YES" id="jjr-Sq-mUq"/>
+                                    <outletCollection property="gestureRecognizers" destination="dfD-Oh-pnW" appends="YES" id="15u-YK-nZx"/>
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u7p-PW-kEO" userLabel="ResultView">
@@ -123,7 +123,7 @@
                                     <constraint firstAttribute="height" constant="100" id="hkg-bn-mHx"/>
                                 </constraints>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="72B-Xd-qUL" appends="YES" id="TBH-Kb-cPB"/>
+                                    <outletCollection property="gestureRecognizers" destination="iqG-uX-brb" appends="YES" id="0hQ-hO-pNE"/>
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ktO-lX-za8" userLabel="BottomView">
@@ -145,7 +145,7 @@
                                     <constraint firstItem="fqv-ra-VBb" firstAttribute="leading" secondItem="ktO-lX-za8" secondAttribute="leading" constant="22" id="Ygk-nR-kDm"/>
                                 </constraints>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="wzA-Gu-oKb" appends="YES" id="tbA-7c-b5j"/>
+                                    <outletCollection property="gestureRecognizers" destination="eAJ-BF-J4h" appends="YES" id="dv6-CF-OoZ"/>
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tJf-Ab-PiZ" userLabel="FinalView">
@@ -174,6 +174,7 @@
                             <constraint firstItem="Vml-sT-htn" firstAttribute="top" secondItem="Jxg-cr-uWw" secondAttribute="bottom" id="2o9-b2-Fbl"/>
                             <constraint firstItem="ktO-lX-za8" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="4Xq-fB-khV"/>
                             <constraint firstAttribute="trailing" secondItem="tJf-Ab-PiZ" secondAttribute="trailing" id="Ian-9f-KhY"/>
+                            <constraint firstItem="Vml-sT-htn" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="KPA-7p-pOn"/>
                             <constraint firstItem="Jxg-cr-uWw" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="MeV-tR-hyx"/>
                             <constraint firstItem="u7p-PW-kEO" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="SXd-Fe-WIs"/>
                             <constraint firstItem="ktO-lX-za8" firstAttribute="top" secondItem="u7p-PW-kEO" secondAttribute="bottom" id="a8q-6r-QKu"/>
@@ -198,19 +199,19 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <panGestureRecognizer minimumNumberOfTouches="1" id="uVy-O3-3qh" userLabel="Pan Start View">
+                <panGestureRecognizer minimumNumberOfTouches="1" id="dfD-Oh-pnW" userLabel="Pan Start">
                     <connections>
-                        <action selector="handlePan:" destination="BYZ-38-t0r" id="B8Y-A9-82f"/>
+                        <action selector="handlePan:" destination="BYZ-38-t0r" id="1Nu-bw-PCf"/>
                     </connections>
                 </panGestureRecognizer>
-                <panGestureRecognizer minimumNumberOfTouches="1" id="72B-Xd-qUL" userLabel="Pan Result View">
+                <panGestureRecognizer minimumNumberOfTouches="1" id="iqG-uX-brb" userLabel="Pan Result">
                     <connections>
-                        <action selector="handlePan:" destination="BYZ-38-t0r" id="rvH-J3-rQL"/>
+                        <action selector="handlePan:" destination="BYZ-38-t0r" id="sKe-A3-k1J"/>
                     </connections>
                 </panGestureRecognizer>
-                <panGestureRecognizer minimumNumberOfTouches="1" id="wzA-Gu-oKb" userLabel="Pan Bottom View">
+                <panGestureRecognizer minimumNumberOfTouches="1" id="eAJ-BF-J4h" userLabel="Pan About">
                     <connections>
-                        <action selector="handlePan:" destination="BYZ-38-t0r" id="b3a-dc-gFi"/>
+                        <action selector="handlePan:" destination="BYZ-38-t0r" id="O5h-7F-l4F"/>
                     </connections>
                 </panGestureRecognizer>
             </objects>
@@ -228,6 +229,9 @@
                                 <rect key="frame" x="130" y="313.5" width="114" height="60"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="custom" customClass="CustomSegueLeftToRight" customModule="testYourself" customModuleProvider="target" id="ZVp-ZJ-2bW"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

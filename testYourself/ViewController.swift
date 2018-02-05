@@ -30,34 +30,37 @@ class ViewController: UIViewController {
     @IBOutlet weak var newTestView: UIView!
     @IBOutlet weak var previousResultView: UIView!
     @IBOutlet weak var moreAboutView: UIView!
-
+    
     @IBAction func handlePan(_ sender: UIPanGestureRecognizer) {
+        
         let translation = sender.translation(in: self.view)
         let screenCenter = self.view.center
         
         if let senderView = sender.view {
             if senderView.center.x + translation.x <= screenCenter.x {
-                senderView.center.x = senderView.center.x + translation.x
-            }
-        
-        
-            if sender.state == UIGestureRecognizerState.ended {
-                if senderView.center.x >= 0 {
-                    UIView.animate(withDuration: 0.5, delay: 0, options: UIViewAnimationOptions.curveEaseOut, animations: {
-                        senderView.center.x = screenCenter.x
-                    }, completion: nil)
+                if translation.x < 0 {
+                    senderView.center.x = senderView.center.x + translation.x
                 }
             }
-            
+        
             if senderView.center.x < 0 {
                 UIView.animate(withDuration: 0.3, delay: 0, options: UIViewAnimationOptions.curveEaseOut, animations: {
                     senderView.center.x = -screenCenter.x
                 }, completion: { (finished: Bool) in
                     if counterToPerformSegueOnlyOnce {
                         counterToPerformSegueOnlyOnce = false
-                        self.performSegue(withIdentifier: "menuToNewTest", sender: self)
+                        
+                        var segueId = "menuToNewTest"
+                        
+                        print(sender.name)
+                                                
+                        self.performSegue(withIdentifier: segueId, sender: self)
                     }
                 })
+            } else if sender.state == UIGestureRecognizerState.ended {
+                UIView.animate(withDuration: 0.3, delay: 0, options: UIViewAnimationOptions.curveEaseOut, animations: {
+                    senderView.center.x = screenCenter.x
+                }, completion: nil)
             }
         }
         sender.setTranslation(CGPoint.zero, in: self.view)

@@ -8,4 +8,5 @@
 
 import Foundation
 
+// variables utilisées pour les segues slide sur la premiere page
 var counterToPerformSegueOnlyOnce = true
