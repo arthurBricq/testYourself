@@ -18,7 +18,7 @@ class QuizzViewController: UIViewController, UITextFieldDelegate {
         
         // Arranging the background (creating a gradient of color for the view)
         var expension = CGAffineTransform()
-        expension.a = 3
+        expension.a = 1
         expension.d = 2
         expension.tx = -100
         expension.ty = -150

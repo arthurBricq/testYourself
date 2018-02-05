@@ -65,19 +65,19 @@
                                     <constraint firstItem="4SV-jx-Zpw" firstAttribute="top" secondItem="Jxg-cr-uWw" secondAttribute="top" constant="60" id="hWe-Ie-EZb"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vml-sT-htn" userLabel="StartView">
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vml-sT-htn" userLabel="StartView">
                                 <rect key="frame" x="0.0" y="296.5" width="375" height="100"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="Abh-KB-jQw">
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="Abh-KB-jQw">
                                         <rect key="frame" x="22" y="22.5" width="251.5" height="55"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start a new test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ydf-c2-79U">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Start a new test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ydf-c2-79U">
                                                 <rect key="frame" x="0.0" y="0.0" width="155.5" height="55"/>
                                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-DemiBold" family="Avenir Next Condensed" pointSize="27"/>
                                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test" translatesAutoresizingMaskIntoConstraints="NO" id="Slh-xO-sbp">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="test" translatesAutoresizingMaskIntoConstraints="NO" id="Slh-xO-sbp">
                                                 <rect key="frame" x="205.5" y="0.0" width="46" height="55"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="46" id="aaF-14-hCP"/>
@@ -88,11 +88,16 @@
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.87990674361359655" green="0.36591944252226888" blue="0.25369849988224102" alpha="0.86606378424657537" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="Abh-KB-jQw" firstAttribute="centerY" secondItem="Vml-sT-htn" secondAttribute="centerY" id="6ej-74-iGH"/>
                                     <constraint firstItem="Abh-KB-jQw" firstAttribute="leading" secondItem="Vml-sT-htn" secondAttribute="leading" constant="22" id="Psr-me-QVY"/>
                                     <constraint firstAttribute="height" constant="100" id="SpZ-Ug-5ds"/>
+                                    <constraint firstAttribute="width" constant="375" id="cY6-R7-DsX"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="dfD-Oh-pnW" appends="YES" id="15u-YK-nZx"/>
+                                </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u7p-PW-kEO" userLabel="ResultView">
                                 <rect key="frame" x="0.0" y="397" width="375" height="100"/>
@@ -117,11 +122,15 @@
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.46028815398966605" green="0.20216817375436888" blue="0.26888081024075638" alpha="0.70293771404109584" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="DnI-fk-2VF" firstAttribute="centerY" secondItem="u7p-PW-kEO" secondAttribute="centerY" id="CBw-af-lZf"/>
                                     <constraint firstItem="DnI-fk-2VF" firstAttribute="leading" secondItem="u7p-PW-kEO" secondAttribute="leading" constant="22" id="NMd-ou-vkE"/>
                                     <constraint firstAttribute="height" constant="100" id="hkg-bn-mHx"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="iqG-uX-brb" appends="YES" id="0hQ-hO-pNE"/>
+                                </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ktO-lX-za8" userLabel="BottomView">
                                 <rect key="frame" x="0.0" y="497" width="375" height="100"/>
@@ -134,12 +143,16 @@
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.26733452382680961" green="0.20294748540137281" blue="0.35148104677345549" alpha="0.86665239726027399" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="fqv-ra-VBb" firstAttribute="centerX" secondItem="ktO-lX-za8" secondAttribute="centerX" id="GVq-8w-IEO"/>
                                     <constraint firstItem="fqv-ra-VBb" firstAttribute="centerY" secondItem="ktO-lX-za8" secondAttribute="centerY" id="IPn-Ac-KKJ"/>
                                     <constraint firstAttribute="height" constant="100" id="RIe-O6-aJ1"/>
                                     <constraint firstItem="fqv-ra-VBb" firstAttribute="leading" secondItem="ktO-lX-za8" secondAttribute="leading" constant="22" id="Ygk-nR-kDm"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="eAJ-BF-J4h" appends="YES" id="dv6-CF-OoZ"/>
+                                </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tJf-Ab-PiZ" userLabel="FinalView">
                                 <rect key="frame" x="0.0" y="597" width="375" height="70"/>
@@ -177,14 +190,33 @@
                             <constraint firstItem="Jxg-cr-uWw" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="lQc-Fd-QLc"/>
                             <constraint firstItem="Jxg-cr-uWw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qBk-Sb-mgs"/>
                             <constraint firstItem="ktO-lX-za8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qjG-Zz-Gkh"/>
-                            <constraint firstItem="Vml-sT-htn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="sC8-sN-qgO"/>
                             <constraint firstItem="u7p-PW-kEO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wzH-NO-ThR"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Vml-sT-htn" secondAttribute="trailing" id="x8f-i4-YID"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="moreAboutView" destination="ktO-lX-za8" id="bM9-fW-ani"/>
+                        <outlet property="newTestView" destination="Vml-sT-htn" id="4JX-hi-J7u"/>
+                        <outlet property="previousResultView" destination="u7p-PW-kEO" id="wFo-3W-jp4"/>
+                        <outlet property="viewsWidth" destination="cY6-R7-DsX" id="2r7-ib-Q7M"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="dfD-Oh-pnW" userLabel="Pan Start">
+                    <connections>
+                        <action selector="handlePan:" destination="BYZ-38-t0r" id="1Nu-bw-PCf"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="iqG-uX-brb" userLabel="Pan Result">
+                    <connections>
+                        <action selector="handlePan:" destination="BYZ-38-t0r" id="sKe-A3-k1J"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="eAJ-BF-J4h" userLabel="Pan About">
+                    <connections>
+                        <action selector="handlePan:" destination="BYZ-38-t0r" id="O5h-7F-l4F"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
         </scene>
@@ -206,6 +238,7 @@
         <!--Quizz View Controller-->
         <scene sceneID="fw9-x4-3mH">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nNu-LP-e6Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="IFW-1h-0AJ" customClass="QuizzViewController" customModule="testYourself" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Fzc-ZW-o1b">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -361,7 +394,6 @@
                         <outlet property="textField" destination="Mfj-J2-Xto" id="4ck-Qa-jKN"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nNu-LP-e6Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1097" y="133"/>
         </scene>

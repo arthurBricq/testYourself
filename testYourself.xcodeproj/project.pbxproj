@@ -16,6 +16,9 @@
 		4EA6A5C82028C2A100215903 /* QuestionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA6A5C72028C2A100215903 /* QuestionTableViewController.swift */; };
 		4EA6A5CA2028C86200215903 /* Struct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA6A5C92028C86200215903 /* Struct.swift */; };
 		4EE6B9F72027308E00E7B864 /* QuizzViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE6B9F62027308E00E7B864 /* QuizzViewController.swift */; };
+		9CEAD926202792850038CA70 /* CustomSegueRightToLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEAD925202792850038CA70 /* CustomSegueRightToLeft.swift */; };
+		9CEAD92A20279D980038CA70 /* CustomSegueLeftToRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEAD92920279D980038CA70 /* CustomSegueLeftToRight.swift */; };
+		9CEAD92E2027AA9D0038CA70 /* variables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEAD92D2027AA9D0038CA70 /* variables.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		4EA6A5C72028C2A100215903 /* QuestionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewController.swift; sourceTree = "<group>"; };
 		4EA6A5C92028C86200215903 /* Struct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Struct.swift; sourceTree = "<group>"; };
 		4EE6B9F62027308E00E7B864 /* QuizzViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizzViewController.swift; sourceTree = "<group>"; };
+		9CEAD925202792850038CA70 /* CustomSegueRightToLeft.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegueRightToLeft.swift; sourceTree = "<group>"; };
+		9CEAD92920279D980038CA70 /* CustomSegueLeftToRight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegueLeftToRight.swift; sourceTree = "<group>"; };
+		9CEAD92D2027AA9D0038CA70 /* variables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = variables.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +168,7 @@
 				4EA6A5C82028C2A100215903 /* QuestionTableViewController.swift in Sources */,
 				4E3538802024CBFB00901DD3 /* AppDelegate.swift in Sources */,
 				4EE6B9F72027308E00E7B864 /* QuizzViewController.swift in Sources */,
+				9CEAD926202792850038CA70 /* CustomSegueRightToLeft.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,10 +306,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = A669ZDMYDX;
+				DEVELOPMENT_TEAM = 39B3D4SKXY;
 				INFOPLIST_FILE = testYourself/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.testYourself;
+				PRODUCT_BUNDLE_IDENTIFIER = bricqBros.testYourself;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -314,10 +321,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = A669ZDMYDX;
+				DEVELOPMENT_TEAM = 39B3D4SKXY;
 				INFOPLIST_FILE = testYourself/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.testYourself;
+				PRODUCT_BUNDLE_IDENTIFIER = bricqBros.testYourself;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
