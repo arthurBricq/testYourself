@@ -24,21 +24,30 @@ class QuestionTableViewController: UITableViewController {
 
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 0
+        return 1
     }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        let tmp = activeQuizz.allQuestions[activeQuestionIdentifier].answers.count
+        return tmp
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath) as! AnswerTableViewCell
+        
+        
+        let tmpRow = indexPath.row // Is the number of the answer index (...For each rows...)
+        let currentQuestion = activeQuizz.allQuestions[activeQuestionIdentifier] // Is the current question
+        let textToDisplay = currentQuestion.answers[tmpRow]
+        cell.textField.text = "test fuck it"
+        let test = 0
+        
+        // For each answers
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

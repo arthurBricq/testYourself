@@ -15,6 +15,7 @@
 		4EA6A5C62028B49400215903 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA6A5C52028B49400215903 /* GameViewController.swift */; };
 		4EA6A5C82028C2A100215903 /* QuestionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA6A5C72028C2A100215903 /* QuestionTableViewController.swift */; };
 		4EA6A5CA2028C86200215903 /* Struct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA6A5C92028C86200215903 /* Struct.swift */; };
+		4EA6A5CE202902A400215903 /* AnswerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA6A5CD202902A400215903 /* AnswerTableViewCell.swift */; };
 		4EE6B9F72027308E00E7B864 /* QuizzViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE6B9F62027308E00E7B864 /* QuizzViewController.swift */; };
 		9CEAD926202792850038CA70 /* CustomSegueRightToLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEAD925202792850038CA70 /* CustomSegueRightToLeft.swift */; };
 		9CEAD92A20279D980038CA70 /* CustomSegueLeftToRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEAD92920279D980038CA70 /* CustomSegueLeftToRight.swift */; };
@@ -32,6 +33,7 @@
 		4EA6A5C52028B49400215903 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		4EA6A5C72028C2A100215903 /* QuestionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewController.swift; sourceTree = "<group>"; };
 		4EA6A5C92028C86200215903 /* Struct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Struct.swift; sourceTree = "<group>"; };
+		4EA6A5CD202902A400215903 /* AnswerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerTableViewCell.swift; sourceTree = "<group>"; };
 		4EE6B9F62027308E00E7B864 /* QuizzViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizzViewController.swift; sourceTree = "<group>"; };
 		9CEAD925202792850038CA70 /* CustomSegueRightToLeft.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegueRightToLeft.swift; sourceTree = "<group>"; };
 		9CEAD92920279D980038CA70 /* CustomSegueLeftToRight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegueLeftToRight.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				4EA6A5C72028C2A100215903 /* QuestionTableViewController.swift */,
+				4EA6A5CD202902A400215903 /* AnswerTableViewCell.swift */,
 				4E3538812024CBFB00901DD3 /* ViewController.swift */,
 				4EE6B9F62027308E00E7B864 /* QuizzViewController.swift */,
 				4EA6A5C52028B49400215903 /* GameViewController.swift */,
@@ -184,6 +187,7 @@
 				9CEAD92A20279D980038CA70 /* CustomSegueLeftToRight.swift in Sources */,
 				9CEAD92E2027AA9D0038CA70 /* variables.swift in Sources */,
 				4EA6A5CA2028C86200215903 /* Struct.swift in Sources */,
+				4EA6A5CE202902A400215903 /* AnswerTableViewCell.swift in Sources */,
 				4EA6A5C62028B49400215903 /* GameViewController.swift in Sources */,
 				4E3538822024CBFB00901DD3 /* ViewController.swift in Sources */,
 				4EA6A5C82028C2A100215903 /* QuestionTableViewController.swift in Sources */,
