@@ -11,7 +11,6 @@ import UIKit
 
 // variables utilisées pour les segues slide sur la premiere page
 var counterToPerformSegueOnlyOnce = true
-var origineX : CGFloat = 0
 var initialDiff = CGFloat()
 var boleanTestTMP = true
 var xPos : CGFloat = 0

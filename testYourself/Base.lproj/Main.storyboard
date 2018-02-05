@@ -195,10 +195,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="moreAboutView" destination="ktO-lX-za8" id="bM9-fW-ani"/>
-                        <outlet property="newTestView" destination="Vml-sT-htn" id="4JX-hi-J7u"/>
-                        <outlet property="previousResultView" destination="u7p-PW-kEO" id="wFo-3W-jp4"/>
+                        <outlet property="bottomView" destination="ktO-lX-za8" id="ATg-oN-GVy"/>
+                        <outlet property="resultView" destination="u7p-PW-kEO" id="iZR-8r-tPk"/>
+                        <outlet property="startView" destination="Vml-sT-htn" id="TgG-C4-wYc"/>
                         <outlet property="viewsWidth" destination="cY6-R7-DsX" id="2r7-ib-Q7M"/>
+                        <segue destination="IFW-1h-0AJ" kind="custom" identifier="VCToQuizzVC" customClass="CustomSegueRightToLeft" customModule="testYourself" customModuleProvider="target" id="VPd-nm-Rbh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -227,18 +228,35 @@
                     <view key="view" contentMode="scaleToFill" id="L59-r3-fwV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="More About Us" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A0B-ga-qPo">
+                                <rect key="frame" x="130" y="323" width="115" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rsz-Ka-vQ0">
+                                <rect key="frame" x="164" y="403" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Rsz-Ka-vQ0" firstAttribute="centerX" secondItem="L59-r3-fwV" secondAttribute="centerX" id="2NM-5g-SBB"/>
+                            <constraint firstItem="A0B-ga-qPo" firstAttribute="centerX" secondItem="L59-r3-fwV" secondAttribute="centerX" id="LuT-VR-brd"/>
+                            <constraint firstItem="Rsz-Ka-vQ0" firstAttribute="top" secondItem="A0B-ga-qPo" secondAttribute="bottom" constant="59" id="TGm-fi-OkL"/>
+                            <constraint firstItem="A0B-ga-qPo" firstAttribute="centerY" secondItem="L59-r3-fwV" secondAttribute="centerY" id="qlT-70-dfW"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="D08-1P-XSx"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VJw-x6-O3C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1071" y="-637"/>
+            <point key="canvasLocation" x="137" y="971"/>
         </scene>
         <!--Quizz View Controller-->
         <scene sceneID="fw9-x4-3mH">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nNu-LP-e6Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="IFW-1h-0AJ" customClass="QuizzViewController" customModule="testYourself" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Fzc-ZW-o1b">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -252,7 +270,7 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ply-ab-YgP" userLabel="NameStack">
-                                            <rect key="frame" x="10" y="0.0" width="270" height="81"/>
+                                            <rect key="frame" x="10" y="0.0" width="325" height="81"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is your name ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mkQ-tR-GI1">
                                                     <rect key="frame" x="0.0" y="0.0" width="219.5" height="41"/>
@@ -261,7 +279,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mfj-J2-Xto">
-                                                    <rect key="frame" x="0.0" y="51" width="270" height="30"/>
+                                                    <rect key="frame" x="0.0" y="51" width="325" height="30"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -275,7 +293,7 @@
                                             </constraints>
                                         </stackView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dcw-xr-5BQ" userLabel="GenderStack">
-                                            <rect key="frame" x="10" y="131" width="270" height="81"/>
+                                            <rect key="frame" x="10" y="131" width="325" height="81"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender ? " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GMB-93-mKq">
                                                     <rect key="frame" x="0.0" y="0.0" width="103" height="41"/>
@@ -284,7 +302,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="jYW-nx-4Na">
-                                                    <rect key="frame" x="0.0" y="51" width="270" height="31"/>
+                                                    <rect key="frame" x="0.0" y="51" width="325" height="31"/>
                                                     <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="myZ-EE-J1X"/>
@@ -301,16 +319,16 @@
                                             </constraints>
                                         </stackView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="4jM-tb-hKG" userLabel="QuizzStack">
-                                            <rect key="frame" x="0.0" y="262" width="290" height="210"/>
+                                            <rect key="frame" x="6" y="262" width="333.5" height="210"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose which test do you want?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hxl-ju-mNa">
-                                                    <rect key="frame" x="0.0" y="0.0" width="290" height="40"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="333.5" height="40"/>
                                                     <fontDescription key="fontDescription" name="AvenirNextCondensed-Medium" family="Avenir Next Condensed" pointSize="29"/>
                                                     <color key="textColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="Uza-A0-xLd">
-                                                    <rect key="frame" x="0.0" y="50" width="290" height="160"/>
+                                                    <rect key="frame" x="0.0" y="50" width="333.5" height="160"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="aoW-Ml-E2y" userLabel="SmartStack">
                                                             <rect key="frame" x="0.0" y="0.0" width="264.5" height="24"/>
@@ -394,6 +412,7 @@
                         <outlet property="textField" destination="Mfj-J2-Xto" id="4ck-Qa-jKN"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nNu-LP-e6Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1310" y="67"/>
         </scene>
@@ -501,11 +520,17 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HLe-gx-RsJ">
+                                <rect key="frame" x="164" y="393" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Zzj-eU-OAx" firstAttribute="centerY" secondItem="gUR-I4-CZm" secondAttribute="centerY" id="Jbp-9G-P82"/>
                             <constraint firstItem="Zzj-eU-OAx" firstAttribute="centerX" secondItem="gUR-I4-CZm" secondAttribute="centerX" id="Lzl-b9-7hF"/>
+                            <constraint firstItem="HLe-gx-RsJ" firstAttribute="centerX" secondItem="FqC-M5-3D0" secondAttribute="centerX" id="XHr-0i-CiD"/>
+                            <constraint firstItem="HLe-gx-RsJ" firstAttribute="top" secondItem="Zzj-eU-OAx" secondAttribute="bottom" constant="39" id="gpD-Gw-gew"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gUR-I4-CZm"/>
                     </view>

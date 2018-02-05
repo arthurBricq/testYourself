@@ -19,18 +19,14 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool)
     {
         super.viewWillAppear(animated)
-        
-        newTestView.center.x = self.view.center.x
-        previousResultView.center.x = self.view.center.x
-        moreAboutView.center.x = self.view.center.x
         counterToPerformSegueOnlyOnce = true // Variable is true when we can perform the segue. We need it because without it, the actions perfom thousands of segues.
     }
     
     
     // OUTLETS
-    @IBOutlet weak var newTestView: UIView!
-    @IBOutlet weak var previousResultView: UIView!
-    @IBOutlet weak var moreAboutView: UIView!
+    @IBOutlet weak var startView: UIView!
+    @IBOutlet weak var resultView: UIView!
+    @IBOutlet weak var bottomView: UIView!
     @IBOutlet weak var viewsWidth: NSLayoutConstraint!
     
     
@@ -44,8 +40,7 @@ class ViewController: UIViewController {
         // Première fois que l'on touche l'écran, on appelle cette fonction
         if sender.state == UIGestureRecognizerState.began {
             boleanTestTMP = true
-            origineX = pointLocation.x
-            initialDiff = origineX - screenCenter.x
+            initialDiff = pointLocation.x - screenCenter.x
             print(initialDiff)
         }
         
@@ -72,7 +67,19 @@ class ViewController: UIViewController {
                     UIView.animate(withDuration: 0.5, animations: {
                         print("sleeping.......")
                     }, completion: { (tmp) in
-                        //self.performSegue(withIdentifier: "menuToNewTest", sender: self)
+                        
+                        var segueId = "VCToQuizzVC"
+                        
+                        if sender.view == self.startView {
+                            segueId = "VCToQuizzVC"
+                            print("Segue to start a new test")
+                        } else if sender.view == self.resultView {
+                            print("Segue to result")
+                        } else if sender.view == self.bottomView {
+                            print("Segue to more about us")
+                        }
+                        
+                        self.performSegue(withIdentifier: segueId, sender: self)
                     })
                 })
             }
