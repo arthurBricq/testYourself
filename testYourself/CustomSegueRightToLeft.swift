@@ -15,6 +15,10 @@ class CustomSegueRightToLeft: UIStoryboardSegue {
         let sourceView = self.source.view as UIView!
         let destinationView = self.destination.view as UIView!
         
+        /*let source = self.source as! ViewController
+        source.newTestView.center.x = -1000
+        let sourceView = source.view*/
+        
         // recupere la hauteur et la largeur de l'écran
         let screenWidth = UIScreen.main.bounds.width
         let screenHeight = UIScreen.main.bounds.height

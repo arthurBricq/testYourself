@@ -60,19 +60,19 @@
                                     <constraint firstItem="4SV-jx-Zpw" firstAttribute="top" secondItem="Jxg-cr-uWw" secondAttribute="top" constant="60" id="hWe-Ie-EZb"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vml-sT-htn" userLabel="StartView">
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vml-sT-htn" userLabel="StartView">
                                 <rect key="frame" x="0.0" y="296.5" width="375" height="100"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="Abh-KB-jQw">
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="Abh-KB-jQw">
                                         <rect key="frame" x="22" y="22.5" width="251.5" height="55"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start a new test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ydf-c2-79U">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Start a new test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ydf-c2-79U">
                                                 <rect key="frame" x="0.0" y="0.0" width="155.5" height="55"/>
                                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-DemiBold" family="Avenir Next Condensed" pointSize="27"/>
                                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test" translatesAutoresizingMaskIntoConstraints="NO" id="Slh-xO-sbp">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="test" translatesAutoresizingMaskIntoConstraints="NO" id="Slh-xO-sbp">
                                                 <rect key="frame" x="205.5" y="0.0" width="46" height="55"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="46" id="aaF-14-hCP"/>
@@ -88,6 +88,7 @@
                                     <constraint firstItem="Abh-KB-jQw" firstAttribute="centerY" secondItem="Vml-sT-htn" secondAttribute="centerY" id="6ej-74-iGH"/>
                                     <constraint firstItem="Abh-KB-jQw" firstAttribute="leading" secondItem="Vml-sT-htn" secondAttribute="leading" constant="22" id="Psr-me-QVY"/>
                                     <constraint firstAttribute="height" constant="100" id="SpZ-Ug-5ds"/>
+                                    <constraint firstAttribute="width" constant="375" id="cY6-R7-DsX"/>
                                 </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="dfD-Oh-pnW" appends="YES" id="15u-YK-nZx"/>
@@ -174,7 +175,6 @@
                             <constraint firstItem="Vml-sT-htn" firstAttribute="top" secondItem="Jxg-cr-uWw" secondAttribute="bottom" id="2o9-b2-Fbl"/>
                             <constraint firstItem="ktO-lX-za8" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="4Xq-fB-khV"/>
                             <constraint firstAttribute="trailing" secondItem="tJf-Ab-PiZ" secondAttribute="trailing" id="Ian-9f-KhY"/>
-                            <constraint firstItem="Vml-sT-htn" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="KPA-7p-pOn"/>
                             <constraint firstItem="Jxg-cr-uWw" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="MeV-tR-hyx"/>
                             <constraint firstItem="u7p-PW-kEO" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="SXd-Fe-WIs"/>
                             <constraint firstItem="ktO-lX-za8" firstAttribute="top" secondItem="u7p-PW-kEO" secondAttribute="bottom" id="a8q-6r-QKu"/>
@@ -185,9 +185,7 @@
                             <constraint firstItem="Jxg-cr-uWw" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="lQc-Fd-QLc"/>
                             <constraint firstItem="Jxg-cr-uWw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qBk-Sb-mgs"/>
                             <constraint firstItem="ktO-lX-za8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qjG-Zz-Gkh"/>
-                            <constraint firstItem="Vml-sT-htn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="sC8-sN-qgO"/>
                             <constraint firstItem="u7p-PW-kEO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wzH-NO-ThR"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Vml-sT-htn" secondAttribute="trailing" id="x8f-i4-YID"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -195,7 +193,7 @@
                         <outlet property="moreAboutView" destination="ktO-lX-za8" id="bM9-fW-ani"/>
                         <outlet property="newTestView" destination="Vml-sT-htn" id="4JX-hi-J7u"/>
                         <outlet property="previousResultView" destination="u7p-PW-kEO" id="wFo-3W-jp4"/>
-                        <segue destination="IFW-1h-0AJ" kind="custom" identifier="menuToNewTest" customClass="CustomSegueRightToLeft" customModule="testYourself" customModuleProvider="target" id="Xkh-yp-zET"/>
+                        <outlet property="viewsWidth" destination="cY6-R7-DsX" id="2r7-ib-Q7M"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -220,34 +218,20 @@
         <!--Quizz View Controller-->
         <scene sceneID="fw9-x4-3mH">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nNu-LP-e6Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="IFW-1h-0AJ" customClass="QuizzViewController" customModule="testYourself" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Fzc-ZW-o1b">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2vs-j9-Rep">
-                                <rect key="frame" x="130" y="313.5" width="114" height="60"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="custom" customClass="CustomSegueLeftToRight" customModule="testYourself" customModuleProvider="target" id="ZVp-ZJ-2bW"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="2vs-j9-Rep" firstAttribute="centerX" secondItem="Iye-NH-CMA" secondAttribute="centerX" id="yMo-qz-b9W"/>
-                            <constraint firstItem="2vs-j9-Rep" firstAttribute="centerY" secondItem="Iye-NH-CMA" secondAttribute="centerY" id="ydG-BK-ZxV"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Iye-NH-CMA"/>
                     </view>
                     <connections>
                         <outlet property="globalView" destination="Fzc-ZW-o1b" id="kwB-VN-f6k"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nNu-LP-e6Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1318" y="6"/>
+            <point key="canvasLocation" x="1310" y="67"/>
         </scene>
     </scenes>
     <resources>
