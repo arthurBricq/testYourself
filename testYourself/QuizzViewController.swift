@@ -20,8 +20,8 @@ class QuizzViewController: UIViewController, UITextFieldDelegate {
         var expension = CGAffineTransform()
         expension.a = 1
         expension.d = 2
-        expension.tx = -100
-        expension.ty = -150
+        expension.tx = 0
+        expension.ty = -300
         print(expension)
         gradient.frame = globalView.frame.applying(expension)
         print(gradient.frame)
