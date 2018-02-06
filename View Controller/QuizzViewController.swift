@@ -32,6 +32,7 @@ class QuizzViewController: UIViewController, UITextFieldDelegate {
         let textAttributes = [NSAttributedStringKey.foregroundColor: UIColor.darkGray, NSAttributedStringKey.font: myFont]
         segmentedControl.setTitleTextAttributes(textAttributes, for: .normal)
         segmentedControl.setTitleTextAttributes(textAttributes, for: .selected)
+        
     }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

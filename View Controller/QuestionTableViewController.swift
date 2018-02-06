@@ -8,10 +8,16 @@
 
 import UIKit
 
-class QuestionTableViewController: UITableViewController {
+class QuestionTableViewController: UITableViewController, TableViewCellDelegate
+{
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 140
+        
+        initialize_OneQuizzChecked()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,65 +30,89 @@ class QuestionTableViewController: UITableViewController {
 
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 0
+        let tmp = activeQuizz.allQuestions[activeQuestionIdentifier].answers.count
+        return tmp
     }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return 1
     }
 
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath) as! AnswerTableViewCell
+        
+        let tmpSection = indexPath.section // Is the number of the answer index (...For each rows...)
+        let currentQuestion = activeQuizz.allQuestions[activeQuestionIdentifier] // Is the current question
+        let textToDisplay = currentQuestion.answers[tmpSection]
+        cell.textField.text = textToDisplay.answer
+        
+        // Updating the buttons :
+        var buttonImage = UIImage()
+        let section = indexPath.section
+        print("for the section \(section), the state is given by \(OneQuizzChecked[activeQuestionIdentifier].isChecked[section]) ")
+        if OneQuizzChecked[activeQuestionIdentifier].isChecked[section] {
+            buttonImage = UIImage(named: "checkBox")!
+        } else {
+            buttonImage = UIImage(named: "uncheckBox")!
+        }
+        
+        cell.button.setImage(buttonImage, for: .normal)
+        
+        cell.delegate = self
+        
         return cell
     }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    
+    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 40
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+    
+    override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let footerView = UIView()
+        footerView.backgroundColor = UIColor.clear
+        return footerView
     }
-    */
+    
+    
+    // Buttons actions & logic
+    func userDidTapButton(_ sender: AnswerTableViewCell){
+        guard let tappedIndexPath = tableView.indexPath(for: sender) else { return }
+        let sectionTapped = tappedIndexPath.section
+        updateCheckedArray(forButtonInSection: sectionTapped)
+        self.tableView.reloadData()
+        
+        
+        var tmpIndexPath = IndexPath()
+        let sectionNumber = activeQuizz.allQuestions[activeQuestionIdentifier].answers.count-1
+        
+        for i in 0...sectionNumber {
+            let rowNumber = 0
+            tmpIndexPath = IndexPath(row: rowNumber, section: i)
+            tableView(self.tableView, cellForRowAt: tmpIndexPath)
 
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
+        }
     }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
+
+func updateCheckedArray(forButtonInSection: Int)
+{
+    let numberOfAnswers = activeQuizz.allQuestions[activeQuestionIdentifier].answers.count
+    // One verification of the logic
+    if numberOfAnswers != OneQuizzChecked[activeQuestionIdentifier].isChecked.count {
+        fatalError("There is a incoherence inside the different arrays.")
+    }
+    // Changing the previous result (if there is one, because we only can choose one correct answer)
+    for i in 0...numberOfAnswers-1 {
+        if OneQuizzChecked[activeQuestionIdentifier].isChecked[i] { // the answer number i is checked
+            if i != forButtonInSection { // The answer number i is not the one that the user tapped just now
+                OneQuizzChecked[activeQuestionIdentifier].isChecked[i] = false // Then it becomes false.
+            }
+        }
+    }
+    
+    OneQuizzChecked[activeQuestionIdentifier].isChecked[forButtonInSection] = true ;
+    describe_OneQuizzChecked()
+}
+
