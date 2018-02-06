@@ -221,7 +221,7 @@
                     </connections>
                 </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
+            <point key="canvasLocation" x="385" y="1"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Axy-8R-MSN">

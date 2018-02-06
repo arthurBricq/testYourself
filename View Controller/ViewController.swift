@@ -16,12 +16,20 @@ class ViewController: UIViewController {
         viewsWidth.constant = self.view.frame.width
     }
     
-    override func viewWillAppear(_ animated: Bool)
-    {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         counterToPerformSegueOnlyOnce = true // Variable is true when we can perform the segue. We need it because without it, the actions perfom thousands of segues.
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        print("viewWillDisappear : \(bottomView.center.x)")
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        print("viewDidDisappear : \(bottomView.center.x)")
+    }
     
     // OUTLETS
     @IBOutlet weak var startView: UIView!
@@ -41,7 +49,7 @@ class ViewController: UIViewController {
         if sender.state == UIGestureRecognizerState.began {
             boleanTestTMP = true
             initialDiff = pointLocation.x - screenCenter.x
-            print(initialDiff)
+            print("initialDiff = \(initialDiff)")
         }
         
         if boleanTestTMP == true { // Actualisation de la valeur si le test bouléin le permet.
@@ -63,7 +71,9 @@ class ViewController: UIViewController {
                 UIView.animate(withDuration: 1.0, delay: 0, options: .curveEaseInOut, animations: {
                     senderView.center.x = -screenCenter.x
                 }, completion: { (tmp) in
-                    print("done \(senderView.center.x)")
+                    
+                    print("Before sleep : \(senderView.center.x)")
+                    
                     UIView.animate(withDuration: 0.5, animations: {
                         print("sleeping.......")
                     }, completion: { (tmp) in
@@ -72,13 +82,13 @@ class ViewController: UIViewController {
                         
                         if sender.view == self.startView {
                             segueId = "VCToQuizzVC"
-                            print("Segue to start a new test")
+                            whichViewIsChanging = 1
                         } else if sender.view == self.resultView {
                             segueId = "VCToPreviousResultVC"
-                            print("Segue to result")
+                            whichViewIsChanging = 2
                         } else if sender.view == self.bottomView {
                             segueId = "VCToMoreAboutUs"
-                            print("Segue to more about us")
+                            whichViewIsChanging = 3
                         }
                         
                         self.performSegue(withIdentifier: segueId, sender: self)
