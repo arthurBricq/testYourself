@@ -57,7 +57,7 @@
                                         </constraints>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.99866424478250115" green="0.65890737563792456" blue="0.20220094259002866" alpha="0.65469820205479456" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.97254901960784312" green="0.77647058823529413" blue="0.4823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="Yz6-P2-LWS" firstAttribute="centerX" secondItem="Jxg-cr-uWw" secondAttribute="centerX" id="Ta8-tj-vSp"/>
                                     <constraint firstAttribute="bottom" secondItem="Yz6-P2-LWS" secondAttribute="bottom" constant="30" id="cB3-aA-hAt"/>
@@ -87,7 +87,7 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.87990674361359655" green="0.36591944252226888" blue="0.25369849988224102" alpha="0.86606378424657537" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.89371424913406372" green="0.45156091451644897" blue="0.35375922918319702" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="Abh-KB-jQw" firstAttribute="centerY" secondItem="Vml-sT-htn" secondAttribute="centerY" id="6ej-74-iGH"/>
@@ -121,7 +121,7 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.46028815398966605" green="0.20216817375436888" blue="0.26888081024075638" alpha="0.70293771404109584" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.62194555997848511" green="0.43913054466247559" blue="0.48628848791122437" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="DnI-fk-2VF" firstAttribute="centerY" secondItem="u7p-PW-kEO" secondAttribute="centerY" id="CBw-af-lZf"/>
@@ -142,7 +142,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.26733452382680961" green="0.20294748540137281" blue="0.35148104677345549" alpha="0.86665239726027399" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.3658522367477417" green="0.30961853265762329" blue="0.4387434720993042" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="fqv-ra-VBb" firstAttribute="centerX" secondItem="ktO-lX-za8" secondAttribute="centerX" id="GVq-8w-IEO"/>
@@ -167,7 +167,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.19370570049473615" green="0.26656740106583238" blue="0.4002085761035532" alpha="0.88819028253424659" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.28519093990325928" green="0.34937393665313721" blue="0.47123861312866211" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="Njk-Wb-Mzi" firstAttribute="centerY" secondItem="tJf-Ab-PiZ" secondAttribute="centerY" id="5Gq-YF-y6i"/>
                                     <constraint firstItem="Njk-Wb-Mzi" firstAttribute="centerX" secondItem="tJf-Ab-PiZ" secondAttribute="centerX" id="8g8-xf-sQT"/>
@@ -175,7 +175,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.97254901960784312" green="0.77647058823529413" blue="0.4823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Vml-sT-htn" firstAttribute="top" secondItem="Jxg-cr-uWw" secondAttribute="bottom" id="2o9-b2-Fbl"/>
                             <constraint firstItem="ktO-lX-za8" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="4Xq-fB-khV"/>
@@ -584,6 +584,6 @@
         <image name="test" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="LbY-mR-03t"/>
+        <segue reference="hhd-rP-jPJ"/>
     </inferredMetricsTieBreakers>
 </document>

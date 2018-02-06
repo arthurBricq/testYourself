@@ -11,7 +11,6 @@ class QuizzViewController: UIViewController, UITextFieldDelegate {
     // MARK : variables
     let gradient = CAGradientLayer()
     
-    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -20,14 +19,17 @@ class QuizzViewController: UIViewController, UITextFieldDelegate {
         var expension = CGAffineTransform()
         expension.a = 1
         expension.d = 2
-        expension.tx = 0
-        expension.ty = -300
+        expension.tx = -self.view.bounds.height
+        expension.ty = -self.view.bounds.height
         print(expension)
-        gradient.frame = globalView.frame.applying(expension)
+        //gradient.frame = globalView.frame.applying(expension)
+        
         print(gradient.frame)
-        let myColor = UIColor(red: 255/255, green: 168/255, blue: 52/255, alpha: 0.7)
-        gradient.colors = [ myColor.cgColor , UIColor.clear.cgColor]
-        gradient.transform = CATransform3DMakeRotation(0*CGFloat.pi / 12, 0, 0, 1)
+        let beginningColor = UIColor(red: 248/255, green: 198/255, blue: 123/255, alpha: 1)
+        let endColor = UIColor(red: 248/255, green: 198/255, blue: 123/255, alpha: 0.6)
+        gradient.colors = [beginningColor.cgColor , endColor.cgColor]
+        gradient.transform = CATransform3DMakeRotation(-CGFloat.pi / 2, 0, 0, 1)
+        gradient.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height)
         globalView.layer.insertSublayer(gradient, at: 0)
         
         // Changing the color of the text in the segmented control.
@@ -38,7 +40,7 @@ class QuizzViewController: UIViewController, UITextFieldDelegate {
     }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        // This function is called when the buton return is tapped. The view controller class must be part of UITextFieldDelegate. 
+        // This function is called when the buton return on the keyboard is tapped. The view controller class must be part of UITextFieldDelegate.
         self.view.endEditing(true)
         return true
     }
