@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uoW-nt-I6l">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -260,7 +260,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VJw-x6-O3C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-742" y="999"/>
+            <point key="canvasLocation" x="385" y="945"/>
         </scene>
         <!--Quizz View Controller-->
         <scene sceneID="fw9-x4-3mH">
@@ -446,7 +446,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nNu-LP-e6Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1309.5999999999999" y="66.11694152923539"/>
+            <point key="canvasLocation" x="1404" y="0.0"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="jlv-4t-vhG">
@@ -536,7 +536,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xiL-tr-8M5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2129" y="133"/>
+            <point key="canvasLocation" x="2266" y="0.0"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="jCv-Zg-7S3">
@@ -572,7 +572,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Sj-p8-t8L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1673" y="133"/>
+            <point key="canvasLocation" x="-649" y="0.0"/>
         </scene>
         <!--Question Table View Controller-->
         <scene sceneID="P4l-Zz-cDA">
@@ -633,7 +633,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qq5-IG-5Ls" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2129" y="797"/>
+            <point key="canvasLocation" x="2265" y="609"/>
         </scene>
     </scenes>
     <resources>
@@ -642,6 +642,7 @@
         <image name="test" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="VPd-nm-Rbh"/>
         <segue reference="45z-4Q-sJS"/>
     </inferredMetricsTieBreakers>
 </document>
