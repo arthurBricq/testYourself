@@ -8,6 +8,7 @@
 
 import Foundation
 
+// DATA MODEL FOR THE GAME : Three classes for the data model of the game : One quizz is made of several question, and for each question we have several answers, and for each answers we have several benefits.
 struct OneAnswer {
     var answer : String
     var benefits : [Int] // Ce tableau d'entier indique de combien de points sur 10 une propriété doit être augmenté si l'utilisateur choisi cette réponse là. A la fin de toutes les questions, on fait la somme pondérée de tous les points de toutes les catégories afin de déterminer la personnalité de l'utilisateur.
@@ -29,10 +30,44 @@ class OneQuizz
         self.allQuestions = allQuestios
         self.properties = properties
     }
+}
+
+// DATA MODEL FOR THE CHECKED ANSWERS BY THE PLAYER :
+struct OneAnswerChecked {
+    // For each question, when the player tap a button, it will mark to true the specific number of the section where the player tapped.
+    var isChecked : [Bool]
     
 }
 
+var OneQuizzChecked = [OneAnswerChecked]() // This is the variable with all the results.
 
+func initialize_OneQuizzChecked() {
+    // We must put false for each answers in eahc questions.
+    for i in 0...activeQuizz.allQuestions.count-1 // i représente l'index de toutes les questions (première question, deuxième question, ... , dernière question)
+    {
+        var TMP = [Bool]()
+        for j in 0...activeQuizz.allQuestions[i].answers.count-1 // j représente l'index de chaque réponse parmis une question (première réponse de la ième question, ... , dernière réponse de la ième question)
+        {
+            TMP.append(false)
+        }
+        var TMP2 = OneAnswerChecked(isChecked: TMP)
+        OneQuizzChecked.append(TMP2)
+        TMP.removeAll()
+        TMP2.isChecked.removeAll()
+    }
+}
+
+func describe_OneQuizzChecked() {
+    // This function is just to output all the elements of this array
+    for i in 0...activeQuizz.allQuestions.count-1 // i représente l'index de toutes les questions (première question, deuxième question, ... , dernière question)
+    {
+        print("Question \(i)")
+        for j in 0...activeQuizz.allQuestions[i].answers.count-1 // j représente l'index de chaque réponse parmis une question (première réponse de la ième question, ... , dernière réponse de la ième question)
+        {
+            print(OneQuizzChecked[i].isChecked[j])
+        }
+    }
+}
 
 
 // Création du premier quizz par A.B.

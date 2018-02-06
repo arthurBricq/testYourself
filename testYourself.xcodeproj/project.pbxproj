@@ -103,9 +103,9 @@
 		4EE6B9F820279A1D00E7B864 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				4E3538812024CBFB00901DD3 /* ViewController.swift */,
 				4EA6A5C72028C2A100215903 /* QuestionTableViewController.swift */,
 				4EA6A5CD202902A400215903 /* AnswerTableViewCell.swift */,
-				4E3538812024CBFB00901DD3 /* ViewController.swift */,
 				4EE6B9F62027308E00E7B864 /* QuizzViewController.swift */,
 				4EA6A5C52028B49400215903 /* GameViewController.swift */,
 			);

@@ -22,7 +22,7 @@ class AnswerTableViewCell: UITableViewCell {
     }
     
     // Outlets ----------------
-    @IBOutlet weak var textField: UITextView!
+    @IBOutlet weak var textField: UILabel!
     @IBOutlet weak var button: UIButton!
     
 }

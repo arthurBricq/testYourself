@@ -12,6 +12,11 @@ class QuestionTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 140
+        
+        initialize_OneQuizzChecked()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,29 +29,40 @@ class QuestionTableViewController: UITableViewController {
 
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let tmp = activeQuizz.allQuestions[activeQuestionIdentifier].answers.count
         return tmp
     }
-
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath) as! AnswerTableViewCell
         
-        
-        let tmpRow = indexPath.row // Is the number of the answer index (...For each rows...)
+        let tmpSection = indexPath.section // Is the number of the answer index (...For each rows...)
         let currentQuestion = activeQuizz.allQuestions[activeQuestionIdentifier] // Is the current question
-        let textToDisplay = currentQuestion.answers[tmpRow]
-        cell.textField.text = "test fuck it"
-        let test = 0
+        let textToDisplay = currentQuestion.answers[tmpSection]
+        cell.textField.text = textToDisplay.answer
+        print(cell.textField.text)
         
-        // For each answers
+        let buttonImage = UIImage(named: "uncheckBox")
+        cell.button.setImage(buttonImage, for: .normal)
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 40
+    }
+    
+    override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let footerView = UIView()
+        footerView.backgroundColor = UIColor.clear
+        return footerView
+    }
+    
     
 
     /*
