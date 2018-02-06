@@ -62,13 +62,13 @@ class ViewController: UIViewController {
                 print("Segue now")
                 counterToPerformSegueOnlyOnce = false
 
-                UIView.animate(withDuration: 1.0, delay: 0, options: .curveEaseInOut, animations: {
+                UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseInOut, animations: {
                     senderView.center.x = -screenCenter.x
                 }, completion: { (tmp) in
                     
                     print("Before sleep : \(senderView.center.x)")
                     
-                    UIView.animate(withDuration: 0.5, animations: {
+                    UIView.animate(withDuration: 0.3, animations: {
                         print("sleeping.......")
                     }, completion: { (tmp) in
                         

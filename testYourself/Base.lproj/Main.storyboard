@@ -13,6 +13,7 @@
         <array key="Avenir.ttc">
             <string>Avenir-Book</string>
             <string>Avenir-Light</string>
+            <string>Avenir-MediumOblique</string>
         </array>
         <array key="AvenirNextCondensed.ttc">
             <string>AvenirNextCondensed-DemiBold</string>
@@ -268,7 +269,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iS9-Nx-iSJ">
-                                <rect key="frame" x="15" y="80" width="345" height="537"/>
+                                <rect key="frame" x="15" y="105" width="345" height="512"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <stackView key="tableFooterView" opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" id="IE4-U9-J9Q">
                                     <rect key="frame" x="0.0" y="0.0" width="345" height="472"/>
@@ -400,14 +401,38 @@
                                     </constraints>
                                 </stackView>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xt4-Ae-clt" customClass="CustomButtonForTheQuizzMenu" customModule="testYourself" customModuleProvider="target">
+                                <rect key="frame" x="15" y="29" width="106" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="Q4z-zj-jzt"/>
+                                    <constraint firstAttribute="width" constant="106" id="ab9-dV-YMH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-MediumOblique" family="Avenir" pointSize="22"/>
+                                <state key="normal" title="Retour">
+                                    <color key="titleColor" red="0.15284707731916183" green="0.24981219532281126" blue="0.3851126269035533" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                        <color key="value" red="0.66628776696249647" green="0.71550096723347922" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="custom" customClass="CustomSegueLeftToRight" customModule="testYourself" customModuleProvider="target" id="45z-4Q-sJS"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Iye-NH-CMA" firstAttribute="trailing" secondItem="iS9-Nx-iSJ" secondAttribute="trailing" constant="15" id="40R-Li-XQU"/>
-                            <constraint firstItem="iS9-Nx-iSJ" firstAttribute="top" secondItem="Iye-NH-CMA" secondAttribute="top" constant="60" id="9BA-JM-Jia"/>
+                            <constraint firstItem="iS9-Nx-iSJ" firstAttribute="top" secondItem="Iye-NH-CMA" secondAttribute="top" constant="85" id="9BA-JM-Jia"/>
                             <constraint firstItem="iS9-Nx-iSJ" firstAttribute="leading" secondItem="Iye-NH-CMA" secondAttribute="leading" constant="15" id="CFa-TM-VuW"/>
                             <constraint firstItem="Iye-NH-CMA" firstAttribute="bottom" secondItem="iS9-Nx-iSJ" secondAttribute="bottom" constant="50" id="N5C-Hz-gCc"/>
+                            <constraint firstItem="xt4-Ae-clt" firstAttribute="leading" secondItem="Iye-NH-CMA" secondAttribute="leading" constant="15" id="Qx6-dH-Htn"/>
                             <constraint firstItem="iS9-Nx-iSJ" firstAttribute="centerX" secondItem="Fzc-ZW-o1b" secondAttribute="centerX" id="ZRx-75-WB6"/>
+                            <constraint firstItem="xt4-Ae-clt" firstAttribute="top" secondItem="Iye-NH-CMA" secondAttribute="top" constant="9" id="l3a-9F-geU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Iye-NH-CMA"/>
                     </view>
@@ -419,7 +444,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nNu-LP-e6Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1310" y="67"/>
+            <point key="canvasLocation" x="1309.5999999999999" y="66.11694152923539"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="jlv-4t-vhG">
@@ -584,6 +609,6 @@
         <image name="test" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="hhd-rP-jPJ"/>
+        <segue reference="45z-4Q-sJS"/>
     </inferredMetricsTieBreakers>
 </document>
