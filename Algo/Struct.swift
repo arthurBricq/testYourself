@@ -36,10 +36,8 @@ class OneQuizz
 struct OneAnswerChecked {
     // For each question, when the player tap a button, it will mark to true the specific number of the section where the player tapped.
     var isChecked : [Bool]
-    
+  
 }
-
-var OneQuizzChecked = [OneAnswerChecked]() // This is the variable with all the results.
 
 func initialize_OneQuizzChecked() {
     // We must put false for each answers in eahc questions.
@@ -75,7 +73,7 @@ func describe_OneQuizzChecked() {
 // benefits :
 let firstBenefits = ["good in physic/math","idiot","good in humain science","has lot of logic","not very studient but it's okay","he has a great mind","aware of things around him"]
 // First question
-let q1 = OnePartOfaQuizz(questionLabel: "What is a prime number", answers: [OneAnswer(answer: "number 1 is the only one.", benefits: [0,10,0,3,8,0,0]), OneAnswer(answer: "A number that has no other dividors than itself", benefits: [7,0,0,5,0,5,5]), OneAnswer(answer: "This doesn't mean anything to me.", benefits: [0,5,5,3,3,2,0])])
+let q1 = OnePartOfaQuizz(questionLabel: "What is a prime number ?", answers: [OneAnswer(answer: "number 1 is the only one.", benefits: [0,10,0,3,8,0,0]), OneAnswer(answer: "A number that has no other dividors than itself", benefits: [7,0,0,5,0,5,5]), OneAnswer(answer: "This doesn't mean anything to me.", benefits: [0,5,5,3,3,2,0])])
 
 // Second question: why does water evaporates.
 let ans1 = OneAnswer(answer: "Because the temperature and the pressure are making it passing from liquid state to gaseous state.", benefits: [10,0,0,10,4,5,10])
@@ -98,6 +96,10 @@ let q4 = OnePartOfaQuizz(questionLabel: "what is your favorite field?", answers:
 
 let firstQuizz = OneQuizz(title: "Are you really Smart ?", allQuestios: [q1,q2,q3,q4], properties: firstBenefits)
 
+
+
+// MARK : Those 3 variables are very important -------------------------------------
 var activeQuizz = firstQuizz // This is the test that the player decides to play.
 var activeQuestionIdentifier = 0  // the is the question that is being displayed.
+var OneQuizzChecked = [OneAnswerChecked]() // This is the variable with all the results that the player selected.
 

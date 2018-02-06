@@ -61,10 +61,17 @@ class GameViewController: UIViewController
         // 4) Setting the table view.
         tableViewWidth.constant = carWidth.constant - 20
         tableView.backgroundColor = UIColor.clear
+        // 5) Update the text view :
+        updateTextView()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    
+    func updateTextView() {
+        textView.text = activeQuizz.allQuestions[activeQuestionIdentifier].questionLabel
     }
     
 

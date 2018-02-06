@@ -25,4 +25,10 @@ class AnswerTableViewCell: UITableViewCell {
     @IBOutlet weak var textField: UILabel!
     @IBOutlet weak var button: UIButton!
     
+    // Delegate protocol
+    weak var delegate: TableViewCellDelegate?
+    
+    @IBAction func userDidTapButton(_ sender: UIButton) {
+        delegate?.userDidTapButton(self)
+    }
 }

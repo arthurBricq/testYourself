@@ -12,6 +12,7 @@
 		4E3538852024CBFB00901DD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E3538832024CBFB00901DD3 /* Main.storyboard */; };
 		4E3538872024CBFB00901DD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E3538862024CBFB00901DD3 /* Assets.xcassets */; };
 		4E35388A2024CBFB00901DD3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E3538882024CBFB00901DD3 /* LaunchScreen.storyboard */; };
+		4E7456FC202A1894006B3DB1 /* protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7456FB202A1894006B3DB1 /* protocol.swift */; };
 		4EA6A5C62028B49400215903 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA6A5C52028B49400215903 /* GameViewController.swift */; };
 		4EA6A5C82028C2A100215903 /* QuestionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA6A5C72028C2A100215903 /* QuestionTableViewController.swift */; };
 		4EA6A5CA2028C86200215903 /* Struct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA6A5C92028C86200215903 /* Struct.swift */; };
@@ -30,6 +31,7 @@
 		4E3538862024CBFB00901DD3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4E3538892024CBFB00901DD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4E35388B2024CBFB00901DD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E7456FB202A1894006B3DB1 /* protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = protocol.swift; sourceTree = "<group>"; };
 		4EA6A5C52028B49400215903 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		4EA6A5C72028C2A100215903 /* QuestionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewController.swift; sourceTree = "<group>"; };
 		4EA6A5C92028C86200215903 /* Struct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Struct.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				4EA6A5C92028C86200215903 /* Struct.swift */,
+				4E7456FB202A1894006B3DB1 /* protocol.swift */,
 				9CEAD92D2027AA9D0038CA70 /* variables.swift */,
 			);
 			path = Algo;
@@ -192,6 +195,7 @@
 				4E3538822024CBFB00901DD3 /* ViewController.swift in Sources */,
 				4EA6A5C82028C2A100215903 /* QuestionTableViewController.swift in Sources */,
 				4E3538802024CBFB00901DD3 /* AppDelegate.swift in Sources */,
+				4E7456FC202A1894006B3DB1 /* protocol.swift in Sources */,
 				4EE6B9F72027308E00E7B864 /* QuizzViewController.swift in Sources */,
 				9CEAD926202792850038CA70 /* CustomSegueRightToLeft.swift in Sources */,
 			);
