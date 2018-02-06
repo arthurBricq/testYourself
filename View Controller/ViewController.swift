@@ -21,14 +21,8 @@ class ViewController: UIViewController {
         counterToPerformSegueOnlyOnce = true // Variable is true when we can perform the segue. We need it because without it, the actions perfom thousands of segues.
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        print("viewWillDisappear : \(bottomView.center.x)")
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        print("viewDidDisappear : \(bottomView.center.x)")
+    override var prefersStatusBarHidden: Bool {
+        return true
     }
     
     // OUTLETS
