@@ -28,7 +28,7 @@ class CustomSegueRightToLeft: UIStoryboardSegue {
         let window = UIApplication.shared.keyWindow
         window?.insertSubview(destinationView!, aboveSubview: sourceView!)
         
-        UIView.animate(withDuration: 1.5, delay: 0, options: [], animations: {
+        UIView.animate(withDuration: 0.5, delay: 0, options: [], animations: {
             sourceView?.frame = CGRect(x: -screenWidth, y: 0, width: screenWidth, height: screenHeight)
             destinationView?.frame = CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight)
             
