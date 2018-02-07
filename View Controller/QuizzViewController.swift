@@ -8,6 +8,8 @@ class QuizzViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var nameView: UIView!
     @IBOutlet weak var textFieldWidth: NSLayoutConstraint!
+    @IBOutlet weak var genderView: UIView!
+    @IBOutlet weak var scrollView: UIScrollView!
     
     
     // MARK : variables
@@ -30,7 +32,7 @@ class QuizzViewController: UIViewController, UITextFieldDelegate {
         globalView.layer.insertSublayer(gradient, at: 0)
         
         // Changing the color of the text in the segmented control.
-        let myFont = UIFont(name: "Avenir", size: 16)
+        let myFont = UIFont(name: "Avenir", size: 20)
         let textAttributes = [NSAttributedStringKey.foregroundColor: UIColor.darkGray, NSAttributedStringKey.font: myFont]
         segmentedControl.setTitleTextAttributes(textAttributes, for: .normal)
         segmentedControl.setTitleTextAttributes(textAttributes, for: .selected)
@@ -43,6 +45,11 @@ class QuizzViewController: UIViewController, UITextFieldDelegate {
         nameViewWidthConstraint.isActive = true
         textFieldWidth.constant = 0.6*globalWidth
         
+        // Arranging the second stackView
+        genderView.center.x = self.view.center.x
+        segmentedControl.center.x = self.view.center.x
+        let genderViewWidthConstraint = NSLayoutConstraint(item: genderView, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: globalWidth)
+        genderViewWidthConstraint.isActive = true
     }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

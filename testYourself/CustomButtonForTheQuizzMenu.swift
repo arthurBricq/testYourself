@@ -13,7 +13,8 @@ import UIKit
     @IBInspectable var fillColor : UIColor = UIColor.blue
     @IBInspectable var cornerRadius : CGFloat = 5
     
-    override func draw(_ rect: CGRect) {
+    override func draw(_ rect: CGRect)
+    {
         // Drawing code
         
         let width = bounds.width
