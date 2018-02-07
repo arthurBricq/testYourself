@@ -6,6 +6,8 @@ class QuizzViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var globalView: UIView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var nameView: UIView!
+    @IBOutlet weak var textFieldWidth: NSLayoutConstraint!
     
     
     // MARK : variables
@@ -32,6 +34,14 @@ class QuizzViewController: UIViewController, UITextFieldDelegate {
         let textAttributes = [NSAttributedStringKey.foregroundColor: UIColor.darkGray, NSAttributedStringKey.font: myFont]
         segmentedControl.setTitleTextAttributes(textAttributes, for: .normal)
         segmentedControl.setTitleTextAttributes(textAttributes, for: .selected)
+        
+        // Arranging the first Stack
+        let globalWidth = self.view.frame.width
+        textField.center.x = self.view.center.x
+        nameView.center.x = self.view.center.x
+        let nameViewWidthConstraint = NSLayoutConstraint(item: nameView, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: globalWidth)
+        nameViewWidthConstraint.isActive = true
+        textFieldWidth.constant = 0.6*globalWidth
         
     }
 
