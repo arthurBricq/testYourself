@@ -32,6 +32,8 @@ import UIKit
         arrowPath.addLine(to: CGPoint(x: 0.20*width+1, y: 0.9*height))
         arrowPath.addLine(to: CGPoint(x: 0.20*width+1, y: 0.1*height))
         arrowPath.fill()
+        
     }
 
+    
 }

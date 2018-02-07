@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E06D89D202B7A4A004ECB34 /* CustomButton_ToGo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E06D89C202B7A4A004ECB34 /* CustomButton_ToGo.swift */; };
 		4E3538802024CBFB00901DD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E35387F2024CBFB00901DD3 /* AppDelegate.swift */; };
 		4E3538822024CBFB00901DD3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3538812024CBFB00901DD3 /* ViewController.swift */; };
 		4E3538852024CBFB00901DD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E3538832024CBFB00901DD3 /* Main.storyboard */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4E06D89C202B7A4A004ECB34 /* CustomButton_ToGo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton_ToGo.swift; sourceTree = "<group>"; };
 		4E35387C2024CBFB00901DD3 /* testYourself.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testYourself.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E35387F2024CBFB00901DD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4E3538812024CBFB00901DD3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -55,9 +57,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E06D89E202B831B004ECB34 /* CustomButtons */ = {
+			isa = PBXGroup;
+			children = (
+				4E06D89C202B7A4A004ECB34 /* CustomButton_ToGo.swift */,
+				9CE32B26202A1D850022CF5A /* CustomButtonForTheQuizzMenu.swift */,
+			);
+			path = CustomButtons;
+			sourceTree = "<group>";
+		};
 		4E3538732024CBFB00901DD3 = {
 			isa = PBXGroup;
 			children = (
+				4E06D89E202B831B004ECB34 /* CustomButtons */,
 				4EA6A5CC2028FEF800215903 /* Segues */,
 				4EA6A5CB2028FEE600215903 /* Algo */,
 				4EE6B9F820279A1D00E7B864 /* View Controller */,
@@ -79,7 +91,6 @@
 			children = (
 				4E35387F2024CBFB00901DD3 /* AppDelegate.swift */,
 				4E3538832024CBFB00901DD3 /* Main.storyboard */,
-				9CE32B26202A1D850022CF5A /* CustomButtonForTheQuizzMenu.swift */,
 				4E3538862024CBFB00901DD3 /* Assets.xcassets */,
 				4E3538882024CBFB00901DD3 /* LaunchScreen.storyboard */,
 				4E35388B2024CBFB00901DD3 /* Info.plist */,
@@ -196,6 +207,7 @@
 				4EA6A5CA2028C86200215903 /* Struct.swift in Sources */,
 				4EA6A5CE202902A400215903 /* AnswerTableViewCell.swift in Sources */,
 				4EA6A5C62028B49400215903 /* GameViewController.swift in Sources */,
+				4E06D89D202B7A4A004ECB34 /* CustomButton_ToGo.swift in Sources */,
 				4E3538822024CBFB00901DD3 /* ViewController.swift in Sources */,
 				4EA6A5C82028C2A100215903 /* QuestionTableViewController.swift in Sources */,
 				4E3538802024CBFB00901DD3 /* AppDelegate.swift in Sources */,
