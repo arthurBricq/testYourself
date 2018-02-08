@@ -706,6 +706,8 @@
                         <outlet property="carWidth" destination="FRb-2f-ilG" id="7qw-4X-l0X"/>
                         <outlet property="cardHeigh" destination="Zrn-Pg-tFw" id="m6r-UW-VCL"/>
                         <outlet property="cardView" destination="HVy-lY-ZJj" id="x2m-ac-Q1t"/>
+                        <outlet property="cardViewCenterX" destination="Od8-CG-1fd" id="9e4-10-TI5"/>
+                        <outlet property="cardViewCenterY" destination="nyw-xo-L4p" id="rr2-Vj-Jjt"/>
                         <outlet property="globalView" destination="qMD-Zy-tLj" id="eyQ-Gn-pT5"/>
                         <outlet property="progressionLabelWidth" destination="Z41-yO-lSl" id="HHR-td-c0a"/>
                         <outlet property="tableView" destination="geJ-m8-YrS" id="S3w-49-bEb"/>
