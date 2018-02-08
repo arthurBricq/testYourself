@@ -12,13 +12,19 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        viewsWidth.constant = self.view.frame.width
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         counterToPerformSegueOnlyOnce = true // Variable is true when we can perform the segue. We need it because without it, the actions perfom thousands of segues.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if isItTheFirstTimeTheViewAppear { // We want to do the animation only once.
+            animateTheView()
+        }
     }
     
     override var prefersStatusBarHidden: Bool {
@@ -29,9 +35,81 @@ class ViewController: UIViewController {
     @IBOutlet weak var startView: UIView!
     @IBOutlet weak var resultView: UIView!
     @IBOutlet weak var bottomView: UIView!
-    @IBOutlet weak var viewsWidth: NSLayoutConstraint!
+    @IBOutlet weak var titleView: UIStackView!
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var finalView: UIView!
+    @IBOutlet weak var topView: UIView!
+    // Constraints for the initial animation:
+    @IBOutlet weak var topViewTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var startViewCenterX: NSLayoutConstraint!
+    @IBOutlet weak var resultViewLeading: NSLayoutConstraint!
+    @IBOutlet weak var bottomViewLeading: NSLayoutConstraint!
+    @IBOutlet weak var finalViewLeading: NSLayoutConstraint!
+    @IBOutlet weak var upperConstraint: NSLayoutConstraint!
     
     
+    
+    func animateTheView()
+    {
+        // First, we give the view the initial position that we wanna have.
+        prepareForAnimation()
+        self.view.layoutIfNeeded()
+        isItTheFirstTimeTheViewAppear = false
+        
+        UIView.animate(withDuration: 1, delay: 0, options: [.curveEaseInOut, .allowAnimatedContent], animations: {
+            // First animation : making appear the 'Test Yourself Label''
+            self.upperConstraint.constant = 60
+            self.view.layoutIfNeeded()
+            
+        }) { (tmp1) in
+            UIView.animate(withDuration: 0.7, delay: 0, options: .curveEaseInOut, animations: {
+                // Second animation : making appear the startView
+                self.startViewCenterX.constant = 0
+                self.view.layoutIfNeeded()
+
+            }, completion: { (tmp2) in
+                UIView.animate(withDuration: 1, delay: 0, options: .curveEaseInOut, animations: {
+                    //Thir animation : making appear the resultView
+                    self.resultViewLeading.constant = 0
+                    self.view.layoutIfNeeded()
+
+                }, completion: { (tmp3) in
+                    UIView.animate(withDuration: 0.7, delay: 0, options: .curveEaseInOut, animations: {
+                        self.bottomViewLeading.constant = 0
+                        self.view.layoutIfNeeded()
+                        
+                    }, completion: { (tmp4) in
+                        UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseInOut, animations: {
+                            self.finalViewLeading.constant = 0
+                            self.view.layoutIfNeeded()
+
+                        }, completion: { (tmp5) in
+                            //
+                        })
+                    })
+                })
+                
+                
+            })
+        }
+        
+    }
+    
+    func prepareForAnimation() {
+        // First: making everything away
+        let screenWidth = self.view.bounds.width
+        print(screenWidth)
+        let topViewHeight = topView.bounds.height
+        print(topViewHeight)
+        startViewCenterX.constant = -screenWidth
+        resultViewLeading.constant = -2*screenWidth
+        bottomViewLeading.constant = -2*screenWidth
+        finalViewLeading.constant = -2*screenWidth
+        // topViewTopConstraint.constant = -topViewHeight
+        upperConstraint.constant = -250
+    }
+    
+    // MARK : Pan Gesture function 
     
     @IBAction func handlePan(_ sender: UIPanGestureRecognizer) {
         

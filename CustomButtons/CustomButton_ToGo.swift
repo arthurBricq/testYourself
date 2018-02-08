@@ -8,7 +8,7 @@
 
 import UIKit
 
-@IBDesignable class customButton: UIButton {
+class customButton: UIButton {
     
     // MARK : Variables
     @IBInspectable var cornerRadius : CGFloat = 3.0
@@ -23,29 +23,39 @@ import UIKit
         layer.cornerRadius = cornerRadius
         layer.borderWidth = lineWidth
         layer.borderColor = outerColor.cgColor
-        
-        if isThebuttonTapped {
-            layer.backgroundColor = outerColor.cgColor
-            titleLabel?.textColor = innerColor
-        } else {
-            layer.backgroundColor = innerColor.cgColor
-            titleLabel?.textColor = outerColor
-            
-        }
+        layer.backgroundColor = innerColor.cgColor
+        titleLabel?.textColor = outerColor
         
     }
     
     var isThebuttonTapped : Bool = false {
         didSet {
-            self.draw(layer.bounds)
+            if isThebuttonTapped {
+                layer.backgroundColor = outerColor.cgColor
+                titleLabel?.textColor = innerColor
+            } else {
+                layer.backgroundColor = innerColor.cgColor
+                titleLabel?.textColor = outerColor
+                
+            }
         }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        isThebuttonTapped = true
+        UIView.animate(withDuration: 0.1, delay: 0, options: .curveEaseInOut, animations: {
+            self.layer.backgroundColor = self.outerColor.cgColor
+            self.titleLabel?.textColor = self.innerColor
+        }) { (tmp) in
+            //
+        }
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        isThebuttonTapped = false
+        UIView.animate(withDuration: 0.1, delay: 0, options: .curveEaseInOut, animations: {
+            self.layer.backgroundColor = self.innerColor.cgColor
+            self.titleLabel?.textColor = self.outerColor
+        }) { (tmp) in
+            //
+        }
     }
 }

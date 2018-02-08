@@ -8,7 +8,7 @@
 
 import UIKit
 
-@IBDesignable class CustomButtonForTheQuizzMenu: UIButton {
+class CustomButtonForTheQuizzMenu: UIButton {
     
     @IBInspectable var fillColor : UIColor = UIColor.blue
     @IBInspectable var cornerRadius : CGFloat = 5

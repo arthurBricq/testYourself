@@ -28,7 +28,6 @@ class QuizzViewController: UIViewController, UITextFieldDelegate {
         gradient.transform = CATransform3DMakeRotation(-CGFloat.pi / 2, 0, 0, 1)
         // met le gradiant de la taille de l'écran
         gradient.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height)
-        print(gradient.frame)
         globalView.layer.insertSublayer(gradient, at: 0)
         
         // Changing the color of the text in the segmented control.

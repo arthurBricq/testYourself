@@ -18,6 +18,7 @@
 		4EA6A5C82028C2A100215903 /* QuestionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA6A5C72028C2A100215903 /* QuestionTableViewController.swift */; };
 		4EA6A5CA2028C86200215903 /* Struct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA6A5C92028C86200215903 /* Struct.swift */; };
 		4EA6A5CE202902A400215903 /* AnswerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA6A5CD202902A400215903 /* AnswerTableViewCell.swift */; };
+		4EE2D1AA202C7F0F00C4C3BC /* BricqBrosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE2D1A9202C7F0F00C4C3BC /* BricqBrosViewController.swift */; };
 		4EE6B9F72027308E00E7B864 /* QuizzViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE6B9F62027308E00E7B864 /* QuizzViewController.swift */; };
 		9CE32B27202A1D850022CF5A /* CustomButtonForTheQuizzMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE32B26202A1D850022CF5A /* CustomButtonForTheQuizzMenu.swift */; };
 		9CEAD926202792850038CA70 /* CustomSegueRightToLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEAD925202792850038CA70 /* CustomSegueRightToLeft.swift */; };
@@ -39,6 +40,7 @@
 		4EA6A5C72028C2A100215903 /* QuestionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewController.swift; sourceTree = "<group>"; };
 		4EA6A5C92028C86200215903 /* Struct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Struct.swift; sourceTree = "<group>"; };
 		4EA6A5CD202902A400215903 /* AnswerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerTableViewCell.swift; sourceTree = "<group>"; };
+		4EE2D1A9202C7F0F00C4C3BC /* BricqBrosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BricqBrosViewController.swift; path = "View Controller/BricqBrosViewController.swift"; sourceTree = SOURCE_ROOT; };
 		4EE6B9F62027308E00E7B864 /* QuizzViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizzViewController.swift; sourceTree = "<group>"; };
 		9CE32B26202A1D850022CF5A /* CustomButtonForTheQuizzMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonForTheQuizzMenu.swift; sourceTree = "<group>"; };
 		9CEAD925202792850038CA70 /* CustomSegueRightToLeft.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegueRightToLeft.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				4EA6A5CD202902A400215903 /* AnswerTableViewCell.swift */,
 				4EE6B9F62027308E00E7B864 /* QuizzViewController.swift */,
 				4EA6A5C52028B49400215903 /* GameViewController.swift */,
+				4EE2D1A9202C7F0F00C4C3BC /* BricqBrosViewController.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 				4E3538822024CBFB00901DD3 /* ViewController.swift in Sources */,
 				4EA6A5C82028C2A100215903 /* QuestionTableViewController.swift in Sources */,
 				4E3538802024CBFB00901DD3 /* AppDelegate.swift in Sources */,
+				4EE2D1AA202C7F0F00C4C3BC /* BricqBrosViewController.swift in Sources */,
 				4E7456FC202A1894006B3DB1 /* protocol.swift in Sources */,
 				4EE6B9F72027308E00E7B864 /* QuizzViewController.swift in Sources */,
 				9CEAD926202792850038CA70 /* CustomSegueRightToLeft.swift in Sources */,

@@ -15,3 +15,4 @@ var initialDiff = CGFloat()
 var boleanTestTMP = true
 var xPos : CGFloat = 0
 var whichViewIsChanging = 0
+var isItTheFirstTimeTheViewAppear = true 
