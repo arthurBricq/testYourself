@@ -56,19 +56,19 @@ class ViewController: UIViewController {
         self.view.layoutIfNeeded()
         isItTheFirstTimeTheViewAppear = false
         
-        UIView.animate(withDuration: 1, delay: 0, options: [.curveEaseInOut, .allowAnimatedContent], animations: {
+        UIView.animate(withDuration: 0.8, delay: 0, options: [.curveEaseInOut, .allowAnimatedContent], animations: {
             // First animation : making appear the 'Test Yourself Label''
             self.upperConstraint.constant = 60
             self.view.layoutIfNeeded()
             
         }) { (tmp1) in
-            UIView.animate(withDuration: 0.7, delay: 0, options: .curveEaseInOut, animations: {
+            UIView.animate(withDuration: 0.6, delay: 0, options: .curveEaseInOut, animations: {
                 // Second animation : making appear the startView
                 self.startViewCenterX.constant = 0
                 self.view.layoutIfNeeded()
 
             }, completion: { (tmp2) in
-                UIView.animate(withDuration: 1, delay: 0, options: .curveEaseInOut, animations: {
+                UIView.animate(withDuration: 0.8, delay: 0, options: .curveEaseInOut, animations: {
                     //Thir animation : making appear the resultView
                     self.resultViewLeading.constant = 0
                     self.view.layoutIfNeeded()
