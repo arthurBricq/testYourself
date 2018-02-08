@@ -44,7 +44,7 @@ func initialize_OneQuizzChecked() {
     for i in 0...activeQuizz.allQuestions.count-1 // i représente l'index de toutes les questions (première question, deuxième question, ... , dernière question)
     {
         var TMP = [Bool]()
-        for j in 0...activeQuizz.allQuestions[i].answers.count-1 // j représente l'index de chaque réponse parmis une question (première réponse de la ième question, ... , dernière réponse de la ième question)
+        for _ in 0...activeQuizz.allQuestions[i].answers.count-1 // j représente l'index de chaque réponse parmis une question (première réponse de la ième question, ... , dernière réponse de la ième question)
         {
             TMP.append(false)
         }

@@ -694,6 +694,7 @@
                                     </containerView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.62701045891421325" green="0.34937967520635926" blue="0.0012970667792734719" alpha="0.70871682363013699" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="fpC-oq-MWS" firstAttribute="leading" secondItem="HVy-lY-ZJj" secondAttribute="leading" constant="10" id="2iv-Pj-MlA"/>
                                     <constraint firstItem="geJ-m8-YrS" firstAttribute="centerX" secondItem="HVy-lY-ZJj" secondAttribute="centerX" id="Erc-J9-0lc"/>
@@ -704,6 +705,9 @@
                                     <constraint firstAttribute="bottom" secondItem="geJ-m8-YrS" secondAttribute="bottom" constant="20" id="mdl-0p-ZIX"/>
                                     <constraint firstItem="geJ-m8-YrS" firstAttribute="top" secondItem="fpC-oq-MWS" secondAttribute="bottom" constant="20" id="nfJ-v0-Rdo"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="RKb-UJ-KQ9" appends="YES" id="gXr-bE-yvC"/>
+                                </connections>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lQt-aP-VLb">
                                 <rect key="frame" x="37.5" y="30" width="300" height="50"/>
@@ -739,6 +743,8 @@
                         <outlet property="carWidth" destination="FRb-2f-ilG" id="7qw-4X-l0X"/>
                         <outlet property="cardHeigh" destination="Zrn-Pg-tFw" id="m6r-UW-VCL"/>
                         <outlet property="cardView" destination="HVy-lY-ZJj" id="x2m-ac-Q1t"/>
+                        <outlet property="cardViewCenterX" destination="Od8-CG-1fd" id="9e4-10-TI5"/>
+                        <outlet property="cardViewCenterY" destination="nyw-xo-L4p" id="rr2-Vj-Jjt"/>
                         <outlet property="globalView" destination="qMD-Zy-tLj" id="eyQ-Gn-pT5"/>
                         <outlet property="progressionLabelWidth" destination="Z41-yO-lSl" id="HHR-td-c0a"/>
                         <outlet property="tableView" destination="geJ-m8-YrS" id="S3w-49-bEb"/>
@@ -749,6 +755,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xiL-tr-8M5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="RKb-UJ-KQ9">
+                    <connections>
+                        <action selector="slideTheView:" destination="uoW-nt-I6l" id="G11-Il-Xwd"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2266" y="0.0"/>
         </scene>
