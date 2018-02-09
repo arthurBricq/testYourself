@@ -218,7 +218,7 @@
                         <outlet property="topViewTopConstraint" destination="lQc-Fd-QLc" id="0yy-U7-10l"/>
                         <outlet property="upperConstraint" destination="fE6-tq-Q2N" id="qe4-jZ-Qlu"/>
                         <segue destination="IFW-1h-0AJ" kind="custom" identifier="VCToQuizzVC" customClass="CustomSegueRightToLeft" customModule="testYourself" customModuleProvider="target" id="VPd-nm-Rbh"/>
-                        <segue destination="J67-Vz-Q4m" kind="custom" identifier="VCToMoreAboutUs" customClass="CustomSegueRightToLeft" customModule="testYourself" customModuleProvider="target" id="2uQ-wM-N3R"/>
+                        <segue destination="J67-Vz-Q4m" kind="custom" identifier="VCToMoreAboutUs" customClass="CustomSegueMenuToBricqBros" customModule="testYourself" customModuleProvider="target" id="2uQ-wM-N3R"/>
                         <segue destination="rT9-zx-7jI" kind="custom" identifier="VCToPreviousResultVC" customClass="CustomSegueRightToLeft" customModule="testYourself" customModuleProvider="target" id="Bhp-vv-dcy"/>
                     </connections>
                 </viewController>
@@ -256,7 +256,7 @@
                                     <color key="titleColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="custom" customClass="CustomSegueLeftToRight" customModule="testYourself" customModuleProvider="target" id="LbY-mR-03t"/>
+                                    <segue destination="BYZ-38-t0r" kind="custom" customClass="CustomSegueBackFromBricqBrosVC" customModule="testYourself" customModuleProvider="target" id="LbY-mR-03t"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bricq" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iZD-pg-2qC">

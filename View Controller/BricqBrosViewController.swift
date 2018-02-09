@@ -29,15 +29,23 @@ class BricqBrosViewController: UIViewController {
         updateTheBackground()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        prepareForAnimation()
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        prepareForAnimation()
-        animateTheView()
+        if !isInSegueFromMenuToBricqBros {
+            animateTheView()
+        }
     }
     
     func prepareForAnimation() {
         stackView.alpha = 0
         backButton.alpha = 0
+        bricqLabel.isHidden = true
+        brosLabel.isHidden = true
         
         initiativeTextLabel.alpha = 0
         inspirativeTextLabel.alpha = 0
@@ -49,6 +57,9 @@ class BricqBrosViewController: UIViewController {
     }
     
     func animateTheView() {
+        
+        bricqLabel.isHidden = false
+        brosLabel.isHidden = false
         
         UIView.animateKeyframes(withDuration: 12, delay: 0, options: .calculationModeLinear, animations: {
             

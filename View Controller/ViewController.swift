@@ -121,7 +121,6 @@ class ViewController: UIViewController {
         if sender.state == UIGestureRecognizerState.began {
             boleanTestTMP = true
             initialDiff = pointLocation.x - screenCenter.x
-            print("initialDiff = \(initialDiff)")
         }
         
         if boleanTestTMP == true { // Actualisation de la valeur si le test bouléin le permet.
@@ -137,14 +136,11 @@ class ViewController: UIViewController {
         {
             if counterToPerformSegueOnlyOnce {
                 boleanTestTMP = false
-                print("Segue now")
                 counterToPerformSegueOnlyOnce = false
 
                 UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseInOut, animations: {
                     senderView.center.x = -screenCenter.x
                 }, completion: { (tmp) in
-                    
-                    print("Before sleep : \(senderView.center.x)")
                     
                     UIView.animate(withDuration: 0.3, animations: {
                         print("sleeping.......")
