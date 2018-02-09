@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uoW-nt-I6l">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -674,26 +674,27 @@
                                 <rect key="frame" x="67.5" y="109.5" width="240" height="488"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="You enter a place where someone is dying, in front of 10000 dollars. What do you do ?" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fpC-oq-MWS">
-                                        <rect key="frame" x="10" y="15" width="210" height="150"/>
+                                        <rect key="frame" x="10" y="15" width="210" height="100"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="150" id="BEA-KN-KME"/>
+                                            <constraint firstAttribute="height" constant="100" id="BEA-KN-KME"/>
                                         </constraints>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="21"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="geJ-m8-YrS">
-                                        <rect key="frame" x="18" y="185" width="203" height="283"/>
+                                        <rect key="frame" x="18" y="135" width="203" height="333"/>
                                         <color key="backgroundColor" red="0.62701045891421325" green="0.097458305375867638" blue="0.13059308138851292" alpha="0.70695098458904104" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="203" id="Pn4-LW-eer"/>
                                         </constraints>
                                         <connections>
-                                            <segue destination="UGY-2T-g7e" kind="embed" id="uPh-1J-9Fd"/>
+                                            <segue destination="UGY-2T-g7e" kind="embed" identifier="TransitionToTableView" id="uPh-1J-9Fd"/>
                                         </connections>
                                     </containerView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.62701045891421325" green="0.34937967520635926" blue="0.0012970667792734719" alpha="0.70871682363013699" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.41107613150304567" green="0.22905781437574207" blue="0.00085037368411394298" alpha="0.70871682363013699" colorSpace="custom" customColorSpace="sRGB"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="fpC-oq-MWS" firstAttribute="leading" secondItem="HVy-lY-ZJj" secondAttribute="leading" constant="10" id="2iv-Pj-MlA"/>
@@ -752,6 +753,7 @@
                         <outlet property="textView" destination="fpC-oq-MWS" id="vnk-8N-DmS"/>
                         <outlet property="titleLabel" destination="lQt-aP-VLb" id="OcF-Dc-80E"/>
                         <outlet property="verticalCardCenter" destination="nyw-xo-L4p" id="lS9-Ye-GLJ"/>
+                        <segue destination="kgt-bo-8nz" kind="show" identifier="LastSegue" id="ry1-cb-1uq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xiL-tr-8M5" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -762,6 +764,21 @@
                 </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2266" y="0.0"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="3vm-aU-HGD">
+            <objects>
+                <viewController id="kgt-bo-8nz" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kRf-hy-vgL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="dMu-TT-1qy"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="40X-3P-CNU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3199" y="0.0"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="jCv-Zg-7S3">
@@ -804,7 +821,7 @@
             <objects>
                 <tableViewController id="UGY-2T-g7e" customClass="QuestionTableViewController" customModule="testYourself" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="PxN-k3-mrR">
-                        <rect key="frame" x="0.0" y="0.0" width="203" height="283"/>
+                        <rect key="frame" x="0.0" y="0.0" width="203" height="333"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -830,7 +847,7 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nvz-Wa-hFa">
                                             <rect key="frame" x="55" y="8.5" width="147" height="27.5"/>
                                             <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
-                                            <nil key="textColor"/>
+                                            <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>

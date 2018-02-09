@@ -25,6 +25,7 @@ class GameViewController: UIViewController
     @IBOutlet weak var cardViewCenterY: NSLayoutConstraint!
     
     
+    
     // MARK : variables
     let gradient = CAGradientLayer()
     
@@ -32,6 +33,7 @@ class GameViewController: UIViewController
     
     override func viewDidLoad()
     {
+        // We are going to arrange the view as we want it.
         super.viewDidLoad()
         
         // Creating the gradient :
@@ -50,7 +52,7 @@ class GameViewController: UIViewController
         
         // Arranging the card view as we want :
         // 1) The card view layer
-        cardHeigh.constant = globalView.frame.height*0.8
+        cardHeigh.constant = globalView.frame.height*0.65
         carWidth.constant = globalView.frame.width*0.9
         cardView.layer.cornerRadius = 20
         progressionLabelWidth.constant = carWidth.constant
@@ -74,9 +76,11 @@ class GameViewController: UIViewController
     
     func updateTextView() {
         textView.text = activeQuizz.allQuestions[activeQuestionIdentifier].questionLabel
+        
+        titleLabel.text = "Question Number \(activeQuestionIdentifier+1)"
     }
     
-    // MARK : PanGestureRecognizer
+    // MARK : PanGestureRecognizer ------------------------------------
     
     var hasToChangeTheView = false
     var isChangingTheView = false // Cette variable sert à ce que les segues ne soient pas appeler plusieurs fois lorsque la variable 'hasToChangeTheView' devient vrai.
@@ -127,29 +131,19 @@ class GameViewController: UIViewController
         }
         
     
-        if hasToChangeTheView { // Cela veut dire que cette variable vient d'être changé
-            if !isChangingTheView { // Cela permet de ne pas faire plusieurs appels.
+        if hasToChangeTheView { // Cela veut dire que cette variable vient d'être changé, et donc qu'une des conditions pour changer de vue a été complétée.
+            if !isChangingTheView { // Cela permet de ne pas faire plusieurs appels à cette fonction (puisqu'elle agit trop rapidement)
+                
                 hasToChangeTheView = false
                 isChangingTheView = true
                 hasToComeBackToIdentity = false
 
-                if tx+x > 0 {
+                if tx+x > 0 // L'utilisateur jète la carte vers la droite (donc RETOUR EN ARRIERE)
+                {
                     print("Doit partir vers la droite")
-                    if isItLastQuestion { // Si c'est la dernière question, il faut appeler le segue.
-                        
-                    } else { // Ce n'est pas la dernière question, donc il faut passer à la question suivante.
-                        UIView.animate(withDuration: 0.2, animations: {
-                            self.cardViewCenterX.constant = 400
-                            self.cardViewCenterY.constant = 80
-                            self.view.layoutIfNeeded()
-                        }, completion: { (tmp) in
-                            print(lastTeta)
-                            self.swipingRight(teta: lastTeta)
-                        })
-                    }
                     
-                } else if tx + x < 0 {
-                    if isItFirstQuestion // Dans ce cas, on ne peut pas retourner vers la gauche. Il faut donc faire l'identité.
+                    
+                    if isItFirstQuestion // Dans ce cas, on ne peut pas retourner en arrière. Il faut donc faire l'identité.
                     {
                         
                         UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseOut, animations: {
@@ -159,16 +153,85 @@ class GameViewController: UIViewController
                         hasToComeBackToIdentity = true
                         
                         
-                    } else { // Cela veut dire que ce n'est pas a première question/
+                    } else { // Cela veut dire que ce n'est pas a première question, donc on peut retourner en arrière
                         print("Doit partir vers la gauche")
-                        UIView.animate(withDuration: 0.2, animations: {
+                        UIView.animate(withDuration: 0.2, animations: { // On envoie la carte à droite de l'écran
+                            self.cardViewCenterX.constant = +400
+                            self.cardViewCenterY.constant = 80
+                            self.view.layoutIfNeeded()
+                        }, completion: { (tmp) in
+                            self.swipingToPreviousQuestion(teta: lastTeta)
+                        })
+                    }
+                    
+                    
+                    
+                } else if tx + x < 0
+                {
+                    // On commence par tester s'il s'agit de la dernière question.
+                    if activeQuestionIdentifier == activeQuizz.allQuestions.count-1 {
+                        isItLastQuestion = true
+                        print("Nous devons quitter cette page et passer au dernier ViewController ")
+                    } else {
+                        isItLastQuestion = false
+                    }
+                    
+                    print(isItLastQuestion)
+                    
+                    if isItLastQuestion { // Si c'est la dernière question, il faut appeler le segue.
+                        UIView.animate(withDuration: 0.2, animations: { // On envoie la carte vers la gauche (comme d'habitude)
                             self.cardViewCenterX.constant = -400
                             self.cardViewCenterY.constant = 80
                             self.view.layoutIfNeeded()
                         }, completion: { (tmp) in
-                            self.swipingLeft()
+                            // Partir sur la page suivante.
+                            self.performSegue(withIdentifier: "LastSegue", sender: self)
+                            
                         })
+                    } else
+                    { // Ce n'est pas la dernière question, donc il faut passer à la question suivante. Il faut juste vérifier qu'une réponse a bien été coché par l'utilisateur.
+                        
+                        let i = activeQuestionIdentifier
+                        var isOneAnswerChecked = false // Cette variable indique 'true' s'il y a une réponse cochée.
+                        let numberOfAnswers = activeQuizz.allQuestions[activeQuestionIdentifier].answers.count
+                        let arrayWithAnswers = OneQuizzChecked[i] // C'est un tableau de booléan qui indique quelle réponse est cochée par true (si une réponse est cochée)
+                        
+                        for tmp in 0...numberOfAnswers-1 {
+                            if arrayWithAnswers.isChecked[tmp] == true {
+                                isOneAnswerChecked = true
+                            }
+                        }
+                        
+                        if isOneAnswerChecked {
+                            print("il y a une réponse cochée")
+                        } else {
+                            print("il n'y a pas de réponse cochée")
+                        }
+                        
+                        if isOneAnswerChecked
+                        { // On peut donc passer à la question suivante.
+                            UIView.animate(withDuration: 0.2, animations: { // On envoie la carte vers la gauche.
+                                self.cardViewCenterX.constant = -400
+                                self.cardViewCenterY.constant = 80
+                                self.view.layoutIfNeeded()
+                            }, completion: { (tmp) in
+                                self.swipingToNextQuestion(teta: lastTeta)
+                            })
+                        } else
+                        { // On ne peut pas passer à la question suivante. Il faut donc revenir à l'identité.
+                            UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseOut, animations: {
+                                self.cardView.transform = CGAffineTransform.identity
+                            })
+                            isChangingTheView = false
+                            hasToComeBackToIdentity = true
+                        
+                        }
+                        
+    
                     }
+                    
+                    
+                    
                 }
             }
         }
@@ -189,24 +252,26 @@ class GameViewController: UIViewController
         sender.setTranslation(CGPoint.zero, in: self.view)
     }
 
-    func swipingRight(teta: CGFloat) {
+    func swipingToNextQuestion(teta: CGFloat) {
         // 1 -------- On passe à la question suivante et actualiser la tableView
         activeQuestionIdentifier += 1
-        tableView.layoutIfNeeded()
+        tableViewController.tableView.reloadData() // Cela permet d'actualiser les réponses
+        updateTextView() // Cela permet d'actualiser la question.
+        
         // 2 --------- On a besoin de faire apparaitre la vue par la gauche, commençons par la mettre à gauche.
-        cardViewCenterX.constant = -400
+        cardViewCenterX.constant = +400
         cardViewCenterY.constant = 80
         view.layoutIfNeeded()
         // 3 ----------- Puis il faut faire une rotation de -2teta pour la carte, avec teta qui est l'angle finale de rotation.
-        cardView.transform = CGAffineTransform(rotationAngle: -2*teta)
-        // Puis on fait l'apparition
+        cardView.transform = CGAffineTransform(rotationAngle: +2*teta)
+        // 4---------- Puis on fait l'apparition
         UIView.animate(withDuration: 0.3, delay: 0.5, options: .curveEaseIn, animations: {
             self.cardViewCenterX.constant = 0
             self.cardViewCenterY.constant = 20
             self.view.layoutIfNeeded()
             
         }) { (tmp) in
-        // 4 ---------Réactualiser les différentes variables de la logique.
+        // 5 ---------Réactualiser les différentes variables de la logique.
             if self.isItFirstQuestion {
                 self.isItFirstQuestion = false
             }
@@ -215,12 +280,50 @@ class GameViewController: UIViewController
             self.hasToComeBackToIdentity = true // On utilise cette variable pour que la vue ne revienne pas en arrière lorsqu'elle est censée quitter la page.
         
         }
+    }
+    
+    func swipingToPreviousQuestion(teta: CGFloat) {
+        //1) Actualiser les données de l'ancienne carte :
+        activeQuestionIdentifier -= 1
+        tableViewController.tableView.reloadData()
+        updateTextView()
         
+        //2) Mettre l'ancienne carte à droite
+        cardViewCenterX.constant = -400
+        cardViewCenterY.constant = 80
+        view.layoutIfNeeded()
+        
+        //3) Faire une rotation
+        cardView.transform = CGAffineTransform(rotationAngle: -2*teta)
+
+        //4) Faire apparaitre la carte
+        UIView.animate(withDuration: 0.3, delay: 0.5, options: .curveEaseInOut, animations: {
+            self.cardViewCenterX.constant = 0
+            self.cardViewCenterY.constant = 20
+            self.view.layoutIfNeeded()
+        }) { (tmp) in
+            if activeQuestionIdentifier == 0 {
+                self.isItFirstQuestion = true
+            }
+            self.hasToChangeTheView = false
+            self.isChangingTheView = false
+            self.hasToComeBackToIdentity = true
+        }
         
     }
     
-    func swipingLeft() {
-        activeQuestionIdentifier -= 1 // On passe à la question précedente
+    
+    // MARK : Logics and functions to handle correctly the container view with the tableView inside it, as a child View.
+    
+    var tableViewController = UITableViewController() // This is the child view.
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "TransitionToTableView")
+        {
+            print("the segue going to the table is done.")
+            tableViewController = segue.destination as! QuestionTableViewController
+            // Pass data to secondViewController before the transition
+        }
     }
     
 }

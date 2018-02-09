@@ -29,7 +29,8 @@ class QuestionTableViewController: UITableViewController, TableViewCellDelegate
     }
 
     // MARK: - Table view data source
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int
+    {
         let tmp = activeQuizz.allQuestions[activeQuestionIdentifier].answers.count
         return tmp
     }
@@ -45,13 +46,15 @@ class QuestionTableViewController: UITableViewController, TableViewCellDelegate
         
         let tmpSection = indexPath.section // Is the number of the answer index (...For each rows...)
         let currentQuestion = activeQuizz.allQuestions[activeQuestionIdentifier] // Is the current question
+        
+        // Updating the textField (which is actually a Label)
         let textToDisplay = currentQuestion.answers[tmpSection]
         cell.textField.text = textToDisplay.answer
+        cell.textField.sizeToFit()
         
         // Updating the buttons :
         var buttonImage = UIImage()
         let section = indexPath.section
-        print("for the section \(section), the state is given by \(OneQuizzChecked[activeQuestionIdentifier].isChecked[section]) ")
         if OneQuizzChecked[activeQuestionIdentifier].isChecked[section] {
             buttonImage = UIImage(named: "checkBox")!
         } else {
@@ -63,6 +66,17 @@ class QuestionTableViewController: UITableViewController, TableViewCellDelegate
         cell.delegate = self
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        /*
+         One problem : the heigh of the rows is not sufficient enough to display the text. So, we must create a logic that tells for each rows the estimated heigh.
+         */
+        
+        let specificAnswer = activeQuizz.allQuestions[activeQuestionIdentifier].answers[indexPath.section].answer // Ceci représente le texte à afficher.
+        
+        return 50
+        
     }
     
     override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
@@ -77,16 +91,19 @@ class QuestionTableViewController: UITableViewController, TableViewCellDelegate
     
     
     // Buttons actions & logic
-    func userDidTapButton(_ sender: AnswerTableViewCell){
+    func userDidTapButton(_ sender: AnswerTableViewCell)
+    {
+        /*
+         Cette fonction est appelée quand l'utilisateur tappe sur un boutton.
+        */
         guard let tappedIndexPath = tableView.indexPath(for: sender) else { return }
         let sectionTapped = tappedIndexPath.section
         updateCheckedArray(forButtonInSection: sectionTapped)
         self.tableView.reloadData()
         
-        
+        // Recharger les données.
         var tmpIndexPath = IndexPath()
         let sectionNumber = activeQuizz.allQuestions[activeQuestionIdentifier].answers.count-1
-        
         for i in 0...sectionNumber {
             let rowNumber = 0
             tmpIndexPath = IndexPath(row: rowNumber, section: i)
