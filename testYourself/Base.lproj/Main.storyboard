@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uoW-nt-I6l">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -218,7 +218,7 @@
                         <outlet property="topViewTopConstraint" destination="lQc-Fd-QLc" id="0yy-U7-10l"/>
                         <outlet property="upperConstraint" destination="fE6-tq-Q2N" id="qe4-jZ-Qlu"/>
                         <segue destination="IFW-1h-0AJ" kind="custom" identifier="VCToQuizzVC" customClass="CustomSegueRightToLeft" customModule="testYourself" customModuleProvider="target" id="VPd-nm-Rbh"/>
-                        <segue destination="J67-Vz-Q4m" kind="custom" identifier="VCToMoreAboutUs" customClass="CustomSegueRightToLeft" customModule="testYourself" customModuleProvider="target" id="2uQ-wM-N3R"/>
+                        <segue destination="J67-Vz-Q4m" kind="custom" identifier="VCToMoreAboutUs" customClass="CustomSegueMenuToBricqBros" customModule="testYourself" customModuleProvider="target" id="2uQ-wM-N3R"/>
                         <segue destination="rT9-zx-7jI" kind="custom" identifier="VCToPreviousResultVC" customClass="CustomSegueRightToLeft" customModule="testYourself" customModuleProvider="target" id="Bhp-vv-dcy"/>
                     </connections>
                 </viewController>
@@ -256,7 +256,7 @@
                                     <color key="titleColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="custom" customClass="CustomSegueLeftToRight" customModule="testYourself" customModuleProvider="target" id="LbY-mR-03t"/>
+                                    <segue destination="BYZ-38-t0r" kind="custom" customClass="CustomSegueBackFromBricqBrosVC" customModule="testYourself" customModuleProvider="target" id="LbY-mR-03t"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bricq" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iZD-pg-2qC">
@@ -266,30 +266,30 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=".Bros" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R4A-zn-ZmC">
-                                <rect key="frame" x="121.5" y="200" width="133" height="82"/>
+                                <rect key="frame" x="121" y="200" width="133" height="82"/>
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Heavy" family="Avenir Next Condensed" pointSize="60"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="G7m-gp-bHQ">
-                                <rect key="frame" x="120" y="315.5" width="136" height="131.5"/>
+                                <rect key="frame" x="119.5" y="315.5" width="136" height="131.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Two brothers." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g6W-KM-oc6">
                                         <rect key="frame" x="0.0" y="0.0" width="102.5" height="30.5"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="22"/>
-                                        <color key="textColor" red="0.83921568629999999" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="One same goal." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bCa-Pw-vil">
-                                        <rect key="frame" x="0.0" y="50.5" width="120.5" height="30.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="One goal." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bCa-Pw-vil">
+                                        <rect key="frame" x="0.0" y="50.5" width="75" height="30.5"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="22"/>
-                                        <color key="textColor" red="0.83921568629999999" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To build the futur." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gkz-bH-pW8">
                                         <rect key="frame" x="0.0" y="101" width="136" height="30.5"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="22"/>
-                                        <color key="textColor" red="0.83921568629999999" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -721,7 +721,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="nKg-kK-8Ie">
-                                <rect key="frame" x="62" y="632" width="250" height="5"/>
+                                <rect key="frame" x="62.5" y="632" width="250" height="5"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="Z41-yO-lSl"/>
@@ -796,7 +796,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HLe-gx-RsJ">
-                                <rect key="frame" x="164" y="393" width="46" height="30"/>
+                                <rect key="frame" x="164.5" y="393" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="custom" customClass="CustomSegueLeftToRight" customModule="testYourself" customModuleProvider="target" id="hhd-rP-jPJ"/>
