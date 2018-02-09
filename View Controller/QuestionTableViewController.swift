@@ -13,6 +13,7 @@ class QuestionTableViewController: UITableViewController, TableViewCellDelegate
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 140
         
@@ -68,19 +69,10 @@ class QuestionTableViewController: UITableViewController, TableViewCellDelegate
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        /*
-         One problem : the heigh of the rows is not sufficient enough to display the text. So, we must create a logic that tells for each rows the estimated heigh.
-         */
-        
-        let specificAnswer = activeQuizz.allQuestions[activeQuestionIdentifier].answers[indexPath.section].answer // Ceci représente le texte à afficher.
-        
-        return 50
-        
-    }
+    
     
     override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 40
+        return 10
     }
     
     override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {

@@ -747,6 +747,7 @@
                         <outlet property="cardViewCenterX" destination="Od8-CG-1fd" id="9e4-10-TI5"/>
                         <outlet property="cardViewCenterY" destination="nyw-xo-L4p" id="rr2-Vj-Jjt"/>
                         <outlet property="globalView" destination="qMD-Zy-tLj" id="eyQ-Gn-pT5"/>
+                        <outlet property="progression" destination="nKg-kK-8Ie" id="wbw-oh-tTd"/>
                         <outlet property="progressionLabelWidth" destination="Z41-yO-lSl" id="HHR-td-c0a"/>
                         <outlet property="tableView" destination="geJ-m8-YrS" id="S3w-49-bEb"/>
                         <outlet property="tableViewWidth" destination="Pn4-LW-eer" id="0c7-Yf-AFr"/>
@@ -853,11 +854,13 @@
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
+                                        <constraint firstItem="Nvz-Wa-hFa" firstAttribute="top" secondItem="X23-6z-iLf" secondAttribute="top" constant="8" id="APl-Sg-nTQ"/>
                                         <constraint firstItem="fJi-JE-n1B" firstAttribute="centerY" secondItem="X23-6z-iLf" secondAttribute="centerY" id="JMp-0H-zN0"/>
                                         <constraint firstItem="Nvz-Wa-hFa" firstAttribute="centerY" secondItem="X23-6z-iLf" secondAttribute="centerY" id="Mme-vW-REX"/>
                                         <constraint firstItem="Nvz-Wa-hFa" firstAttribute="leading" secondItem="fJi-JE-n1B" secondAttribute="trailing" constant="20" id="RqA-WJ-OWX"/>
                                         <constraint firstItem="fJi-JE-n1B" firstAttribute="leading" secondItem="X23-6z-iLf" secondAttribute="leading" constant="5" id="SIu-PT-rld"/>
                                         <constraint firstAttribute="trailing" secondItem="Nvz-Wa-hFa" secondAttribute="trailing" constant="1" id="Vah-aq-zMx"/>
+                                        <constraint firstAttribute="bottom" secondItem="Nvz-Wa-hFa" secondAttribute="bottom" constant="8" id="cOB-TO-vXh"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

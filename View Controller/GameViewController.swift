@@ -23,6 +23,7 @@ class GameViewController: UIViewController
     @IBOutlet var progressionLabelWidth: NSLayoutConstraint!
     @IBOutlet weak var cardViewCenterX: NSLayoutConstraint!
     @IBOutlet weak var cardViewCenterY: NSLayoutConstraint!
+    @IBOutlet weak var progression: UIProgressView!
     
     
     
@@ -78,6 +79,11 @@ class GameViewController: UIViewController
         textView.text = activeQuizz.allQuestions[activeQuestionIdentifier].questionLabel
         
         titleLabel.text = "Question Number \(activeQuestionIdentifier+1)"
+        
+        let totalNumberOfQuestions = activeQuizz.allQuestions.count
+        let progress = Float(activeQuestionIdentifier+1)/Float(totalNumberOfQuestions)
+        progression.setProgress(progress, animated: true)
+        print("progress : \(progress)")
     }
     
     // MARK : PanGestureRecognizer ------------------------------------
