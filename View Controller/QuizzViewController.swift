@@ -60,5 +60,29 @@ class QuizzViewController: UIViewController, UITextFieldDelegate {
     override var prefersStatusBarHidden: Bool {
         return true
     }
-
+    
+    @IBAction func pressAGoButton(_ sender: customButton) {
+        if textField.text != "" {
+            if sender.id == 0 {
+                activeQuizz = firstQuizz
+            } else if sender.id == 1 {
+                activeQuizz = firstQuizz
+            } else if sender.id == 2 {
+                activeQuizz = firstQuizz
+            }
+            
+            // il faut sauvegarder les infos ici
+            
+            performSegue(withIdentifier: "ToGameViewController", sender: self)
+        } else {
+            let animation = CABasicAnimation(keyPath: "position")
+            animation.duration = 0.07
+            animation.repeatCount = 3
+            animation.autoreverses = true
+            animation.fromValue = NSValue(cgPoint: CGPoint(x: textField.center.x - 10, y: textField.center.y))
+            animation.toValue = NSValue(cgPoint: CGPoint(x: textField.center.x + 10, y: textField.center.y))
+            
+            textField.layer.add(animation, forKey: "position")
+        }
+    }
 }

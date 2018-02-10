@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uoW-nt-I6l">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IFW-1h-0AJ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -409,7 +409,7 @@
                                                                     <constraint firstItem="kIw-2U-6rp" firstAttribute="leading" secondItem="QSl-wv-0hd" secondAttribute="leading" constant="30" id="fRn-Zb-Rbi"/>
                                                                 </constraints>
                                                             </view>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J3m-7p-NJa">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J3m-7p-NJa">
                                                                 <rect key="frame" x="88" y="70" width="200" height="30"/>
                                                                 <color key="backgroundColor" red="0.83921568627450982" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <constraints>
@@ -417,7 +417,7 @@
                                                                     <constraint firstAttribute="width" constant="200" id="teU-7j-LV5"/>
                                                                 </constraints>
                                                                 <nil key="textColor"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                                 <connections>
                                                                     <outlet property="delegate" destination="IFW-1h-0AJ" id="CzI-Qk-PPQ"/>
@@ -509,11 +509,11 @@
                                                                                         </constraints>
                                                                                         <color key="tintColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                         <state key="normal" title="Go">
-                                                                                            <color key="titleColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                            <color key="titleColor" red="0.89411764705882346" green="0.45098039215686275" blue="0.3529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                         </state>
                                                                                         <userDefinedRuntimeAttributes>
                                                                                             <userDefinedRuntimeAttribute type="color" keyPath="outerColor">
-                                                                                                <color key="value" red="0.89295834302902222" green="0.44933754205703735" blue="0.35286188125610352" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                                <color key="value" red="0.89411764705882346" green="0.45098039215686275" blue="0.3529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                             </userDefinedRuntimeAttribute>
                                                                                             <userDefinedRuntimeAttribute type="color" keyPath="innerColor">
                                                                                                 <color key="value" red="0.85447603464126587" green="0.91855353116989136" blue="0.93028539419174194" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -524,7 +524,13 @@
                                                                                             <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
                                                                                                 <real key="value" value="2"/>
                                                                                             </userDefinedRuntimeAttribute>
+                                                                                            <userDefinedRuntimeAttribute type="number" keyPath="id">
+                                                                                                <integer key="value" value="0"/>
+                                                                                            </userDefinedRuntimeAttribute>
                                                                                         </userDefinedRuntimeAttributes>
+                                                                                        <connections>
+                                                                                            <action selector="pressAGoButton:" destination="IFW-1h-0AJ" eventType="touchUpInside" id="Dz1-QH-O1v"/>
+                                                                                        </connections>
                                                                                     </button>
                                                                                 </subviews>
                                                                             </stackView>
@@ -545,7 +551,7 @@
                                                                                         </constraints>
                                                                                         <color key="tintColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                         <state key="normal" title="Go">
-                                                                                            <color key="titleColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                            <color key="titleColor" red="0.89411764705882346" green="0.45098039215686275" blue="0.3529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                         </state>
                                                                                         <userDefinedRuntimeAttributes>
                                                                                             <userDefinedRuntimeAttribute type="color" keyPath="outerColor">
@@ -560,7 +566,13 @@
                                                                                             <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
                                                                                                 <real key="value" value="2"/>
                                                                                             </userDefinedRuntimeAttribute>
+                                                                                            <userDefinedRuntimeAttribute type="number" keyPath="id">
+                                                                                                <integer key="value" value="1"/>
+                                                                                            </userDefinedRuntimeAttribute>
                                                                                         </userDefinedRuntimeAttributes>
+                                                                                        <connections>
+                                                                                            <action selector="pressAGoButton:" destination="IFW-1h-0AJ" eventType="touchUpInside" id="33J-K0-gG0"/>
+                                                                                        </connections>
                                                                                     </button>
                                                                                 </subviews>
                                                                             </stackView>
@@ -581,7 +593,7 @@
                                                                                         </constraints>
                                                                                         <color key="tintColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                         <state key="normal" title="Go">
-                                                                                            <color key="titleColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                            <color key="titleColor" red="0.89411764705882346" green="0.45098039215686275" blue="0.3529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                         </state>
                                                                                         <userDefinedRuntimeAttributes>
                                                                                             <userDefinedRuntimeAttribute type="color" keyPath="outerColor">
@@ -596,7 +608,13 @@
                                                                                             <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
                                                                                                 <real key="value" value="2"/>
                                                                                             </userDefinedRuntimeAttribute>
+                                                                                            <userDefinedRuntimeAttribute type="number" keyPath="id">
+                                                                                                <integer key="value" value="2"/>
+                                                                                            </userDefinedRuntimeAttribute>
                                                                                         </userDefinedRuntimeAttributes>
+                                                                                        <connections>
+                                                                                            <action selector="pressAGoButton:" destination="IFW-1h-0AJ" eventType="touchUpInside" id="aEG-ZR-YDj"/>
+                                                                                        </connections>
                                                                                     </button>
                                                                                 </subviews>
                                                                                 <constraints>
@@ -656,6 +674,7 @@
                         <outlet property="segmentedControl" destination="BuN-dY-euw" id="RDc-Mj-F7b"/>
                         <outlet property="textField" destination="J3m-7p-NJa" id="0az-L9-VJL"/>
                         <outlet property="textFieldWidth" destination="teU-7j-LV5" id="61O-XG-duM"/>
+                        <segue destination="uoW-nt-I6l" kind="custom" identifier="ToGameViewController" customClass="CustomSegueQuizzVCToGameVC" customModule="testYourself" customModuleProvider="target" id="RPp-9f-6d4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nNu-LP-e6Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
