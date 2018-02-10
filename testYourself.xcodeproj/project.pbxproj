@@ -26,6 +26,7 @@
 		9CB01BF5202E167F003108BC /* CustomSegueBackFromBricqBrosVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB01BF4202E167F003108BC /* CustomSegueBackFromBricqBrosVC.swift */; };
 		9CB01BF9202E24FF003108BC /* RadialGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB01BF8202E24FF003108BC /* RadialGradientView.swift */; };
 		9CB01BFB202F03EE003108BC /* CustomSegueQuizzVCToGameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB01BFA202F03EE003108BC /* CustomSegueQuizzVCToGameVC.swift */; };
+		9CB01BFD202F5B83003108BC /* ClassToSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB01BFC202F5B83003108BC /* ClassToSave.swift */; };
 		9CE32B27202A1D850022CF5A /* CustomButtonForTheQuizzMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE32B26202A1D850022CF5A /* CustomButtonForTheQuizzMenu.swift */; };
 		9CEAD926202792850038CA70 /* CustomSegueRightToLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEAD925202792850038CA70 /* CustomSegueRightToLeft.swift */; };
 		9CEAD92A20279D980038CA70 /* CustomSegueLeftToRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEAD92920279D980038CA70 /* CustomSegueLeftToRight.swift */; };
@@ -55,6 +56,7 @@
 		9CB01BF4202E167F003108BC /* CustomSegueBackFromBricqBrosVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegueBackFromBricqBrosVC.swift; sourceTree = "<group>"; };
 		9CB01BF8202E24FF003108BC /* RadialGradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RadialGradientView.swift; path = CustomViews/RadialGradientView.swift; sourceTree = SOURCE_ROOT; };
 		9CB01BFA202F03EE003108BC /* CustomSegueQuizzVCToGameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomSegueQuizzVCToGameVC.swift; path = Segues/CustomSegueQuizzVCToGameVC.swift; sourceTree = SOURCE_ROOT; };
+		9CB01BFC202F5B83003108BC /* ClassToSave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassToSave.swift; sourceTree = "<group>"; };
 		9CE32B26202A1D850022CF5A /* CustomButtonForTheQuizzMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonForTheQuizzMenu.swift; sourceTree = "<group>"; };
 		9CEAD925202792850038CA70 /* CustomSegueRightToLeft.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegueRightToLeft.swift; sourceTree = "<group>"; };
 		9CEAD92920279D980038CA70 /* CustomSegueLeftToRight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegueLeftToRight.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 				4E7456FB202A1894006B3DB1 /* protocol.swift */,
 				9CF4CE16202CC45000E2300A /* functions.swift */,
 				9CEAD92D2027AA9D0038CA70 /* variables.swift */,
+				9CB01BFC202F5B83003108BC /* ClassToSave.swift */,
 			);
 			path = Algo;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 				9CB01BF3202E1013003108BC /* CustomSegueMenuToBricqBros.swift in Sources */,
 				4E7456FC202A1894006B3DB1 /* protocol.swift in Sources */,
 				4EE6B9F72027308E00E7B864 /* QuizzViewController.swift in Sources */,
+				9CB01BFD202F5B83003108BC /* ClassToSave.swift in Sources */,
 				9CEAD926202792850038CA70 /* CustomSegueRightToLeft.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
