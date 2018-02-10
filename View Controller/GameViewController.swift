@@ -50,6 +50,9 @@ class GameViewController: UIViewController
         gradient.transform = CATransform3DMakeRotation(0*CGFloat.pi / 12, 0, 0, 1)
         globalView.layer.insertSublayer(gradient, at: 0)
         
+        // shadow on the card view
+        //cardView.layer.shadowOffset = CGSize(width: 4, height: 4)
+        
         // Arranging the card view as we want :
         // 1) The card view layer
         cardHeigh.constant = globalView.frame.height*0.65
