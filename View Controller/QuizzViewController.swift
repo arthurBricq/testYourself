@@ -2,6 +2,10 @@ import UIKit
 
 class QuizzViewController: UIViewController, UITextFieldDelegate {
 
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+    
     // MARK : outlets
     @IBOutlet var globalView: UIView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
@@ -66,10 +70,6 @@ class QuizzViewController: UIViewController, UITextFieldDelegate {
     // fait degager le clavier quand on appuie à l'écran
     @objc func tapOnTheScreen(recognizer: UITapGestureRecognizer) {
         self.view.endEditing(true)
-    }
-    
-    override var prefersStatusBarHidden: Bool {
-        return true
     }
     
     @IBAction func pressAGoButton(_ sender: customButton) {

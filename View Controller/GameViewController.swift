@@ -10,6 +10,10 @@ import UIKit
 
 class GameViewController: UIViewController
 {
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+    
     // MARK : Outlets
     @IBOutlet var globalView: UIView!
     @IBOutlet weak var cardView: UIView!
@@ -85,7 +89,7 @@ class GameViewController: UIViewController
         titleLabel.text = "Question Number \(activeQuestionIdentifier+1)"
         
         let totalNumberOfQuestions = activeQuizz.allQuestions.count
-        let progress = Float(activeQuestionIdentifier+1)/Float(totalNumberOfQuestions)
+        let progress = Float(activeQuestionIdentifier)/Float(totalNumberOfQuestions)
         progression.setProgress(progress, animated: true)
         print("progress : \(progress)")
     }
@@ -195,7 +199,11 @@ class GameViewController: UIViewController
                             self.view.layoutIfNeeded()
                         }, completion: { (tmp) in
                             // Partir sur la page suivante.
-                            self.performSegue(withIdentifier: "LastSegue", sender: self)
+                            UIView.animate(withDuration: 3, animations: {
+                                self.progression.setProgress(1, animated: true)
+                            }, completion: { (tmp) in
+                                self.performSegue(withIdentifier: "LastSegue", sender: self)
+                            })
                             
                         })
                     } else
