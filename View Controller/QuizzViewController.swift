@@ -36,6 +36,9 @@ class QuizzViewController: UIViewController, UITextFieldDelegate {
         segmentedControl.setTitleTextAttributes(textAttributes, for: .normal)
         segmentedControl.setTitleTextAttributes(textAttributes, for: .selected)
         
+        // enleve le correcteur d'orthographe
+        textField.autocorrectionType = .no
+        
         // Arranging the first Stack
         let globalWidth = self.view.frame.width
         textField.center.x = self.view.center.x
@@ -49,12 +52,20 @@ class QuizzViewController: UIViewController, UITextFieldDelegate {
         segmentedControl.center.x = self.view.center.x
         let genderViewWidthConstraint = NSLayoutConstraint(item: genderView, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: globalWidth)
         genderViewWidthConstraint.isActive = true
+        
+        // Tap gesture recognizer on the view
+        let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.tapOnTheScreen(recognizer:)))
+        self.view.addGestureRecognizer(tapRecognizer)
     }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         // This function is called when the buton return on the keyboard is tapped. The view controller class must be part of UITextFieldDelegate.
         self.view.endEditing(true)
         return true
+    }
+    // fait degager le clavier quand on appuie à l'écran
+    @objc func tapOnTheScreen(recognizer: UITapGestureRecognizer) {
+        self.view.endEditing(true)
     }
     
     override var prefersStatusBarHidden: Bool {
@@ -79,8 +90,8 @@ class QuizzViewController: UIViewController, UITextFieldDelegate {
             animation.duration = 0.07
             animation.repeatCount = 3
             animation.autoreverses = true
-            animation.fromValue = NSValue(cgPoint: CGPoint(x: textField.center.x - 10, y: textField.center.y))
-            animation.toValue = NSValue(cgPoint: CGPoint(x: textField.center.x + 10, y: textField.center.y))
+            animation.fromValue = NSValue(cgPoint: CGPoint(x: textField.center.x - 5, y: textField.center.y))
+            animation.toValue = NSValue(cgPoint: CGPoint(x: textField.center.x + 5, y: textField.center.y))
             
             textField.layer.add(animation, forKey: "position")
         }
