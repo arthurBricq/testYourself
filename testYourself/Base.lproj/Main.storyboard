@@ -835,8 +835,8 @@
                                 <rect key="frame" x="0.0" y="40" width="375" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What about you" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fpt-GM-pLs">
-                                        <rect key="frame" x="30" y="4" width="171.5" height="41"/>
-                                        <fontDescription key="fontDescription" name="AvenirNextCondensed-Medium" family="Avenir Next Condensed" pointSize="30"/>
+                                        <rect key="frame" x="30" y="2" width="194.5" height="46.5"/>
+                                        <fontDescription key="fontDescription" name="AvenirNextCondensed-Medium" family="Avenir Next Condensed" pointSize="34"/>
                                         <color key="textColor" red="0.64190824171008187" green="0.21652960303151372" blue="0.13805762462618984" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="highlightedColor" red="0.73434954881668091" green="0.2444227933883667" blue="0.15245324373245239" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </label>
@@ -955,11 +955,15 @@
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.91865140199661255" green="0.30892094969749451" blue="0.20098921656608582" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="jnx-rX-Z0m"/>
                                     <constraint firstItem="pOI-vK-lZA" firstAttribute="centerY" secondItem="NtW-pY-B6K" secondAttribute="centerY" id="kAX-Sk-TKk"/>
                                     <constraint firstItem="pOI-vK-lZA" firstAttribute="leading" secondItem="NtW-pY-B6K" secondAttribute="leading" constant="30" id="pfU-29-q0V"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Wbb-r4-YWa" appends="YES" id="yGE-V1-xdk"/>
+                                </connections>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BRICQ.BROS " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Lw-Ob-RDy">
                                 <rect key="frame" x="132" y="626.5" width="110" height="30.5"/>
@@ -990,6 +994,8 @@
                     </view>
                     <connections>
                         <outlet property="backStackView" destination="pOI-vK-lZA" id="2Rq-BU-b0Y"/>
+                        <outlet property="backView" destination="NtW-pY-B6K" id="L7X-mh-BXP"/>
+                        <outlet property="bottomConstraint" destination="Qy5-6t-JbC" id="xA8-nG-sc5"/>
                         <outlet property="globalView" destination="kRf-hy-vgL" id="lMI-B0-hMJ"/>
                         <outlet property="grapViewWidth" destination="nku-ER-5Ku" id="xDM-gY-PKo"/>
                         <outlet property="graphView" destination="W8r-So-QYe" id="9g6-I5-7Rw"/>
@@ -1001,9 +1007,16 @@
                         <outlet property="label6" destination="5Uv-Vn-2xR" id="yon-vb-XLM"/>
                         <outlet property="stackView" destination="47N-vk-JbK" id="Qs7-id-hyE"/>
                         <outlet property="stackWIdth" destination="4D8-aT-ppC" id="arz-pJ-V8O"/>
+                        <outlet property="topConstraint" destination="i6J-su-EVf" id="1mH-JD-41K"/>
+                        <segue destination="BYZ-38-t0r" kind="custom" identifier="BackToMenu" customClass="CustomSegueLeftToRight" customModule="testYourself" customModuleProvider="target" id="Vkm-1T-KUp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="40X-3P-CNU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="Wbb-r4-YWa">
+                    <connections>
+                        <action selector="handlePan:" destination="kgt-bo-8nz" id="a1X-8s-cWo"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="3197.5999999999999" y="-0.44977511244377816"/>
         </scene>
@@ -1114,6 +1127,6 @@
         <image name="test" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="45z-4Q-sJS"/>
+        <segue reference="Vkm-1T-KUp"/>
     </inferredMetricsTieBreakers>
 </document>

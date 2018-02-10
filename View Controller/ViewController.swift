@@ -131,8 +131,10 @@ class ViewController: UIViewController {
         if senderView.center.x > screenCenter.x { // Si on retourne vers la droite, bloquer le mouvement.
             senderView.center.x = screenCenter.x
         }
-            
-        if xPos < -50 // Si on termine le mouvement...
+        
+        let velocity = sender.velocity(in: self.view)
+        let speed = norme(vector: velocity)
+        if (xPos < -50) || (speed > 1999) // Si on termine le mouvement...
         {
             if counterToPerformSegueOnlyOnce {
                 boleanTestTMP = false
@@ -143,7 +145,7 @@ class ViewController: UIViewController {
                 }, completion: { (tmp) in
                     
                     UIView.animate(withDuration: 0.3, animations: {
-                        print("sleeping.......")
+                       // print("sleeping.......")
                     }, completion: { (tmp) in
                         
                         var segueId = "VCToQuizzVC"

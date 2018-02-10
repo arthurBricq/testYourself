@@ -90,6 +90,7 @@ class QuestionTableViewController: UITableViewController, TableViewCellDelegate
         */
         guard let tappedIndexPath = tableView.indexPath(for: sender) else { return }
         let sectionTapped = tappedIndexPath.section
+        print("La section tappée est : \(sectionTapped)")
         updateCheckedArray(forButtonInSection: sectionTapped)
         self.tableView.reloadData()
         
