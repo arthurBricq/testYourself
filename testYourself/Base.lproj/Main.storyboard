@@ -401,7 +401,7 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
-                                                                <color key="backgroundColor" red="0.89295834299999999" green="0.44933754209999999" blue="0.35286188130000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <color key="backgroundColor" red="0.89411764705882346" green="0.45098039215686275" blue="0.3529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="50" id="FZd-0l-6TF"/>
                                                                     <constraint firstItem="kIw-2U-6rp" firstAttribute="centerY" secondItem="QSl-wv-0hd" secondAttribute="centerY" id="RDz-dv-5vm"/>
@@ -670,16 +670,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R1v-ea-F2d">
+                                <rect key="frame" x="0.0" y="40" width="375" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lQt-aP-VLb">
+                                        <rect key="frame" x="30" y="0.0" width="300" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Ml8-Gy-nSb"/>
+                                            <constraint firstAttribute="width" constant="300" id="e6k-xX-Wgt"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNextCondensed-DemiBold" family="Avenir Next Condensed" pointSize="30"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.89411764709999997" green="0.45098039220000002" blue="0.35294117650000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="lQt-aP-VLb" firstAttribute="leading" secondItem="R1v-ea-F2d" secondAttribute="leading" constant="30" id="R4F-Bc-B2R"/>
+                                    <constraint firstItem="lQt-aP-VLb" firstAttribute="centerY" secondItem="R1v-ea-F2d" secondAttribute="centerY" id="mK2-Mv-fgP"/>
+                                    <constraint firstAttribute="height" constant="50" id="t8n-uA-8FM"/>
+                                </constraints>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HVy-lY-ZJj" customClass="RadialGradientView" customModule="testYourself" customModuleProvider="target">
                                 <rect key="frame" x="67.5" y="109.5" width="240" height="488"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="You enter a place where someone is dying, in front of 10000 dollars. What do you do ?" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fpC-oq-MWS">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="You enter a place where someone is dying, in front of 10000 dollars. What do you do ?" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fpC-oq-MWS">
                                         <rect key="frame" x="10" y="15" width="210" height="100"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="BEA-KN-KME"/>
                                         </constraints>
-                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="21"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
@@ -728,21 +749,14 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowHeight">
                                         <real key="value" value="4"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="rectangleCornerRadius">
+                                        <real key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="RKb-UJ-KQ9" appends="YES" id="gXr-bE-yvC"/>
                                 </connections>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lQt-aP-VLb">
-                                <rect key="frame" x="37.5" y="30" width="300" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="Ml8-Gy-nSb"/>
-                                    <constraint firstAttribute="width" constant="300" id="e6k-xX-Wgt"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNextCondensed-DemiBold" family="Avenir Next Condensed" pointSize="30"/>
-                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="nKg-kK-8Ie">
                                 <rect key="frame" x="62" y="632" width="250" height="5"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -755,11 +769,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="nKg-kK-8Ie" firstAttribute="centerX" secondItem="qMD-Zy-tLj" secondAttribute="centerX" id="ETj-cl-S5M"/>
+                            <constraint firstItem="Lpm-Jh-OTf" firstAttribute="top" secondItem="R1v-ea-F2d" secondAttribute="top" constant="-20" id="OB7-8w-0VL"/>
                             <constraint firstItem="HVy-lY-ZJj" firstAttribute="centerX" secondItem="qMD-Zy-tLj" secondAttribute="centerX" id="Od8-CG-1fd"/>
+                            <constraint firstItem="R1v-ea-F2d" firstAttribute="centerX" secondItem="qMD-Zy-tLj" secondAttribute="centerX" id="fsC-tI-ZLb"/>
+                            <constraint firstItem="R1v-ea-F2d" firstAttribute="width" secondItem="qMD-Zy-tLj" secondAttribute="width" id="g3E-kh-cso"/>
                             <constraint firstItem="Lpm-Jh-OTf" firstAttribute="bottom" secondItem="nKg-kK-8Ie" secondAttribute="bottom" constant="30" id="hjf-mR-5Yw"/>
-                            <constraint firstItem="lQt-aP-VLb" firstAttribute="centerX" secondItem="qMD-Zy-tLj" secondAttribute="centerX" id="jgV-NM-f7J"/>
                             <constraint firstItem="HVy-lY-ZJj" firstAttribute="centerY" secondItem="qMD-Zy-tLj" secondAttribute="centerY" constant="20" id="nyw-xo-L4p"/>
-                            <constraint firstItem="lQt-aP-VLb" firstAttribute="top" secondItem="Lpm-Jh-OTf" secondAttribute="top" constant="10" id="o7d-Oe-ODz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Lpm-Jh-OTf"/>
                     </view>
@@ -837,7 +852,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Sj-p8-t8L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-649" y="0.0"/>
+            <point key="canvasLocation" x="-650.39999999999998" y="-0.44977511244377816"/>
         </scene>
         <!--Question Table View Controller-->
         <scene sceneID="P4l-Zz-cDA">
@@ -907,6 +922,6 @@
         <image name="test" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="LbY-mR-03t"/>
+        <segue reference="45z-4Q-sJS"/>
     </inferredMetricsTieBreakers>
 </document>
