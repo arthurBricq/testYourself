@@ -74,6 +74,7 @@
 			children = (
 				4E06D89C202B7A4A004ECB34 /* CustomButton_ToGo.swift */,
 				9CE32B26202A1D850022CF5A /* CustomButtonForTheQuizzMenu.swift */,
+				9CB01BF8202E24FF003108BC /* RadialGradientView.swift */,
 			);
 			path = CustomButtons;
 			sourceTree = "<group>";
@@ -236,6 +237,7 @@
 				4E06D89D202B7A4A004ECB34 /* CustomButton_ToGo.swift in Sources */,
 				4E3538822024CBFB00901DD3 /* ViewController.swift in Sources */,
 				4EA6A5C82028C2A100215903 /* QuestionTableViewController.swift in Sources */,
+				9CB01BF9202E24FF003108BC /* RadialGradientView.swift in Sources */,
 				4E3538802024CBFB00901DD3 /* AppDelegate.swift in Sources */,
 				4EE2D1AA202C7F0F00C4C3BC /* BricqBrosViewController.swift in Sources */,
 				4EB42390202F105B00602A11 /* GraphView.swift in Sources */,

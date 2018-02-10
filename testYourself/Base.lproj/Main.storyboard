@@ -401,7 +401,7 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
-                                                                <color key="backgroundColor" red="0.89295834299999999" green="0.44933754209999999" blue="0.35286188130000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <color key="backgroundColor" red="0.89411764705882346" green="0.45098039215686275" blue="0.3529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="50" id="FZd-0l-6TF"/>
                                                                     <constraint firstItem="kIw-2U-6rp" firstAttribute="centerY" secondItem="QSl-wv-0hd" secondAttribute="centerY" id="RDz-dv-5vm"/>
@@ -409,7 +409,7 @@
                                                                     <constraint firstItem="kIw-2U-6rp" firstAttribute="leading" secondItem="QSl-wv-0hd" secondAttribute="leading" constant="30" id="fRn-Zb-Rbi"/>
                                                                 </constraints>
                                                             </view>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J3m-7p-NJa">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J3m-7p-NJa">
                                                                 <rect key="frame" x="88" y="70" width="200" height="30"/>
                                                                 <color key="backgroundColor" red="0.83921568627450982" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <constraints>
@@ -417,7 +417,7 @@
                                                                     <constraint firstAttribute="width" constant="200" id="teU-7j-LV5"/>
                                                                 </constraints>
                                                                 <nil key="textColor"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                                 <connections>
                                                                     <outlet property="delegate" destination="IFW-1h-0AJ" id="CzI-Qk-PPQ"/>
@@ -509,11 +509,11 @@
                                                                                         </constraints>
                                                                                         <color key="tintColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                         <state key="normal" title="Go">
-                                                                                            <color key="titleColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                            <color key="titleColor" red="0.89411764705882346" green="0.45098039215686275" blue="0.3529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                         </state>
                                                                                         <userDefinedRuntimeAttributes>
                                                                                             <userDefinedRuntimeAttribute type="color" keyPath="outerColor">
-                                                                                                <color key="value" red="0.89295834302902222" green="0.44933754205703735" blue="0.35286188125610352" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                                <color key="value" red="0.89411764705882346" green="0.45098039215686275" blue="0.3529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                             </userDefinedRuntimeAttribute>
                                                                                             <userDefinedRuntimeAttribute type="color" keyPath="innerColor">
                                                                                                 <color key="value" red="0.85447603464126587" green="0.91855353116989136" blue="0.93028539419174194" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -524,7 +524,13 @@
                                                                                             <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
                                                                                                 <real key="value" value="2"/>
                                                                                             </userDefinedRuntimeAttribute>
+                                                                                            <userDefinedRuntimeAttribute type="number" keyPath="id">
+                                                                                                <integer key="value" value="0"/>
+                                                                                            </userDefinedRuntimeAttribute>
                                                                                         </userDefinedRuntimeAttributes>
+                                                                                        <connections>
+                                                                                            <action selector="pressAGoButton:" destination="IFW-1h-0AJ" eventType="touchUpInside" id="Dz1-QH-O1v"/>
+                                                                                        </connections>
                                                                                     </button>
                                                                                 </subviews>
                                                                             </stackView>
@@ -545,7 +551,7 @@
                                                                                         </constraints>
                                                                                         <color key="tintColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                         <state key="normal" title="Go">
-                                                                                            <color key="titleColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                            <color key="titleColor" red="0.89411764705882346" green="0.45098039215686275" blue="0.3529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                         </state>
                                                                                         <userDefinedRuntimeAttributes>
                                                                                             <userDefinedRuntimeAttribute type="color" keyPath="outerColor">
@@ -560,7 +566,13 @@
                                                                                             <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
                                                                                                 <real key="value" value="2"/>
                                                                                             </userDefinedRuntimeAttribute>
+                                                                                            <userDefinedRuntimeAttribute type="number" keyPath="id">
+                                                                                                <integer key="value" value="1"/>
+                                                                                            </userDefinedRuntimeAttribute>
                                                                                         </userDefinedRuntimeAttributes>
+                                                                                        <connections>
+                                                                                            <action selector="pressAGoButton:" destination="IFW-1h-0AJ" eventType="touchUpInside" id="33J-K0-gG0"/>
+                                                                                        </connections>
                                                                                     </button>
                                                                                 </subviews>
                                                                             </stackView>
@@ -581,7 +593,7 @@
                                                                                         </constraints>
                                                                                         <color key="tintColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                         <state key="normal" title="Go">
-                                                                                            <color key="titleColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                            <color key="titleColor" red="0.89411764705882346" green="0.45098039215686275" blue="0.3529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                         </state>
                                                                                         <userDefinedRuntimeAttributes>
                                                                                             <userDefinedRuntimeAttribute type="color" keyPath="outerColor">
@@ -596,7 +608,13 @@
                                                                                             <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
                                                                                                 <real key="value" value="2"/>
                                                                                             </userDefinedRuntimeAttribute>
+                                                                                            <userDefinedRuntimeAttribute type="number" keyPath="id">
+                                                                                                <integer key="value" value="2"/>
+                                                                                            </userDefinedRuntimeAttribute>
                                                                                         </userDefinedRuntimeAttributes>
+                                                                                        <connections>
+                                                                                            <action selector="pressAGoButton:" destination="IFW-1h-0AJ" eventType="touchUpInside" id="aEG-ZR-YDj"/>
+                                                                                        </connections>
                                                                                     </button>
                                                                                 </subviews>
                                                                                 <constraints>
@@ -656,6 +674,7 @@
                         <outlet property="segmentedControl" destination="BuN-dY-euw" id="RDc-Mj-F7b"/>
                         <outlet property="textField" destination="J3m-7p-NJa" id="0az-L9-VJL"/>
                         <outlet property="textFieldWidth" destination="teU-7j-LV5" id="61O-XG-duM"/>
+                        <segue destination="uoW-nt-I6l" kind="custom" identifier="ToGameViewController" customClass="CustomSegueQuizzVCToGameVC" customModule="testYourself" customModuleProvider="target" id="RPp-9f-6d4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nNu-LP-e6Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -670,16 +689,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HVy-lY-ZJj">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R1v-ea-F2d">
+                                <rect key="frame" x="0.0" y="40" width="375" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lQt-aP-VLb">
+                                        <rect key="frame" x="30" y="0.0" width="300" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Ml8-Gy-nSb"/>
+                                            <constraint firstAttribute="width" constant="300" id="e6k-xX-Wgt"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNextCondensed-DemiBold" family="Avenir Next Condensed" pointSize="30"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.89411764709999997" green="0.45098039220000002" blue="0.35294117650000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="lQt-aP-VLb" firstAttribute="leading" secondItem="R1v-ea-F2d" secondAttribute="leading" constant="30" id="R4F-Bc-B2R"/>
+                                    <constraint firstItem="lQt-aP-VLb" firstAttribute="centerY" secondItem="R1v-ea-F2d" secondAttribute="centerY" id="mK2-Mv-fgP"/>
+                                    <constraint firstAttribute="height" constant="50" id="t8n-uA-8FM"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HVy-lY-ZJj" customClass="RadialGradientView" customModule="testYourself" customModuleProvider="target">
                                 <rect key="frame" x="67.5" y="109.5" width="240" height="488"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="You enter a place where someone is dying, in front of 10000 dollars. What do you do ?" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fpC-oq-MWS">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="You enter a place where someone is dying, in front of 10000 dollars. What do you do ?" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fpC-oq-MWS">
                                         <rect key="frame" x="10" y="15" width="210" height="100"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="BEA-KN-KME"/>
                                         </constraints>
-                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="21"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
@@ -694,7 +734,7 @@
                                         </connections>
                                     </containerView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.41107613150304567" green="0.22905781437574207" blue="0.00085037368411394298" alpha="0.70871682363013699" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="fpC-oq-MWS" firstAttribute="leading" secondItem="HVy-lY-ZJj" secondAttribute="leading" constant="10" id="2iv-Pj-MlA"/>
@@ -706,20 +746,36 @@
                                     <constraint firstAttribute="bottom" secondItem="geJ-m8-YrS" secondAttribute="bottom" constant="20" id="mdl-0p-ZIX"/>
                                     <constraint firstItem="geJ-m8-YrS" firstAttribute="top" secondItem="fpC-oq-MWS" secondAttribute="bottom" constant="20" id="nfJ-v0-Rdo"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="insideColor">
+                                        <color key="value" red="0.78876506979695438" green="0.56094363541590186" blue="0.32061565213429821" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="outsideColor">
+                                        <color key="value" red="0.68884835025380708" green="0.48988616843933808" blue="0.2800017032893114" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="rectangleRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowWidth">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" red="0.59607843137254901" green="0.78823529411764703" blue="0.88235294117647056" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowBlurrRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowHeight">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="rectangleCornerRadius">
+                                        <real key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="RKb-UJ-KQ9" appends="YES" id="gXr-bE-yvC"/>
                                 </connections>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lQt-aP-VLb">
-                                <rect key="frame" x="37.5" y="30" width="300" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="Ml8-Gy-nSb"/>
-                                    <constraint firstAttribute="width" constant="300" id="e6k-xX-Wgt"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNextCondensed-DemiBold" family="Avenir Next Condensed" pointSize="30"/>
-                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="nKg-kK-8Ie">
                                 <rect key="frame" x="62.5" y="632" width="250" height="5"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -732,11 +788,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="nKg-kK-8Ie" firstAttribute="centerX" secondItem="qMD-Zy-tLj" secondAttribute="centerX" id="ETj-cl-S5M"/>
+                            <constraint firstItem="Lpm-Jh-OTf" firstAttribute="top" secondItem="R1v-ea-F2d" secondAttribute="top" constant="-20" id="OB7-8w-0VL"/>
                             <constraint firstItem="HVy-lY-ZJj" firstAttribute="centerX" secondItem="qMD-Zy-tLj" secondAttribute="centerX" id="Od8-CG-1fd"/>
+                            <constraint firstItem="R1v-ea-F2d" firstAttribute="centerX" secondItem="qMD-Zy-tLj" secondAttribute="centerX" id="fsC-tI-ZLb"/>
+                            <constraint firstItem="R1v-ea-F2d" firstAttribute="width" secondItem="qMD-Zy-tLj" secondAttribute="width" id="g3E-kh-cso"/>
                             <constraint firstItem="Lpm-Jh-OTf" firstAttribute="bottom" secondItem="nKg-kK-8Ie" secondAttribute="bottom" constant="30" id="hjf-mR-5Yw"/>
-                            <constraint firstItem="lQt-aP-VLb" firstAttribute="centerX" secondItem="qMD-Zy-tLj" secondAttribute="centerX" id="jgV-NM-f7J"/>
                             <constraint firstItem="HVy-lY-ZJj" firstAttribute="centerY" secondItem="qMD-Zy-tLj" secondAttribute="centerY" constant="20" id="nyw-xo-L4p"/>
-                            <constraint firstItem="lQt-aP-VLb" firstAttribute="top" secondItem="Lpm-Jh-OTf" secondAttribute="top" constant="10" id="o7d-Oe-ODz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Lpm-Jh-OTf"/>
                     </view>
@@ -971,7 +1028,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Sj-p8-t8L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-649" y="0.0"/>
+            <point key="canvasLocation" x="-650.39999999999998" y="-0.44977511244377816"/>
         </scene>
         <!--Question Table View Controller-->
         <scene sceneID="P4l-Zz-cDA">

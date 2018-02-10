@@ -11,12 +11,12 @@ import UIKit
 class customButton: UIButton {
     
     // MARK : Variables
-    @IBInspectable var cornerRadius : CGFloat = 3.0
     @IBInspectable var outerColor : UIColor = UIColor.red
     @IBInspectable var innerColor : UIColor = UIColor.gray
+    
     @IBInspectable var lineWidth : CGFloat = 3.0
-    
-    
+    @IBInspectable var cornerRadius : CGFloat = 3.0
+    @IBInspectable var id : Int = 0
     
     override func draw(_ rect: CGRect)
     {
@@ -48,6 +48,8 @@ class customButton: UIButton {
         }) { (tmp) in
             //
         }
+        
+        super.touchesBegan(touches, with: event)
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -57,5 +59,8 @@ class customButton: UIButton {
         }) { (tmp) in
             //
         }
+        
+        super.touchesEnded(touches, with: event)
     }
+
 }

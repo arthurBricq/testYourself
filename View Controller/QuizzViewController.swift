@@ -36,6 +36,9 @@ class QuizzViewController: UIViewController, UITextFieldDelegate {
         segmentedControl.setTitleTextAttributes(textAttributes, for: .normal)
         segmentedControl.setTitleTextAttributes(textAttributes, for: .selected)
         
+        // enleve le correcteur d'orthographe
+        textField.autocorrectionType = .no
+        
         // Arranging the first Stack
         let globalWidth = self.view.frame.width
         textField.center.x = self.view.center.x
@@ -49,6 +52,10 @@ class QuizzViewController: UIViewController, UITextFieldDelegate {
         segmentedControl.center.x = self.view.center.x
         let genderViewWidthConstraint = NSLayoutConstraint(item: genderView, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: globalWidth)
         genderViewWidthConstraint.isActive = true
+        
+        // Tap gesture recognizer on the view
+        let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.tapOnTheScreen(recognizer:)))
+        self.view.addGestureRecognizer(tapRecognizer)
     }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -56,9 +63,37 @@ class QuizzViewController: UIViewController, UITextFieldDelegate {
         self.view.endEditing(true)
         return true
     }
+    // fait degager le clavier quand on appuie à l'écran
+    @objc func tapOnTheScreen(recognizer: UITapGestureRecognizer) {
+        self.view.endEditing(true)
+    }
     
     override var prefersStatusBarHidden: Bool {
         return true
     }
-
+    
+    @IBAction func pressAGoButton(_ sender: customButton) {
+        if textField.text != "" {
+            if sender.id == 0 {
+                activeQuizz = firstQuizz
+            } else if sender.id == 1 {
+                activeQuizz = firstQuizz
+            } else if sender.id == 2 {
+                activeQuizz = firstQuizz
+            }
+            
+            // il faut sauvegarder les infos ici
+            
+            performSegue(withIdentifier: "ToGameViewController", sender: self)
+        } else {
+            let animation = CABasicAnimation(keyPath: "position")
+            animation.duration = 0.07
+            animation.repeatCount = 3
+            animation.autoreverses = true
+            animation.fromValue = NSValue(cgPoint: CGPoint(x: textField.center.x - 5, y: textField.center.y))
+            animation.toValue = NSValue(cgPoint: CGPoint(x: textField.center.x + 5, y: textField.center.y))
+            
+            textField.layer.add(animation, forKey: "position")
+        }
+    }
 }

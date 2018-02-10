@@ -37,18 +37,16 @@ class GameViewController: UIViewController
         // We are going to arrange the view as we want it.
         super.viewDidLoad()
         
-        // Creating the gradient :
-        var expension = CGAffineTransform()
-        expension.a = 3
-        expension.d = 2
-        expension.tx = -100
-        expension.ty = -150
-        print(expension)
-        gradient.frame = globalView.frame.applying(expension)
-        print(gradient.frame)
-        let myColor = UIColor(red: 255/255, green: 168/255, blue: 52/255, alpha: 0.7)
-        gradient.colors = [ myColor.cgColor , UIColor.clear.cgColor]
-        gradient.transform = CATransform3DMakeRotation(0*CGFloat.pi / 12, 0, 0, 1)
+        // Arranging the background (creating a gradient of color for the view)
+        // set the colors
+        let beginningColor = UIColor(red: 248/255, green: 198/255, blue: 123/255, alpha: 1)
+        let endColor = UIColor(red: 248/255, green: 198/255, blue: 123/255, alpha: 0.6)
+        gradient.colors = [beginningColor.cgColor, endColor.cgColor]
+        // tourne le gradiant d'un quart vers la droite
+        gradient.transform = CATransform3DMakeRotation(.pi/2, 0, 0, 1)
+        // met le gradiant de la taille de l'écran
+        gradient.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height)
+
         globalView.layer.insertSublayer(gradient, at: 0)
         
         // Arranging the card view as we want :
@@ -70,8 +68,14 @@ class GameViewController: UIViewController
         updateTextView()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        // shadow on the card view
+        cardView.layer.shadowColor = UIColor.black.cgColor
+        cardView.layer.shadowOpacity = 0.8
+        cardView.layer.shadowRadius = 5
+        cardView.layer.shadowOffset = CGSize(width: 5, height: 5)
     }
     
     

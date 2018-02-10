@@ -69,7 +69,7 @@ func describe_OneQuizzChecked() {
 }
 
 
-// Création du premier quizz par A.B.
+// Création du premier quizz par A.B. ------------------------------------------------------------------
 // Are you smart ?
 // benefits :
 let firstBenefits = ["good in physic/math","idiot","good in humain science","has lot of logic","not very studient but it's okay","he has a great mind","aware of things around him"]
@@ -97,6 +97,7 @@ let q4 = OnePartOfaQuizz(questionLabel: "what is your favorite field?", answers:
 
 let firstQuizz = OneQuizz(title: "Are you really Smart ?", allQuestios: [q1,q2,q3,q4], properties: firstBenefits)
 
+//-------------------------------------------------------------------------
 
 
 // MARK : Those 5 variables are very important -------------------------------------
