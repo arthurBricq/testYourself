@@ -10,7 +10,7 @@ import UIKit
 
 let tmp1 = OneScore(name: "Arthur", gender: "Male", nameOfQuizz: "FF", scores: [0, 0, 0, 0, 0, 0])
 let tmp2 = OneScore(name: "Marin", gender: "Male", nameOfQuizz: "Fjkf", scores: [40, 0, 40, 0, 40, 0])
-let tmp3 = OneScore(name: "Elsa", gender: "Female", nameOfQuizz: "fef", scores: [0, 0, 40, 0, 40, 0])
+let tmp3 = OneScore(name: "Elsa", gender: "Female", nameOfQuizz: "efe", scores: [0, 0, 40, 0, 40, 0])
 
 var items : [OneScore] = [tmp1, tmp2, tmp3]
 
