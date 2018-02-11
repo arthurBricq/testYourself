@@ -64,9 +64,7 @@ class ResultsTableViewController: UITableViewController {
         var toReturn: String = ""
         // 1) trouver la valeur maximale et son index
         let currentScore = allScores[atIndex].scores
-        
-        print("Id #\(atIndex) : score = \(currentScore)")
-        
+                
         var maxIndex: Int = 0
         var maxValue: CGFloat = currentScore[0]
         for i in 1..<6 {
