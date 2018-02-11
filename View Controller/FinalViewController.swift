@@ -68,7 +68,7 @@ class FinalViewController: UIViewController {
         backStackView.spacing = width
         canPerformTheSegue = true
         hasToComeBackToInitialPosition = true
-        backView.isHidden = false 
+        backView.isHidden = false
     }
     
     override func viewDidAppear(_ animated: Bool) { /*
@@ -231,7 +231,7 @@ class FinalViewController: UIViewController {
                         }, completion: { (tmp) in
                             
                             self.performSegue(withIdentifier: "BackToMenu", sender: self)
-
+                            self.saveTheGame()
                         })
                         
                     })
@@ -246,6 +246,10 @@ class FinalViewController: UIViewController {
         
     }
     
+    
+    func saveTheGame() {
+        
+    }
     
 }
     

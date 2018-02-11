@@ -40,7 +40,9 @@ struct OneAnswerChecked {
   
 }
 
-func initialize_OneQuizzChecked() {
+func initialize_OneQuizzChecked()
+{
+    OneQuizzChecked.removeAll()
     // We must put false for each answers in eahc questions.
     for i in 0...activeQuizz.allQuestions.count-1 // i représente l'index de toutes les questions (première question, deuxième question, ... , dernière question)
     {

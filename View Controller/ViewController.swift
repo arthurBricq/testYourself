@@ -17,6 +17,11 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         counterToPerformSegueOnlyOnce = true // Variable is true when we can perform the segue. We need it because without it, the actions perfom thousands of segues.
+        // On remet à zero toutes les données du jeu.
+        score = [0,0,0,0,0,0]
+        initialize_OneQuizzChecked()
+        activeQuestionIdentifier = 0
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {

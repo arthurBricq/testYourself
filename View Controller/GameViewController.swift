@@ -82,6 +82,12 @@ class GameViewController: UIViewController
         cardView.layer.shadowOffset = CGSize(width: 5, height: 5)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableViewController.tableView.reloadData()
+        initialize_OneQuizzChecked()
+        describe_OneQuizzChecked()
+    }
     
     func updateTextView() {
         textView.text = activeQuizz.allQuestions[activeQuestionIdentifier].questionLabel
