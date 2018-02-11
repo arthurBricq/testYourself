@@ -33,6 +33,7 @@ class OneQuizz
     }
 }
 
+
 // DATA MODEL FOR THE CHECKED ANSWERS BY THE PLAYER :
 struct OneAnswerChecked {
     // For each question, when the player tap a button, it will mark to true the specific number of the section where the player tapped.
@@ -113,4 +114,6 @@ var OneQuizzChecked = [OneAnswerChecked]() // This is the variable with all the 
 let properties : [String] = activeQuizz.properties
 var score : [CGFloat] = [0.6,0.8,0.2,0.2,0.1,0.9]
 var allScores: [OneScore] = []
-var allQuizz: [OneQuizz] = [firstQuizz] // Ce tableau regroupe tous les quizz que nous disposons. 
+var allQuizz: [OneQuizz] = [firstQuizz] // Ce tableau regroupe tous les quizz que nous disposons.
+var isAMale: Bool = false
+var name: String = ""

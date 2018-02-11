@@ -249,7 +249,13 @@ class FinalViewController: UIViewController {
     
     func saveTheGame() {
         let nameOfQuizz = activeQuizz.title
-        let toSave = OneScore(name: "name", gender: "gender", nameOfQuizz: nameOfQuizz, scores: score)
+        let sexOfThePlayer: String
+        if isAMale {
+            sexOfThePlayer = "Male"
+        } else {
+            sexOfThePlayer = "Female"
+        }
+        let toSave = OneScore(name: name, gender: sexOfThePlayer, nameOfQuizz: nameOfQuizz, scores: score)
         allScores.append(toSave)
         saveToFile(toSave: allScores)
     }

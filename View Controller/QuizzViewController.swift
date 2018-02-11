@@ -82,7 +82,13 @@ class QuizzViewController: UIViewController, UITextFieldDelegate {
                 activeQuizz = firstQuizz
             }
             
-            // il faut sauvegarder les infos ici
+            // il faut sauvegarder les infos ici :
+            name = textField.text!
+            if segmentedControl.selectedSegmentIndex == 0 {
+                isAMale = false
+            } else {
+                isAMale = true
+            }
             
             performSegue(withIdentifier: "ToGameViewController", sender: self)
         } else {
