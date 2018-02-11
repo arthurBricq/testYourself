@@ -8,7 +8,7 @@
 
 import UIKit
 
-@IBDesignable class GraphView: UIView
+class GraphView: UIView
 {
     @IBInspectable var startColor: UIColor = .red
     @IBInspectable var endColor: UIColor = .green
