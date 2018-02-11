@@ -165,7 +165,7 @@ class FinalViewController: UIViewController {
     
     var canPerformTheSegue = true
     var hasToComeBackToInitialPosition = true
-    
+    var scoreToSave: [CGFloat] = []
     
     @IBAction func handlePan(_ sender: UIPanGestureRecognizer)
     {
@@ -209,6 +209,7 @@ class FinalViewController: UIViewController {
             {
                 canPerformTheSegue = false
                 hasToComeBackToInitialPosition = false
+                scoreToSave = score
                 
                 UIView.animate(withDuration: 0.5, delay: 0.0, options: .curveEaseInOut, animations: {
                     
@@ -249,8 +250,8 @@ class FinalViewController: UIViewController {
     
     func saveTheGame() {
         let nameOfQuizz = activeQuizz.title
-        print(score)
-        let toSave = OneScore(name: "name", gender: "gender", nameOfQuizz: nameOfQuizz, scores: score)
+        print(scoreToSave)
+        let toSave = OneScore(name: "name", gender: "gender", nameOfQuizz: nameOfQuizz, scores: scoreToSave)
         allScores.append(toSave)
         saveToFile(toSave: allScores)
     }

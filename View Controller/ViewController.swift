@@ -32,7 +32,6 @@ class ViewController: UIViewController {
         
         // On charge les anciens résultats:
         allScores = loadFromFile()
-
     }
     
     override var prefersStatusBarHidden: Bool {
