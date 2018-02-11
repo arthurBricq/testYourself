@@ -1039,11 +1039,11 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Previous Results" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oxr-4L-7Kw">
                                                 <rect key="frame" x="30" y="4" width="177" height="41"/>
                                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Medium" family="Avenir Next Condensed" pointSize="30"/>
-                                                <color key="textColor" red="0.64190824170000005" green="0.21652960299999999" blue="0.13805762460000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="highlightedColor" red="0.73333333333333328" green="0.24313725490196078" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.96969109769999995" green="0.79569613930000005" blue="0.65912944080000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.62194555997848511" green="0.43913054466247559" blue="0.48628848791122437" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="Oxr-4L-7Kw" firstAttribute="leading" secondItem="hxh-gZ-gSl" secondAttribute="leading" constant="30" id="4tr-jq-FxV"/>
                                             <constraint firstItem="Oxr-4L-7Kw" firstAttribute="centerY" secondItem="hxh-gZ-gSl" secondAttribute="centerY" id="T3N-rM-W4W"/>
@@ -1053,24 +1053,24 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TEr-Vp-TUJ" customClass="customButton" customModule="testYourself" customModuleProvider="target">
-                                <rect key="frame" x="152" y="608.5" width="70" height="40"/>
+                                <rect key="frame" x="152" y="628.5" width="70" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="sIk-OD-2E3"/>
                                     <constraint firstAttribute="width" constant="70" id="vwf-GD-cty"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Back">
-                                    <color key="titleColor" red="0.73333333333333328" green="0.24313725490196078" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.62194555997848511" green="0.43913054466247559" blue="0.48628848791122437" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
-                                        <real key="value" value="1"/>
+                                        <real key="value" value="2"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="outerColor">
-                                        <color key="value" red="0.73333333333333328" green="0.24313725490196078" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" red="0.62194555997848511" green="0.43913054466247559" blue="0.48628848791122437" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="innerColor">
-                                        <color key="value" red="0.77583914186551939" green="0.7834858284710684" blue="0.82734639382402708" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" red="0.97165952834179359" green="0.93636392544817504" blue="0.81700819653736145" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
@@ -1078,7 +1078,7 @@
                                 </connections>
                             </button>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gyE-hC-hbk">
-                                <rect key="frame" x="38" y="160" width="300" height="433.5"/>
+                                <rect key="frame" x="38" y="180" width="300" height="433.5"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="outsideColor">
                                         <color key="value" red="0.82734639382402708" green="0.23552063018295902" blue="0.2527695104091871" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1104,7 +1104,7 @@
                             <constraint firstItem="7pX-xQ-hx1" firstAttribute="centerX" secondItem="FqC-M5-3D0" secondAttribute="centerX" id="Zx2-HR-cfw"/>
                             <constraint firstItem="TEr-Vp-TUJ" firstAttribute="top" secondItem="gyE-hC-hbk" secondAttribute="bottom" constant="15" id="aAo-Hc-NAQ"/>
                             <constraint firstItem="gyE-hC-hbk" firstAttribute="centerX" secondItem="FqC-M5-3D0" secondAttribute="centerX" id="eA4-Kh-iwq"/>
-                            <constraint firstItem="gyE-hC-hbk" firstAttribute="top" secondItem="7pX-xQ-hx1" secondAttribute="bottom" constant="40" id="jEd-m7-dH7"/>
+                            <constraint firstItem="gyE-hC-hbk" firstAttribute="top" secondItem="7pX-xQ-hx1" secondAttribute="bottom" constant="60" id="jEd-m7-dH7"/>
                             <constraint firstItem="TEr-Vp-TUJ" firstAttribute="centerX" secondItem="gUR-I4-CZm" secondAttribute="centerX" id="m6o-tX-VXh"/>
                             <constraint firstItem="hxh-gZ-gSl" firstAttribute="centerX" secondItem="gUR-I4-CZm" secondAttribute="centerX" id="ueQ-RZ-hgd"/>
                         </constraints>
@@ -1185,13 +1185,16 @@
         <scene sceneID="p9R-K9-HjC">
             <objects>
                 <tableViewController id="s3z-9L-Ql0" customClass="ResultsTableViewController" customModule="testYourself" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="mdD-UC-m4O">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="mdD-UC-m4O">
                         <rect key="frame" x="0.0" y="0.0" width="300" height="433.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="sectionIndexColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="sectionIndexTrackingBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="resultCell" id="dmW-C1-Sgh" customClass="ResultTableViewCell" customModule="testYourself" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="resultCell" id="dmW-C1-Sgh" customClass="ResultTableViewCell" customModule="testYourself" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="300" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dmW-C1-Sgh" id="Nb5-p8-PaO">

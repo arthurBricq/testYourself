@@ -64,7 +64,7 @@ class ResultsTableViewController: UITableViewController {
         var toReturn: String = ""
         // 1) trouver la valeur maximale et son index
         let currentScore = allScores[atIndex].scores
-                
+        print("\n\(currentScore)")
         var maxIndex: Int = 0
         var maxValue: CGFloat = currentScore[0]
         for i in 1..<6 {
@@ -86,14 +86,10 @@ class ResultsTableViewController: UITableViewController {
         return toReturn
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            //let test =
+        
+            //present(test, animated: true, completion: nil)
     }
-    */
 
 }
