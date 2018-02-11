@@ -20,4 +20,4 @@ var labelWidth : CGFloat = 150
 
 var isInSegueFromMenuToBricqBros = false
 
-var allScores: [OneScore] = []
+

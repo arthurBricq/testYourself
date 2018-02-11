@@ -106,10 +106,11 @@ let firstQuizz = OneQuizz(title: "Are you really Smart ?", allQuestios: [q1,q2,q
 //-------------------------------------------------------------------------
 
 
-// MARK : Those 5 variables are very important -------------------------------------
+// MARK : Those 6 variables are very important -------------------------------------
 var activeQuizz = firstQuizz // This is the test that the player decides to play.
 var activeQuestionIdentifier = 0  // the is the question that is being displayed.
 var OneQuizzChecked = [OneAnswerChecked]() // This is the variable with all the results that the player selected.
 let properties : [String] = activeQuizz.properties
 var score : [CGFloat] = [0.6,0.8,0.2,0.2,0.1,0.9]
-
+var allScores: [OneScore] = []
+var allQuizz: [OneQuizz] = [firstQuizz] // Ce tableau regroupe tous les quizz que nous disposons. 

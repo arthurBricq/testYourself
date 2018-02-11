@@ -21,7 +21,6 @@ class ViewController: UIViewController {
         score = [0,0,0,0,0,0]
         initialize_OneQuizzChecked()
         activeQuestionIdentifier = 0
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -30,6 +29,10 @@ class ViewController: UIViewController {
         if isItTheFirstTimeTheViewAppear { // We want to do the animation only once.
             animateTheView()
         }
+        
+        // On charge les anciens résultats:
+        allScores = loadFromFile()
+
     }
     
     override var prefersStatusBarHidden: Bool {
