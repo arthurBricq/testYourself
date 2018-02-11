@@ -1056,15 +1056,37 @@
                                     <constraint firstAttribute="height" constant="30" id="sIk-OD-2E3"/>
                                     <constraint firstAttribute="width" constant="50" id="vwf-GD-cty"/>
                                 </constraints>
-                                <state key="normal" title="Back"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" red="0.86666666670000003" green="0.63921568630000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
                                         <real key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="outerColor">
+                                        <color key="value" red="0.8666666666666667" green="0.63921568627450975" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="innerColor">
+                                        <color key="value" red="0.77583914186551939" green="0.7834858284710684" blue="0.82734639382402708" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="rT9-zx-7jI" eventType="touchUpInside" id="4WP-oQ-eag"/>
+                                </connections>
                             </button>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gyE-hC-hbk">
                                 <rect key="frame" x="38" y="140" width="300" height="467"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="outsideColor">
+                                        <color key="value" red="0.82734639382402708" green="0.23552063018295902" blue="0.2527695104091871" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="insideColor">
+                                        <color key="value" red="0.25358649880199613" green="0.24447292617946187" blue="0.82734639382402708" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="rectangleCornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="s3z-9L-Ql0" kind="embed" id="r03-Dx-utr"/>
                                 </connections>
@@ -1163,7 +1185,8 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="mdD-UC-m4O">
                         <rect key="frame" x="0.0" y="0.0" width="300" height="467"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="resultCell" id="dmW-C1-Sgh" customClass="ResultTableViewCell" customModule="testYourself" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="300" height="44"/>
@@ -1197,6 +1220,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstItem="YmL-Ea-mzw" firstAttribute="top" secondItem="zX1-0o-dhX" secondAttribute="bottom" constant="1" id="1cF-TW-yV4"/>
                                         <constraint firstItem="bZp-VU-Vmg" firstAttribute="top" secondItem="Nb5-p8-PaO" secondAttribute="top" id="90r-GM-5NS"/>
@@ -1208,6 +1232,7 @@
                                         <constraint firstItem="YmL-Ea-mzw" firstAttribute="leading" secondItem="Nb5-p8-PaO" secondAttribute="leading" constant="15" id="bGP-IL-o7Q"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="bestCategoryLabel" destination="FdC-UU-2K1" id="hmP-xb-ArA"/>
                                     <outlet property="genderLabel" destination="YmL-Ea-mzw" id="ycr-TL-cK8"/>

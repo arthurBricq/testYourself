@@ -10,6 +10,10 @@ import UIKit
 
 class PreviousResultViewController: UIViewController {
     
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+    
     let gradient = CAGradientLayer()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,5 +32,10 @@ class PreviousResultViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    @IBAction func backButtonPressed(_ sender: customButton) {
+        performSegue(withIdentifier: "BackToMenu", sender: self)
+    }
+    
+    
 }

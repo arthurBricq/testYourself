@@ -28,12 +28,12 @@ class ResultsTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return allScores.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return allScores.count
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -46,7 +46,16 @@ class ResultsTableViewController: UITableViewController {
         
         return cell
     }
-
+    
+    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 20
+    }
+    
+    override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let footerView = UIView()
+        footerView.backgroundColor = UIColor.clear
+        return footerView
+    }
     
     func findTheGreatestCategory(atIndex: Int) -> String { /*
          On appelle cette fonction pour retourner le string du paramètre qui possède la score le plus élevé pour une partie, afin de l'afficher sur l'écran des résultats.
@@ -63,6 +72,7 @@ class ResultsTableViewController: UITableViewController {
                 maxIndex = i
             }
         }
+        
         // 2) trouver le quizz en question grâce à son titre, et extraire le nom de la propriété maximale.
         let nameOfQuizz = allScores[atIndex].nameOfQuizz
         
