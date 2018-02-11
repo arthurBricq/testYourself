@@ -22,10 +22,14 @@
 		4EB42392202F2E3300602A11 /* FinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB42391202F2E3300602A11 /* FinalViewController.swift */; };
 		4EE2D1AA202C7F0F00C4C3BC /* BricqBrosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE2D1A9202C7F0F00C4C3BC /* BricqBrosViewController.swift */; };
 		4EE6B9F72027308E00E7B864 /* QuizzViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE6B9F62027308E00E7B864 /* QuizzViewController.swift */; };
+		9CA808B120303C3B000A58B3 /* ResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA808B020303C3B000A58B3 /* ResultsTableViewController.swift */; };
 		9CB01BF3202E1013003108BC /* CustomSegueMenuToBricqBros.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB01BF2202E1013003108BC /* CustomSegueMenuToBricqBros.swift */; };
 		9CB01BF5202E167F003108BC /* CustomSegueBackFromBricqBrosVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB01BF4202E167F003108BC /* CustomSegueBackFromBricqBrosVC.swift */; };
 		9CB01BF9202E24FF003108BC /* RadialGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB01BF8202E24FF003108BC /* RadialGradientView.swift */; };
 		9CB01BFB202F03EE003108BC /* CustomSegueQuizzVCToGameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB01BFA202F03EE003108BC /* CustomSegueQuizzVCToGameVC.swift */; };
+		9CB01BFD202F5B83003108BC /* ClassToSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB01BFC202F5B83003108BC /* ClassToSave.swift */; };
+		9CB01BFF202F6A42003108BC /* PreviousResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB01BFE202F6A42003108BC /* PreviousResultViewController.swift */; };
+		9CB01C05202F89DE003108BC /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB01C04202F89DE003108BC /* ResultTableViewCell.swift */; };
 		9CE32B27202A1D850022CF5A /* CustomButtonForTheQuizzMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE32B26202A1D850022CF5A /* CustomButtonForTheQuizzMenu.swift */; };
 		9CEAD926202792850038CA70 /* CustomSegueRightToLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEAD925202792850038CA70 /* CustomSegueRightToLeft.swift */; };
 		9CEAD92A20279D980038CA70 /* CustomSegueLeftToRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEAD92920279D980038CA70 /* CustomSegueLeftToRight.swift */; };
@@ -51,10 +55,14 @@
 		4EB42391202F2E3300602A11 /* FinalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalViewController.swift; sourceTree = "<group>"; };
 		4EE2D1A9202C7F0F00C4C3BC /* BricqBrosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BricqBrosViewController.swift; path = "View Controller/BricqBrosViewController.swift"; sourceTree = SOURCE_ROOT; };
 		4EE6B9F62027308E00E7B864 /* QuizzViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizzViewController.swift; sourceTree = "<group>"; };
+		9CA808B020303C3B000A58B3 /* ResultsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ResultsTableViewController.swift; path = ../testYourself/ResultsTableViewController.swift; sourceTree = "<group>"; };
 		9CB01BF2202E1013003108BC /* CustomSegueMenuToBricqBros.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegueMenuToBricqBros.swift; sourceTree = "<group>"; };
 		9CB01BF4202E167F003108BC /* CustomSegueBackFromBricqBrosVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegueBackFromBricqBrosVC.swift; sourceTree = "<group>"; };
 		9CB01BF8202E24FF003108BC /* RadialGradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RadialGradientView.swift; path = CustomViews/RadialGradientView.swift; sourceTree = SOURCE_ROOT; };
 		9CB01BFA202F03EE003108BC /* CustomSegueQuizzVCToGameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomSegueQuizzVCToGameVC.swift; path = Segues/CustomSegueQuizzVCToGameVC.swift; sourceTree = SOURCE_ROOT; };
+		9CB01BFC202F5B83003108BC /* ClassToSave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassToSave.swift; sourceTree = "<group>"; };
+		9CB01BFE202F6A42003108BC /* PreviousResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousResultViewController.swift; sourceTree = "<group>"; };
+		9CB01C04202F89DE003108BC /* ResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewCell.swift; sourceTree = "<group>"; };
 		9CE32B26202A1D850022CF5A /* CustomButtonForTheQuizzMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonForTheQuizzMenu.swift; sourceTree = "<group>"; };
 		9CEAD925202792850038CA70 /* CustomSegueRightToLeft.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegueRightToLeft.swift; sourceTree = "<group>"; };
 		9CEAD92920279D980038CA70 /* CustomSegueLeftToRight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegueLeftToRight.swift; sourceTree = "<group>"; };
@@ -122,6 +130,7 @@
 				4E7456FB202A1894006B3DB1 /* protocol.swift */,
 				9CF4CE16202CC45000E2300A /* functions.swift */,
 				9CEAD92D2027AA9D0038CA70 /* variables.swift */,
+				9CB01BFC202F5B83003108BC /* ClassToSave.swift */,
 			);
 			path = Algo;
 			sourceTree = "<group>";
@@ -151,12 +160,15 @@
 			isa = PBXGroup;
 			children = (
 				4E3538812024CBFB00901DD3 /* ViewController.swift */,
-				4EA6A5C72028C2A100215903 /* QuestionTableViewController.swift */,
-				4EB42391202F2E3300602A11 /* FinalViewController.swift */,
-				4EA6A5CD202902A400215903 /* AnswerTableViewCell.swift */,
+				4EE2D1A9202C7F0F00C4C3BC /* BricqBrosViewController.swift */,
 				4EE6B9F62027308E00E7B864 /* QuizzViewController.swift */,
 				4EA6A5C52028B49400215903 /* GameViewController.swift */,
-				4EE2D1A9202C7F0F00C4C3BC /* BricqBrosViewController.swift */,
+				4EA6A5C72028C2A100215903 /* QuestionTableViewController.swift */,
+				4EA6A5CD202902A400215903 /* AnswerTableViewCell.swift */,
+				4EB42391202F2E3300602A11 /* FinalViewController.swift */,
+				9CB01BFE202F6A42003108BC /* PreviousResultViewController.swift */,
+				9CA808B020303C3B000A58B3 /* ResultsTableViewController.swift */,
+				9CB01C04202F89DE003108BC /* ResultTableViewCell.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -237,6 +249,7 @@
 				9CE32B27202A1D850022CF5A /* CustomButtonForTheQuizzMenu.swift in Sources */,
 				9CEAD92E2027AA9D0038CA70 /* variables.swift in Sources */,
 				4EA6A5CA2028C86200215903 /* Struct.swift in Sources */,
+				9CB01BFF202F6A42003108BC /* PreviousResultViewController.swift in Sources */,
 				4EA6A5CE202902A400215903 /* AnswerTableViewCell.swift in Sources */,
 				4EA6A5C62028B49400215903 /* GameViewController.swift in Sources */,
 				4E06D89D202B7A4A004ECB34 /* CustomButton_ToGo.swift in Sources */,
@@ -253,7 +266,10 @@
 				9CB01BF3202E1013003108BC /* CustomSegueMenuToBricqBros.swift in Sources */,
 				4E7456FC202A1894006B3DB1 /* protocol.swift in Sources */,
 				4EE6B9F72027308E00E7B864 /* QuizzViewController.swift in Sources */,
+				9CB01BFD202F5B83003108BC /* ClassToSave.swift in Sources */,
+				9CB01C05202F89DE003108BC /* ResultTableViewCell.swift in Sources */,
 				9CEAD926202792850038CA70 /* CustomSegueRightToLeft.swift in Sources */,
+				9CA808B120303C3B000A58B3 /* ResultsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
