@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RadialGradientView: UIView {
+@IBDesignable class RadialGradientView: UIView {
     
     @IBInspectable var outsideColor : UIColor = UIColor.red
     @IBInspectable var insideColor : UIColor = UIColor.blue

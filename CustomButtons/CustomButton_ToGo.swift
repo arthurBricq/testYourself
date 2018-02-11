@@ -8,7 +8,7 @@
 
 import UIKit
 
-class customButton: UIButton {
+@IBDesignable class customButton: UIButton {
     
     // MARK : Variables
     @IBInspectable var outerColor : UIColor = UIColor.red

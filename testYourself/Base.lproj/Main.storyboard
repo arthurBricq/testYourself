@@ -1050,13 +1050,18 @@
                                     </view>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TEr-Vp-TUJ">
-                                <rect key="frame" x="170" y="622" width="34" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TEr-Vp-TUJ" customClass="customButton" customModule="testYourself" customModuleProvider="target">
+                                <rect key="frame" x="162" y="622" width="50" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="sIk-OD-2E3"/>
-                                    <constraint firstAttribute="width" constant="34" id="vwf-GD-cty"/>
+                                    <constraint firstAttribute="width" constant="50" id="vwf-GD-cty"/>
                                 </constraints>
                                 <state key="normal" title="Back"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gyE-hC-hbk">
                                 <rect key="frame" x="38" y="140" width="300" height="467"/>
@@ -1080,6 +1085,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gUR-I4-CZm"/>
                     </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="custom" identifier="BackToMenu" customClass="CustomSegueLeftToRight" customModule="testYourself" customModuleProvider="target" id="BXK-pT-Ozc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Sj-p8-t8L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1226,6 +1234,6 @@
         <image name="test" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="45z-4Q-sJS"/>
+        <segue reference="BXK-pT-Ozc"/>
     </inferredMetricsTieBreakers>
 </document>
