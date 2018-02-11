@@ -249,6 +249,7 @@ class FinalViewController: UIViewController {
     
     func saveTheGame() {
         let nameOfQuizz = activeQuizz.title
+        print(score)
         let toSave = OneScore(name: "name", gender: "gender", nameOfQuizz: nameOfQuizz, scores: score)
         allScores.append(toSave)
         saveToFile(toSave: allScores)

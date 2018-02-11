@@ -15,7 +15,9 @@
         <array key="Avenir.ttc">
             <string>Avenir-Black</string>
             <string>Avenir-Book</string>
+            <string>Avenir-Heavy</string>
             <string>Avenir-Light</string>
+            <string>Avenir-Medium</string>
             <string>Avenir-MediumOblique</string>
         </array>
         <array key="AvenirNextCondensed.ttc">
@@ -1038,7 +1040,7 @@
                                                 <rect key="frame" x="30" y="4" width="177" height="41"/>
                                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Medium" family="Avenir Next Condensed" pointSize="30"/>
                                                 <color key="textColor" red="0.64190824170000005" green="0.21652960299999999" blue="0.13805762460000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <color key="highlightedColor" red="0.73434954880000003" green="0.2444227934" blue="0.15245324369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="highlightedColor" red="0.73333333333333328" green="0.24313725490196078" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </label>
                                         </subviews>
                                         <color key="backgroundColor" red="0.96969109769999995" green="0.79569613930000005" blue="0.65912944080000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1051,20 +1053,21 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TEr-Vp-TUJ" customClass="customButton" customModule="testYourself" customModuleProvider="target">
-                                <rect key="frame" x="162" y="622" width="50" height="30"/>
+                                <rect key="frame" x="152" y="608.5" width="70" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="sIk-OD-2E3"/>
-                                    <constraint firstAttribute="width" constant="50" id="vwf-GD-cty"/>
+                                    <constraint firstAttribute="height" constant="40" id="sIk-OD-2E3"/>
+                                    <constraint firstAttribute="width" constant="70" id="vwf-GD-cty"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Back">
-                                    <color key="titleColor" red="0.86666666670000003" green="0.63921568630000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.73333333333333328" green="0.24313725490196078" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
                                         <real key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="outerColor">
-                                        <color key="value" red="0.8666666666666667" green="0.63921568627450975" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" red="0.73333333333333328" green="0.24313725490196078" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="innerColor">
                                         <color key="value" red="0.77583914186551939" green="0.7834858284710684" blue="0.82734639382402708" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1075,7 +1078,7 @@
                                 </connections>
                             </button>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gyE-hC-hbk">
-                                <rect key="frame" x="38" y="140" width="300" height="467"/>
+                                <rect key="frame" x="38" y="160" width="300" height="433.5"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="outsideColor">
                                         <color key="value" red="0.82734639382402708" green="0.23552063018295902" blue="0.2527695104091871" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1097,11 +1100,11 @@
                             <constraint firstItem="hxh-gZ-gSl" firstAttribute="width" secondItem="FqC-M5-3D0" secondAttribute="width" id="2pW-IU-e5k"/>
                             <constraint firstItem="7pX-xQ-hx1" firstAttribute="top" secondItem="gUR-I4-CZm" secondAttribute="top" constant="50" id="627-0i-AgE"/>
                             <constraint firstItem="gyE-hC-hbk" firstAttribute="width" secondItem="FqC-M5-3D0" secondAttribute="width" multiplier="0.8" id="VHK-44-Cnm"/>
-                            <constraint firstItem="gyE-hC-hbk" firstAttribute="height" secondItem="FqC-M5-3D0" secondAttribute="height" multiplier="0.7" id="WTw-bM-bus"/>
+                            <constraint firstItem="gyE-hC-hbk" firstAttribute="height" secondItem="FqC-M5-3D0" secondAttribute="height" multiplier="0.65" id="WTw-bM-bus"/>
                             <constraint firstItem="7pX-xQ-hx1" firstAttribute="centerX" secondItem="FqC-M5-3D0" secondAttribute="centerX" id="Zx2-HR-cfw"/>
                             <constraint firstItem="TEr-Vp-TUJ" firstAttribute="top" secondItem="gyE-hC-hbk" secondAttribute="bottom" constant="15" id="aAo-Hc-NAQ"/>
                             <constraint firstItem="gyE-hC-hbk" firstAttribute="centerX" secondItem="FqC-M5-3D0" secondAttribute="centerX" id="eA4-Kh-iwq"/>
-                            <constraint firstItem="gyE-hC-hbk" firstAttribute="top" secondItem="7pX-xQ-hx1" secondAttribute="bottom" constant="20" id="jEd-m7-dH7"/>
+                            <constraint firstItem="gyE-hC-hbk" firstAttribute="top" secondItem="7pX-xQ-hx1" secondAttribute="bottom" constant="40" id="jEd-m7-dH7"/>
                             <constraint firstItem="TEr-Vp-TUJ" firstAttribute="centerX" secondItem="gUR-I4-CZm" secondAttribute="centerX" id="m6o-tX-VXh"/>
                             <constraint firstItem="hxh-gZ-gSl" firstAttribute="centerX" secondItem="gUR-I4-CZm" secondAttribute="centerX" id="ueQ-RZ-hgd"/>
                         </constraints>
@@ -1183,7 +1186,7 @@
             <objects>
                 <tableViewController id="s3z-9L-Ql0" customClass="ResultsTableViewController" customModule="testYourself" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="mdD-UC-m4O">
-                        <rect key="frame" x="0.0" y="0.0" width="300" height="467"/>
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="433.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1196,40 +1199,40 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zX1-0o-dhX">
-                                            <rect key="frame" x="15" y="0.0" width="42" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <rect key="frame" x="15" y="0.0" width="43" height="23.5"/>
+                                            <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YmL-Ea-mzw">
-                                            <rect key="frame" x="15" y="22" width="33" height="16"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <rect key="frame" x="17" y="20.5" width="34" height="19.5"/>
+                                            <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bZp-VU-Vmg">
-                                            <rect key="frame" x="243" y="0.0" width="42" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <rect key="frame" x="242" y="0.0" width="43" height="23.5"/>
+                                            <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FdC-UU-2K1">
-                                            <rect key="frame" x="243" y="23" width="42" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <rect key="frame" x="243" y="20.5" width="42" height="23.5"/>
+                                            <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
-                                        <constraint firstItem="YmL-Ea-mzw" firstAttribute="top" secondItem="zX1-0o-dhX" secondAttribute="bottom" constant="1" id="1cF-TW-yV4"/>
+                                        <constraint firstItem="YmL-Ea-mzw" firstAttribute="top" secondItem="zX1-0o-dhX" secondAttribute="bottom" constant="-3" id="1cF-TW-yV4"/>
                                         <constraint firstItem="bZp-VU-Vmg" firstAttribute="top" secondItem="Nb5-p8-PaO" secondAttribute="top" id="90r-GM-5NS"/>
                                         <constraint firstItem="zX1-0o-dhX" firstAttribute="leading" secondItem="Nb5-p8-PaO" secondAttribute="leading" constant="15" id="HWH-pL-VH4"/>
                                         <constraint firstAttribute="bottom" secondItem="FdC-UU-2K1" secondAttribute="bottom" id="NBb-tV-NkH"/>
                                         <constraint firstItem="zX1-0o-dhX" firstAttribute="top" secondItem="Nb5-p8-PaO" secondAttribute="top" id="Q52-iS-pK6"/>
                                         <constraint firstAttribute="trailing" secondItem="bZp-VU-Vmg" secondAttribute="trailing" constant="15" id="TGj-i1-NeD"/>
                                         <constraint firstAttribute="trailing" secondItem="FdC-UU-2K1" secondAttribute="trailing" constant="15" id="UIT-lp-arq"/>
-                                        <constraint firstItem="YmL-Ea-mzw" firstAttribute="leading" secondItem="Nb5-p8-PaO" secondAttribute="leading" constant="15" id="bGP-IL-o7Q"/>
+                                        <constraint firstItem="YmL-Ea-mzw" firstAttribute="leading" secondItem="Nb5-p8-PaO" secondAttribute="leading" constant="17" id="bGP-IL-o7Q"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

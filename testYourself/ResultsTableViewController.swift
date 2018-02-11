@@ -39,16 +39,16 @@ class ResultsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "resultCell", for: indexPath) as! ResultTableViewCell
         
-        cell.nameLabel.text = allScores[indexPath.row].name
-        cell.genderLabel.text = allScores[indexPath.row].gender
-        cell.quizNameLabel.text = allScores[indexPath.row].nameOfQuizz
-        cell.bestCategoryLabel.text = findTheGreatestCategory(atIndex: indexPath.row)
+        cell.nameLabel.text = allScores[indexPath.row].name.capitalized
+        cell.genderLabel.text = allScores[indexPath.row].gender.capitalized
+        cell.quizNameLabel.text = allScores[indexPath.row].nameOfQuizz.capitalized
+        cell.bestCategoryLabel.text = findTheGreatestCategory(atIndex: indexPath.row).capitalized
         
         return cell
     }
     
     override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 20
+        return 30
     }
     
     override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
@@ -64,6 +64,7 @@ class ResultsTableViewController: UITableViewController {
         var toReturn: String = ""
         // 1) trouver la valeur maximale et son index
         let currentScore = allScores[atIndex].scores
+        
         var maxIndex: Int = 0
         var maxValue: CGFloat = currentScore[0]
         for i in 1..<6 {
