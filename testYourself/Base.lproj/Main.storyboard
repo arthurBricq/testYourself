@@ -930,7 +930,7 @@
                                         <real key="value" value="7"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="barColor">
-                                        <color key="value" red="0.22741615392206826" green="0.24460030046282477" blue="0.22788240666234799" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" red="0.22745098039215686" green="0.24313725490196078" blue="0.22745098039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
@@ -1112,6 +1112,7 @@
                     </view>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="custom" identifier="BackToMenu" customClass="CustomSegueLeftToRight" customModule="testYourself" customModuleProvider="target" id="BXK-pT-Ozc"/>
+                        <segue destination="cQy-4B-bgA" kind="presentation" identifier="popoverSegue" id="15X-9b-2kp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Sj-p8-t8L" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1257,6 +1258,133 @@
             </objects>
             <point key="canvasLocation" x="2264" y="-779"/>
         </scene>
+        <!--Popover View Controller-->
+        <scene sceneID="dw3-Ah-QbC">
+            <objects>
+                <viewController storyboardIdentifier="popupVC" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="cQy-4B-bgA" customClass="PopoverViewController" customModule="testYourself" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yEt-e4-csa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qdh-tx-cnC" customClass="GraphView" customModule="testYourself" customModuleProvider="target">
+                                <rect key="frame" x="37" y="210.5" width="300" height="266.5"/>
+                                <subviews>
+                                    <stackView autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="2nJ-wu-HmB">
+                                        <rect key="frame" x="37" y="229.5" width="240" height="33"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Good in math" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4CA-Fc-Lo4">
+                                                <rect key="frame" x="0.0" y="0.0" width="40" height="33"/>
+                                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="12"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Good in math" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kjN-u3-ppu">
+                                                <rect key="frame" x="40" y="0.0" width="40" height="33"/>
+                                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="12"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Good in math" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zq8-gZ-f39">
+                                                <rect key="frame" x="80" y="0.0" width="40" height="33"/>
+                                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="12"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Good in math" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IdG-5Z-5kI">
+                                                <rect key="frame" x="120" y="0.0" width="40" height="33"/>
+                                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="12"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Good in math" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xMz-QZ-D8j">
+                                                <rect key="frame" x="160" y="0.0" width="40" height="33"/>
+                                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="12"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Good in math" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kJ3-xe-8d3">
+                                                <rect key="frame" x="200" y="0.0" width="40" height="33"/>
+                                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="12"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="IdG-5Z-5kI" secondAttribute="bottom" id="6mh-SB-fXz"/>
+                                            <constraint firstAttribute="bottom" secondItem="Zq8-gZ-f39" secondAttribute="bottom" id="GZr-mw-1Lo"/>
+                                            <constraint firstAttribute="bottom" secondItem="kjN-u3-ppu" secondAttribute="bottom" id="HKi-qo-whh"/>
+                                            <constraint firstItem="kJ3-xe-8d3" firstAttribute="top" secondItem="2nJ-wu-HmB" secondAttribute="top" id="LVu-jO-Ot5"/>
+                                            <constraint firstAttribute="width" constant="240" id="POU-gh-3h6"/>
+                                            <constraint firstItem="4CA-Fc-Lo4" firstAttribute="top" secondItem="2nJ-wu-HmB" secondAttribute="top" id="QqT-PS-nhQ"/>
+                                            <constraint firstAttribute="bottom" secondItem="kJ3-xe-8d3" secondAttribute="bottom" id="RLV-tG-GjW"/>
+                                            <constraint firstItem="xMz-QZ-D8j" firstAttribute="top" secondItem="2nJ-wu-HmB" secondAttribute="top" id="S6S-cc-Qt2"/>
+                                            <constraint firstAttribute="bottom" secondItem="xMz-QZ-D8j" secondAttribute="bottom" id="TiS-hf-Cri"/>
+                                            <constraint firstItem="kjN-u3-ppu" firstAttribute="top" secondItem="2nJ-wu-HmB" secondAttribute="top" id="Uod-o0-j8W"/>
+                                            <constraint firstAttribute="bottom" secondItem="4CA-Fc-Lo4" secondAttribute="bottom" id="ivm-of-gMq"/>
+                                            <constraint firstItem="IdG-5Z-5kI" firstAttribute="top" secondItem="2nJ-wu-HmB" secondAttribute="top" id="qRl-I6-Qie"/>
+                                            <constraint firstItem="Zq8-gZ-f39" firstAttribute="top" secondItem="2nJ-wu-HmB" secondAttribute="top" id="t3K-81-r9z"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="2nJ-wu-HmB" firstAttribute="centerX" secondItem="Qdh-tx-cnC" secondAttribute="centerX" constant="7" id="9Vc-0M-Hh4"/>
+                                    <constraint firstAttribute="bottom" secondItem="2nJ-wu-HmB" secondAttribute="bottom" constant="4" id="qWL-0S-qcx"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                        <real key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                        <real key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                        <color key="value" red="0.97254901959999995" green="0.81176470590000005" blue="0.67843137249999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                        <color key="value" red="0.98823529409999999" green="0.28235294119999998" blue="0.031372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="barColor">
+                                        <color key="value" red="0.2274509804" green="0.24313725489999999" blue="0.2274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dF9-FM-oud">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <connections>
+                                    <action selector="backButton:" destination="cQy-4B-bgA" eventType="touchUpInside" id="bCl-ti-0Cv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.71103664340101524" green="0.71103664340101524" blue="0.71103664340101524" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="dF9-FM-oud" firstAttribute="top" secondItem="yEt-e4-csa" secondAttribute="top" id="4gw-qr-lHA"/>
+                            <constraint firstItem="Qdh-tx-cnC" firstAttribute="width" secondItem="yEt-e4-csa" secondAttribute="width" multiplier="0.8" id="9Pe-Nx-e6K"/>
+                            <constraint firstItem="dF9-FM-oud" firstAttribute="leading" secondItem="MSX-xa-8rx" secondAttribute="leading" id="CKe-t6-Oi1"/>
+                            <constraint firstItem="Qdh-tx-cnC" firstAttribute="centerX" secondItem="MSX-xa-8rx" secondAttribute="centerX" id="IbZ-i6-vt9"/>
+                            <constraint firstItem="MSX-xa-8rx" firstAttribute="trailing" secondItem="dF9-FM-oud" secondAttribute="trailing" id="UNQ-fQ-HWR"/>
+                            <constraint firstItem="Qdh-tx-cnC" firstAttribute="centerY" secondItem="MSX-xa-8rx" secondAttribute="centerY" id="UdP-Ra-353"/>
+                            <constraint firstItem="MSX-xa-8rx" firstAttribute="bottom" secondItem="dF9-FM-oud" secondAttribute="bottom" id="uhQ-fp-7ce"/>
+                            <constraint firstItem="Qdh-tx-cnC" firstAttribute="height" secondItem="yEt-e4-csa" secondAttribute="height" multiplier="0.4" id="wlR-1N-hjq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="MSX-xa-8rx"/>
+                    </view>
+                    <connections>
+                        <outlet property="graphView" destination="Qdh-tx-cnC" id="axw-l3-1jM"/>
+                        <outlet property="label1" destination="4CA-Fc-Lo4" id="id9-lo-kXB"/>
+                        <outlet property="label2" destination="kjN-u3-ppu" id="ogk-l8-Sp7"/>
+                        <outlet property="label3" destination="Zq8-gZ-f39" id="rfA-2N-Oro"/>
+                        <outlet property="label4" destination="IdG-5Z-5kI" id="OCp-eq-wwA"/>
+                        <outlet property="label5" destination="xMz-QZ-D8j" id="rr2-Bm-lGC"/>
+                        <outlet property="label6" destination="kJ3-xe-8d3" id="8cd-XA-N1F"/>
+                        <outlet property="stackView" destination="2nJ-wu-HmB" id="Qsa-Ge-DGa"/>
+                        <outlet property="stackViewWidth" destination="POU-gh-3h6" id="N25-6G-Lc0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eYW-gN-HOJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2265" y="-1493"/>
+        </scene>
     </scenes>
     <resources>
         <image name="alunosicon" width="1200" height="1200"/>
@@ -1265,6 +1393,6 @@
         <image name="test" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="BXK-pT-Ozc"/>
+        <segue reference="Vkm-1T-KUp"/>
     </inferredMetricsTieBreakers>
 </document>

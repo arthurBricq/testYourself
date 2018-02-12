@@ -31,6 +31,7 @@
 		9CB01BFF202F6A42003108BC /* PreviousResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB01BFE202F6A42003108BC /* PreviousResultViewController.swift */; };
 		9CB01C05202F89DE003108BC /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB01C04202F89DE003108BC /* ResultTableViewCell.swift */; };
 		9CE32B27202A1D850022CF5A /* CustomButtonForTheQuizzMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE32B26202A1D850022CF5A /* CustomButtonForTheQuizzMenu.swift */; };
+		9CE8B9E42031C45E001E0033 /* PopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE8B9E32031C45E001E0033 /* PopoverViewController.swift */; };
 		9CEAD926202792850038CA70 /* CustomSegueRightToLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEAD925202792850038CA70 /* CustomSegueRightToLeft.swift */; };
 		9CEAD92A20279D980038CA70 /* CustomSegueLeftToRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEAD92920279D980038CA70 /* CustomSegueLeftToRight.swift */; };
 		9CEAD92E2027AA9D0038CA70 /* variables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEAD92D2027AA9D0038CA70 /* variables.swift */; };
@@ -64,6 +65,7 @@
 		9CB01BFE202F6A42003108BC /* PreviousResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousResultViewController.swift; sourceTree = "<group>"; };
 		9CB01C04202F89DE003108BC /* ResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewCell.swift; sourceTree = "<group>"; };
 		9CE32B26202A1D850022CF5A /* CustomButtonForTheQuizzMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonForTheQuizzMenu.swift; sourceTree = "<group>"; };
+		9CE8B9E32031C45E001E0033 /* PopoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverViewController.swift; sourceTree = "<group>"; };
 		9CEAD925202792850038CA70 /* CustomSegueRightToLeft.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegueRightToLeft.swift; sourceTree = "<group>"; };
 		9CEAD92920279D980038CA70 /* CustomSegueLeftToRight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegueLeftToRight.swift; sourceTree = "<group>"; };
 		9CEAD92D2027AA9D0038CA70 /* variables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = variables.swift; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 				4EA6A5CD202902A400215903 /* AnswerTableViewCell.swift */,
 				4EB42391202F2E3300602A11 /* FinalViewController.swift */,
 				9CB01BFE202F6A42003108BC /* PreviousResultViewController.swift */,
+				9CE8B9E32031C45E001E0033 /* PopoverViewController.swift */,
 				9CA808B020303C3B000A58B3 /* ResultsTableViewController.swift */,
 				9CB01C04202F89DE003108BC /* ResultTableViewCell.swift */,
 			);
@@ -247,6 +250,7 @@
 			files = (
 				9CEAD92A20279D980038CA70 /* CustomSegueLeftToRight.swift in Sources */,
 				9CE32B27202A1D850022CF5A /* CustomButtonForTheQuizzMenu.swift in Sources */,
+				9CE8B9E42031C45E001E0033 /* PopoverViewController.swift in Sources */,
 				9CEAD92E2027AA9D0038CA70 /* variables.swift in Sources */,
 				4EA6A5CA2028C86200215903 /* Struct.swift in Sources */,
 				9CB01BFF202F6A42003108BC /* PreviousResultViewController.swift in Sources */,

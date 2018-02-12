@@ -86,10 +86,10 @@ class ResultsTableViewController: UITableViewController {
         return toReturn
     }
     
+    // when a cell is pressed
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-            //let test =
-        
-            //present(test, animated: true, completion: nil)
+        let previousResultVC = self.parent as! PreviousResultViewController
+        previousResultVC.showPopover(scoreToShow: allScores[indexPath.section])
     }
 
 }

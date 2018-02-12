@@ -37,5 +37,23 @@ class PreviousResultViewController: UIViewController {
         performSegue(withIdentifier: "BackToMenu", sender: self)
     }
     
-    
+    // function called when a cell is pressed in order to show the popover view correctly
+    var quizUsedTitle: String = ""
+    func showPopover(scoreToShow: OneScore) {
+        // set the score for the GraphView and get the name of the quiz which was played in order to find its properties
+        score = scoreToShow.scores
+        quizUsedTitle = scoreToShow.nameOfQuizz
+        performSegue(withIdentifier: "popoverSegue", sender: self)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // when a segue is performed if it's to the popover view, change the name of the quiz to find its properties
+        if segue.identifier == "popoverSegue" {
+            let nextVC = segue.destination as! PopoverViewController
+            for quizz in allQuizz {
+                if quizz.title == quizUsedTitle {
+                    nextVC.quizz = quizz
+                }
+            }
+        }
+    }
 }
