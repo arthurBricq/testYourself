@@ -45,7 +45,7 @@ class GraphView: UIView
         let endPoint = CGPoint(x: 0, y: height)
         
         // 2 : mise en place du gradient sur une vue avec des arrondies
-        var cornerRadiusSize = CGSize(width: radius, height: radius)
+        let cornerRadiusSize = CGSize(width: radius, height: radius)
         let path = UIBezierPath(roundedRect: rect, byRoundingCorners: .allCorners, cornerRadii: cornerRadiusSize)
         path.addClip() // Creating a new area to constraints the new context.
         context.drawLinearGradient(gradient!, start: startPoint, end: endPoint, options: [])
