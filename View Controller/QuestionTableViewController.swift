@@ -102,7 +102,6 @@ class QuestionTableViewController: UITableViewController, TableViewCellDelegate
             let rowNumber = 0
             tmpIndexPath = IndexPath(row: rowNumber, section: i)
             tableView(self.tableView, cellForRowAt: tmpIndexPath)
-
         }
     }
 }

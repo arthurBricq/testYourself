@@ -676,7 +676,7 @@
                         <outlet property="segmentedControl" destination="BuN-dY-euw" id="RDc-Mj-F7b"/>
                         <outlet property="textField" destination="J3m-7p-NJa" id="0az-L9-VJL"/>
                         <outlet property="textFieldWidth" destination="teU-7j-LV5" id="61O-XG-duM"/>
-                        <segue destination="uoW-nt-I6l" kind="modal" identifier="ToGameViewController" modalTransitionStyle="flipHorizontal" id="RPp-9f-6d4"/>
+                        <segue destination="uoW-nt-I6l" kind="presentation" identifier="ToGameViewController" id="RPp-9f-6d4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nNu-LP-e6Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -686,7 +686,7 @@
         <!--Game View Controller-->
         <scene sceneID="jlv-4t-vhG">
             <objects>
-                <viewController id="uoW-nt-I6l" customClass="GameViewController" customModule="testYourself" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="flipHorizontal" id="uoW-nt-I6l" customClass="GameViewController" customModule="testYourself" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qMD-Zy-tLj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -813,7 +813,7 @@
                         <outlet property="textView" destination="fpC-oq-MWS" id="vnk-8N-DmS"/>
                         <outlet property="titleLabel" destination="lQt-aP-VLb" id="OcF-Dc-80E"/>
                         <outlet property="verticalCardCenter" destination="nyw-xo-L4p" id="lS9-Ye-GLJ"/>
-                        <segue destination="kgt-bo-8nz" kind="modal" identifier="LastSegue" modalTransitionStyle="partialCurl" id="ry1-cb-1uq"/>
+                        <segue destination="kgt-bo-8nz" kind="presentation" identifier="LastSegue" id="ry1-cb-1uq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xiL-tr-8M5" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -828,7 +828,7 @@
         <!--Final View Controller-->
         <scene sceneID="3vm-aU-HGD">
             <objects>
-                <viewController id="kgt-bo-8nz" customClass="FinalViewController" customModule="testYourself" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="partialCurl" id="kgt-bo-8nz" customClass="FinalViewController" customModule="testYourself" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kRf-hy-vgL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

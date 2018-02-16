@@ -96,8 +96,8 @@ class QuizzViewController: UIViewController, UITextFieldDelegate {
             animation.duration = 0.07
             animation.repeatCount = 3
             animation.autoreverses = true
-            animation.fromValue = NSValue(cgPoint: CGPoint(x: textField.center.x - 5, y: textField.center.y))
-            animation.toValue = NSValue(cgPoint: CGPoint(x: textField.center.x + 5, y: textField.center.y))
+            animation.fromValue = NSValue(cgPoint: CGPoint(x: textField.center.x - 7, y: textField.center.y))
+            animation.toValue = NSValue(cgPoint: CGPoint(x: textField.center.x + 7, y: textField.center.y))
             
             textField.layer.add(animation, forKey: "position")
         }

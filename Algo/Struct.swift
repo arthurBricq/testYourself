@@ -81,19 +81,19 @@ func describe_OneQuizzChecked()
 let firstBenefits = ["good in science","idiot","good in humain science","has lot of logic","not very studient ","has a great mind"]
 
 // First question
-let q1 = OnePartOfaQuizz(questionLabel: "What is a prime number ?", answers: [OneAnswer(answer: "Number 1 is the only one.", benefits: [0,10,0,3,8,0]), OneAnswer(answer: "A number that has no other dividors than itself", benefits: [7,0,0,5,0,5]), OneAnswer(answer: "This doesn't mean anything to me.", benefits: [0,5,5,3,3,2])])
+let q1 = OnePartOfaQuizz(questionLabel: "What is a prime number?", answers: [OneAnswer(answer: "Number 1 is the only one.", benefits: [0,10,0,3,8,0]), OneAnswer(answer: "A number that has no other dividors than itself.", benefits: [7,0,0,5,0,5]), OneAnswer(answer: "This doesn't mean anything to me.", benefits: [0,5,5,3,3,2])])
 
 // Second question: why does water evaporates.
 let ans1 = OneAnswer(answer: "Because the temperature and the pressure are making it passing from liquid state to gaseous state.", benefits: [10,0,0,10,4,5])
-let ans2 = OneAnswer(answer: "This is because the air above the water is changing color", benefits: [0,10,0,0,10,5])
-let ans3 = OneAnswer(answer: "This is the wish of god", benefits: [0,5,5,5,0,0])
-let q2 = OnePartOfaQuizz(questionLabel: "Why does water evaporates ?", answers: [ans1,ans2,ans3])
+let ans2 = OneAnswer(answer: "This is because the air above the water is changing color.", benefits: [0,10,0,0,10,5])
+let ans3 = OneAnswer(answer: "This is the wish of god.", benefits: [0,5,5,5,0,0])
+let q2 = OnePartOfaQuizz(questionLabel: "Why does water evaporates?", answers: [ans1,ans2,ans3])
 
 // Third question, during a normal day, what are you activities
-let anss1 = OneAnswer(answer: "I Study/work during most of the day, and I rest before meeting with my friends/family. Also, I enjoy reading books/papers", benefits: [5,0,5,10,0,10])
+let anss1 = OneAnswer(answer: "I Study/work during most of the day, and I rest before meeting with my friends/family. Also, I enjoy reading books/papers.", benefits: [5,0,5,10,0,10])
 let anss2 = OneAnswer(answer: "Mostly, i drink & drog myself with my friends. Rest is borin.", benefits: [0,10,0,0,10,0])
 let anss3 = OneAnswer(answer: "I like to play games sometimes, I pass time on facebook but also check my works.", benefits: [5,2,5,6,6,6])
-let q3 = OnePartOfaQuizz(questionLabel: "During a normal day, what are you activities ?", answers: [anss1,anss2,anss3])
+let q3 = OnePartOfaQuizz(questionLabel: "During a normal day, what are you activities?", answers: [anss1,anss2,anss3])
 
 // Fourth question : what is your favorite field.
 let ansss1 = OneAnswer(answer: "Science", benefits: [10,0,0,0,0,0])
